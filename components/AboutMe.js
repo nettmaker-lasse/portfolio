@@ -151,7 +151,7 @@ export default function AboutMe() {
 			{userData.about.descriptionTwo}
 			</p>
 
-            <h1 className="bg-red-500 text-2xl rounded-md py-1 inline-block font-bold text-black">
+            <h1 className="bg-red-500 text-2xl rounded-md py-1 inline-block font-bold text-black dark:text-white">
               Tech choices
             </h1>
             <div className="flex flex-row flex-wrap mt-8">

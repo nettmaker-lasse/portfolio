@@ -78,7 +78,7 @@ export default function Contact() {
                 <svg
                   width="24"
                   height="24"
-                  className="text-black"
+                  className="text-black dark:text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function Contact() {
                 <svg
                   width="24"
                   height="24"
-                  className="text-gray-50"
+                  className="text-black dark:text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export default function Contact() {
                 <svg
                   width="24"
                   height="24"
-                  className="text-gray-50"
+                  className="text-black dark:text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +141,8 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
-            <label htmlFor="name" className="text-sm text-black mx-4">
+          <form className="form rounded-lg bg-white p-4 flex flex-col dark:bg-black-light">
+            <label htmlFor="name" className="text-sm text-black mx-4 dark:text-white">
               {" "}
               Your Name
             </label>
@@ -151,7 +151,7 @@ export default function Contact() {
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-red dark:bg-white dark:border-black"
               name="name"
             />
-            <label htmlFor="email" className="text-sm text-black mx-4 mt-4">
+            <label htmlFor="email" className="text-sm text-black mx-4 mt-4 dark:text-white">
               Email
             </label>
             <input
@@ -161,7 +161,7 @@ export default function Contact() {
             />
             <label
               htmlFor="message"
-              className="text-sm text-black mx-4 mt-4"
+              className="text-sm text-black mx-4 mt-4 dark:text-white"
             >
               Message
             </label>
@@ -173,7 +173,7 @@ export default function Contact() {
             ></textarea>
             <button
               type="submit"
-              className="border-black border-solid border text-white rounded-md w-1/2 mx-4 mt-8 py-2 text-black text-xs font-bold hover:bg-black hover:text-white"
+              className="border-black border-solid border rounded-md w-1/2 mx-4 mt-8 py-2 text-black text-xs font-bold hover:bg-black hover:text-white dark:border-white"
             >
               Send Message
             </button>
