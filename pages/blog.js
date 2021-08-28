@@ -4,7 +4,7 @@ import Posts from "../components/Posts";
 
 export default function projects() {
   return (
-    <ContainerBlock title="Lasse Buus - Blog>
+    <ContainerBlock title="Lasse Buus - Blog">
       <Posts />
     </ContainerBlock>
   );
