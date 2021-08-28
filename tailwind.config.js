@@ -30,9 +30,11 @@ module.exports = {
 			purple: {
 				DEFAULT: '#682AE9',
 			},
-			yellow: {
-				DEFAULT: '#F7DF1E',
-			},
+			amber: colors.amber,
+			emerald: colors.emerald,
+			yellow: colors.amber,
+			blue: colors.blue,
+			redd: colors.red,
 		},
 	},
 	variants: {

@@ -37,7 +37,7 @@ const PostCard = ({ title, link, imgUrl, number }) => {
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
           />
         </div>
-        <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red-500 rounded-md px-2">
+        <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
           {title}
         </h1>
         <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">

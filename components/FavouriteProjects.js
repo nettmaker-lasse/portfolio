@@ -44,8 +44,8 @@ export default function FavouriteProjects() {
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
               />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red-500 rounded-md px-2">
-               	Title in progress
+              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
+			  	Project in progress
               </h1>
               <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
                 01
@@ -64,8 +64,8 @@ export default function FavouriteProjects() {
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out favourite-img-50"
               />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red-500 rounded-md px-2">
-			  Title in progress
+              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
+			  Project in progress
               </h1>
               <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
                 02
@@ -84,8 +84,8 @@ export default function FavouriteProjects() {
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl favourite-img-50"
               />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red-500 rounded-md px-2">
-			  Title in progress
+              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
+			  Project in progress
               </h1>
               <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
                 03

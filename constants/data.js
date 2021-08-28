@@ -2,7 +2,7 @@ const userData = {
   githubUsername: "nettmaker-lasse",
   name: "Lasse Buus Nielsen",
   designation: "Frontend Developer",
-  avatarUrl: "/avatar-2.jpeg",
+  avatarUrl: "/avatar.jpg",
   email: "lassebuus91@gmail.com",
   phone: "+47 91905635",
   address: "Oslo, Norway",
