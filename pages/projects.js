@@ -4,7 +4,7 @@ import Projects from "../components/Projects";
 
 export default function projects() {
   return (
-    <ContainerBlock title="Projects - Lasse Buus">
+    <ContainerBlock title="Lasse Buus - Projects">
       <Projects />
     </ContainerBlock>
   );
