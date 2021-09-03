@@ -31,3 +31,10 @@ a {
 	height: 450px;
 	width: 100%;
 }
+
+@media (max-width: 600px) {
+	.favourite-img, .favourite-img-50 {
+	 height: 450px;
+	}
+  }
+  
