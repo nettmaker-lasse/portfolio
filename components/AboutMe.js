@@ -25,7 +25,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="bg-white dark:bg-black px-4">
+      <div className="bg-white dark:bg-black">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">

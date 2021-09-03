@@ -4,22 +4,21 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 
 export default function Hero() {
-  const colors = ["#000", "#E03050", "#000"];
-  const colors_dark = ["#000", "#E03050", "#000"];
+  const colors = ["#161616", "#E03050", "#000"];
   return (
-	<div className="max-w-6xl mx-auto pb-20">
-		<div className="flex flex-row justify-center items-center items-start overflow-hidden">
+	<div className="max-w-6xl mx-auto">
+		<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
 		{/* Text container */}
 
-		<div className="w-full md:w-1/2">
+		<div className="md:w-1/2 mb-5">
 			<RoughNotationGroup show={true}>
 			<RainbowHighlight color={colors[0]}>
-				<h1 className="text-4xl md:text-7xl font-bold text-red dark:text-red my-2 inline-block">
+				<h1 className="text-6xl md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
 				Developer.
 				</h1>
 			</RainbowHighlight>
 			<RainbowHighlight color={colors[1]}>
-				<h1 className="text-4xl md:text-7xl font-bold text-black dark:text-white my-2 inline-block">
+				<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
 				Designer.
 				</h1>
 			</RainbowHighlight>
@@ -31,7 +30,7 @@ export default function Hero() {
 			</RoughNotationGroup>
 		</div>
 		{/* Image container */}
-		<div className="hidden lg:block relative w-full md:w-1/2">
+		<div className="lg:block relative w-full md:w-1/2">
 			<div className="">
 			<img src={userData.avatarUrl} alt="avatar" className="shadow grayscale" />
 			<div className="flex flex-row justify-between mt-4">

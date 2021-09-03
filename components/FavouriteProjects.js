@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function FavouriteProjects() {
   return (
-    <div className="bg-white -mt-40 dark:bg-black">
+    <div className="bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:mt-40 mb-30">
-          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-black dark:text-white">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">
             Favourite Projects
           </h1>
           <Link href="/work">

@@ -12,10 +12,10 @@ export default function LatestCode({ repositories }) {
     setRepos(repositories);
   }, []);
   return (
-    <section className="bg-white -mt-40 dark:bg-black lg:mt-10 mb-10 py-14">
+    <section className="bg-white dark:bg-black lg:mt-10 mb-10 py-14">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-black dark:text-white text-center lg:text-left">
+        <div className="flex flex-col md:flex-row justify-between items-center  lg:my-10">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
             Latest Code
           </h1>
 
@@ -42,7 +42,7 @@ export default function LatestCode({ repositories }) {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl my-20 mx-auto gap-y-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto gap-y-10">
         {/* Single github Repo */}
 
         {repos &&
@@ -57,7 +57,7 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <div className="github-repo">
-      <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-700">
+      <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700">
         {latestRepo.name}
       </h1>
       <p className="text-base font-normal my-4 text-gray-500">
