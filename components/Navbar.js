@@ -22,10 +22,10 @@ export default function Navbar() {
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="font-semibold text-xl dark:text-gray-100">
+              <h1 className="font-semibold text-xl dark:text-gray-100 dark:text-white">
                 {userData.name}
               </h1>
-              <p className="text-base font-light text-gray-500 dark:text-gray-300">
+              <p className="text-base font-light text-gray-500 dark:text-gray-300 dark:text-white">
                 {userData.designation}
               </p>
             </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link href="/about">
             <a
-              className={`text-base hover:underline hover:text-red ${
+              className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/about"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Link>
           <Link href="/projects">
             <a
-              className={`text-base hover:underline hover:text-red ${
+              className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/projects"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -87,7 +87,7 @@ export default function Navbar() {
           </Link>
           <Link href="/experience">
             <a
-              className={`text-base hover:underline hover:text-red ${
+              className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/experience"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -113,7 +113,7 @@ export default function Navbar() {
           </Link>
 		  <Link href="/blog">
             <a
-              className={`text-base hover:underline hover:text-red ${
+              className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/blog"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -139,7 +139,7 @@ export default function Navbar() {
           </Link>
           <Link href="/contact">
             <a
-              className={`text-base hover:underline hover:text-red ${
+              className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/contact"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "

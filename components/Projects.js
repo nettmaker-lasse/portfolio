@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section className="bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto h-38 bg-white dark:bg-black">
-        <h1 className=" text-5xl md:text-9xl font-bold py-10 text-center md:text-left">
+        <h1 className=" text-5xl md:text-9xl font-bold py-10 text-center md:text-left dark:text-white">
           Projects
         </h1>
       </div>

@@ -5,14 +5,14 @@ export default function AboutMe() {
   return (
     <section className="bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-black">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-left md:text-left">
+        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
           About
         </h1>
       </div>
       <div className="bg-white -mt-10 dark:bg-black">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
-            className="leading-loose text-2xl md:text-4xl font-semibold"
+            className="leading-loose text-2xl md:text-4xl font-semibold dark:text-white"
             style={{ lineHeight: "3rem" }}
           >
             {userData.about.title}. Currently working at {" "}
@@ -30,10 +30,10 @@ export default function AboutMe() {
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
             <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200 dark:text-white">
                 Contact
               </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
+              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300 dark:text-white">
                 For any sort help / enquiry, shoot a{" "}
                 <a
                   href={`mailto:${userData.email}`}
@@ -45,10 +45,10 @@ export default function AboutMe() {
               </p>
             </div>
             <div className="mt-8">
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200 dark:text-white">
                 Job Opportunities
               </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
+              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300 dark:text-white">
                 I'm currently not looking for a job, If you see me as a good fit anyways,
                 checkout my{" "}
                 <a
@@ -62,11 +62,11 @@ export default function AboutMe() {
               </p>
             </div>
             {/* Social Links */}
-            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200">
+            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200 dark:text-white">
               Social Links
             </h1>
             <div className="mt-4">
-              <div className="flex flex-row justify-start items-center ">
+              <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.facebook}
                   className="flex flex-row items-center space-x-4 group hover:text-red"
@@ -78,7 +78,7 @@ export default function AboutMe() {
                   </p>
                 </a>
               </div>
-              <div className="flex flex-row justify-start items-center">
+              <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.twitter}
                   className="flex flex-row items-center space-x-4 group hover:text-red"
@@ -90,7 +90,7 @@ export default function AboutMe() {
                   </p>
                 </a>
               </div>
-              <div className="flex flex-row justify-start items-center">
+              <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.github}
                   className="flex flex-row items-center space-x-4 group hover:text-red"
@@ -102,7 +102,7 @@ export default function AboutMe() {
                   </p>
                 </a>
               </div>
-              <div className="flex flex-row justify-start items-center">
+              <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.linkedin}
                   className="flex flex-row items-center space-x-4 group hover:text-red"
@@ -114,7 +114,7 @@ export default function AboutMe() {
                   </p>
                 </a>
               </div>
-              <div className="flex flex-row justify-start items-center">
+              <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.twitter}
                   className="flex flex-row items-center space-x-4 group hover:text-red"

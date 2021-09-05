@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
 			<a
               href="/"
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
+              className="text-base font-normal text-gray-600 dark:text-gray-300 dark:text-white"
             >
                <p>Copyright &copy; 2021 <b>Lasse Buus</b></p>
             </a>
