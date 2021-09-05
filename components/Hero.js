@@ -10,7 +10,7 @@ export default function Hero() {
 		<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
 		{/* Text container */}
 
-		<div className="md:w-1/2 mb-5">
+		<div className="relative md:w-1/2 mb-5">
 			<RoughNotationGroup show={true}>
 			<RainbowHighlight color={colors[0]}>
 				<h1 className="text-6xl md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
