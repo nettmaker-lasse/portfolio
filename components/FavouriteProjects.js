@@ -40,7 +40,7 @@ export default function FavouriteProjects() {
           >
             <div className="relative overflow-hidden">
               <img
-                src="/img-5.jpg"
+                srcset="/img-5.jpg"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
               />
@@ -60,7 +60,7 @@ export default function FavouriteProjects() {
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/img-7.jpg"
+                srcset="/img-7.jpg"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out favourite-img-50"
               />
@@ -80,7 +80,7 @@ export default function FavouriteProjects() {
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/img-3.jpg"
+                srcset="/img-3.jpg"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl favourite-img-50"
               />
