@@ -129,11 +129,11 @@ export default function AboutMe() {
             </div>
           </div>
           {/* Text area */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 md:col-span-2 ">
             {userData.about.description?.map((desc, idx) => (
               <p
                 key={idx}
-                className="text-black mb-4 dark:text-white"
+                className="text-black mb-4 dark:text-white leading-8"
               >
                 {desc}
 				</p>
@@ -141,17 +141,17 @@ export default function AboutMe() {
             ))}
 
 			<h3 
-			className="text-2xl md:text-3xl font-semibold text-black dark:text-white my-8"
+			className="text-2xl md:text-3xl font-semibold text-black dark:text-white mt-8 mb-2"
 			>
 			{userData.about.descriptionSeparator}
 			</h3>
 			<p 
-			className="text-black mb-4 dark:text-white"
+			className="text-black mb-4 dark:text-white leading-8"
 			>
 			{userData.about.descriptionTwo}
 			</p>
 
-            <h1 className="bg-red-500 text-2xl rounded-md py-1 inline-block font-bold text-black dark:text-white">
+            {/* <h1 className="bg-red-500 text-2xl rounded-md py-1 inline-block font-bold text-black dark:text-white">
               Tech choices
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
@@ -192,7 +192,7 @@ export default function AboutMe() {
                 className="h-20 w-20 mx-4 my-4"
               />
 
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

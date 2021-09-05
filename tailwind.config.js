@@ -30,6 +30,9 @@ module.exports = {
 			purple: {
 				DEFAULT: '#682AE9',
 			},
+			borderBlue: {
+				DEFAULT: '#272D36',
+			},
 			amber: colors.amber,
 			emerald: colors.emerald,
 			yellow: colors.amber,
