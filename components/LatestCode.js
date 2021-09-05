@@ -16,7 +16,7 @@ export default function LatestCode({ repositories }) {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center  lg:my-10">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
-            Latest Code
+            Code
           </h1>
 
           <a
