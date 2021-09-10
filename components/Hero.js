@@ -32,7 +32,7 @@ export default function Hero() {
 		{/* Image container */}
 		<div className="lg:block relative w-full md:w-1/2">
 			<div className="">
-			<img srcset={userData.avatarUrl} alt="avatar" className="shadow grayscale" />
+			<img srcSet={userData.avatarUrl} alt="avatar" className="shadow grayscale" />
 			<div className="flex flex-row justify-between mt-4">
 				<div className="flex flex-row space-x-4">
 				<svg
