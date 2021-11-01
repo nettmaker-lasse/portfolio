@@ -20,12 +20,6 @@ a {
   box-sizing: border-box;
 }
 
-.footer {
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-}
-
 .favourite-img {
 	object-fit: cover;
 	height: 700px;
@@ -42,5 +36,4 @@ a {
 	.favourite-img, .favourite-img-50 {
 	 height: 450px;
 	}
-  }
-  
+}
