@@ -25,27 +25,7 @@ const userData = {
 			title: "Project title",
 			link: "https://lassebuus.dk/",
 			imgUrl: "/img-4.jpg",
-		},
-		{
-			title: "Project title",
-			link: "https://lassebuus.dk/",
-			imgUrl: "/img-5.jpg",
-		},
-		{
-			title: "Project title",
-			link: "https://lassebuus.dk/",
-			imgUrl: "/img-6.jpg",
-		},
-		{
-			title: "Project title",
-			link: "https://lassebuus.dk/",
-			imgUrl: "/img-7.jpg",
-		},
-		{
-			title: "Project title",
-			link: "https://lassebuus.dk/",
-			imgUrl: "/img-1.jpg",
-		},
+		}
 	],
 	frontendCode: [{
 			language: "JavaScript",

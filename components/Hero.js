@@ -22,11 +22,6 @@ export default function Hero() {
 				Designer.
 				</h1>
 			</RainbowHighlight>
-			{/* <RainbowHighlight color={colors[2]}>
-				<h1 className="text-4xl md:text-7xl font-bold text-red dark:text-red my-2 inline-block">
-				Programmer.
-				</h1>
-			</RainbowHighlight> */}
 			</RoughNotationGroup>
 		</div>
 		{/* Image container */}

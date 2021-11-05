@@ -1,5 +1,5 @@
 import React from "react";
-import userData from "@constants/data";
+import postData from "@constants/dataPosts";
 
 export default function Posts() {
   return (
@@ -12,7 +12,7 @@ export default function Posts() {
       {/* Grid starts here */}
       <div className="bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
-          {userData.projects.map((proj, idx) => (
+          {postData.projects.map((proj, idx) => (
             <PostCard
               title={proj.title}
               link={proj.link}

@@ -41,7 +41,7 @@ export default function Navbar() {
                   : "text-gray-600 dark:text-gray-300 font-normal "
               }`}
             >
-              About{" "}
+              About
               {router.asPath === "/about" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Navbar() {
                   : "text-gray-600 dark:text-gray-300 font-normal "
               }`}
             >
-              Experience{" "}
+              Experience
               {router.asPath === "/experience" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

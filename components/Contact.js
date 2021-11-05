@@ -73,7 +73,7 @@ export default function Contact() {
             <div className="social-icons flex flex-row space-x-8">
               <a
                 href={userData.socialLinks.facebook}
-                className="h-10 w-10 rounded-full hover:bg-red flex items-center justify-center cursor-pointer"
+                className="h-10 w-10 rounded-full flex items-center justify-center cursor-pointer"
               >
                 <svg
                   width="24"
@@ -91,7 +91,7 @@ export default function Contact() {
               </a>
               <a
                 href={userData.socialLinks.twitter}
-                className="h-10 w-10 rounded-full hover:bg-red flex items-center justify-center cursor-pointer"
+                className="h-10 w-10 rounded-full flex items-center justify-center cursor-pointer"
               >
                 <svg
                   width="24"
@@ -111,7 +111,7 @@ export default function Contact() {
               </a>
               <a
                 href={userData.socialLinks.instagram}
-                className="h-10 w-10 rounded-full hover:bg-red flex items-center justify-center cursor-pointer"
+                className="h-10 w-10 rounded-full flex items-center justify-center cursor-pointer"
               >
                 <svg
                   width="24"
