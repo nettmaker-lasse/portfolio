@@ -7,31 +7,59 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import client from '../lib/sanity';
 
-export default function Home({ repositories }) {
+
+export default function Home({ dataFields, repositories }) {
+
+	const { homepageData } = dataFields;
+
   return (
+	  <>
+	{/* <img className="homepage-img" src={homepageData.image.url} alt={homepageData.subtitle} /> */}
     <ContainerBlock
       title="Lasse Buus - Developer, Designer"
       description="This is my portfolio"
     >
-      <Hero />
+      <Hero dataFields={dataFields} />
       <FavouriteProjects />
       <LatestCode repositories={repositories} />
       <FavouritePosts />
     </ContainerBlock>
+	</>
   );
 }
-
-export const getServerSideProps = async () => {
-  console.log(process.env.GITHUB_AUTH_TOKEN);
+  
+// Create a query called homepageQuery
+const homepageQuery = `*[_type == "homepage"][0] {
+title,
+subtitle,
+"ctaUrl": cta {
+	current
+		},
+image {
+	...asset->
+},
+imagecaption
+}`;
+  
+  export async function getStaticProps() {
+	const homepageData = await client.fetch(homepageQuery);
+	// const siteHeaderData = await client.fetch(siteHeaderQuery);
+	
+	console.log(process.env.GITHUB_AUTH_TOKEN);
   let token = process.env.GITHUB_AUTH_TOKEN;
 
   const repositories = await getLatestRepos(userData, token);
   // console.log("REPOSITORIES", repositories);
 
-  return {
-    props: {
-      repositories,
-    },
-  };
-};
+	const dataFields = { homepageData };
+  
+	return {
+	  props: {
+		dataFields,
+		repositories,
+	  },
+	  revalidate: 1,
+	};
+  }

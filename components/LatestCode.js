@@ -7,10 +7,9 @@ export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState([]);
 
   useEffect(async () => {
-    // let latestRepos = await getLatestRepos(userData);
-    // console.log("latestRepos", latestRepos);
     setRepos(repositories);
   }, []);
+  
   return (
     <section className="bg-white dark:bg-black lg:mt-10 mb-10 py-14">
       <div className="max-w-6xl mx-auto">

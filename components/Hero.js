@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
+import client from '@lib/sanity';
 
-export default function Hero() {
-  const colors = ["#161616", "#E03050", "#000"];
-  return (
+export default function Hero({dataFields}) {
+
+	const [fields, setFields] = useState([]);
+	const colors = ["#161616", "#E03050", "#000"];
+
+	useEffect(async () => {
+		setFields(dataFields);
+		console.log(dataFields);
+	  }, []);
+
+	return (
 	<div className="max-w-6xl mx-auto">
 		<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
 		{/* Text container */}
@@ -14,12 +23,12 @@ export default function Hero() {
 			<RoughNotationGroup show={true}>
 			<RainbowHighlight color={colors[0]}>
 				<h1 className="text-6xl md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
-				Developer.
+				{dataFields.homepageData.title}.
 				</h1>
 			</RainbowHighlight>
 			<RainbowHighlight color={colors[1]}>
 				<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
-				Designer.
+				{dataFields.homepageData.subtitle}.
 				</h1>
 			</RainbowHighlight>
 			</RoughNotationGroup>
@@ -27,7 +36,7 @@ export default function Hero() {
 		{/* Image container */}
 		<div className="lg:block relative w-full md:w-1/2">
 			<div className="">
-			<img srcSet={userData.avatarUrl} alt="avatar" className="shadow" />
+			<img srcSet={dataFields.homepageData.image.url} alt={dataFields.homepageData.subtitle} className="shadow" />
 			<div className="flex flex-row justify-between mt-4">
 				<div className="flex flex-row space-x-4">
 				<svg
@@ -43,7 +52,7 @@ export default function Hero() {
 					d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
 					/>
 				</svg>
-				<p className="font-mono">That's me</p>
+				<p className="font-mono">{dataFields.homepageData.imagecaption}</p>
 				</div>
 			</div>
 			</div>
