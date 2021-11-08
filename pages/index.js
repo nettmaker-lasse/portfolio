@@ -31,7 +31,7 @@ export default function Home({ dataFields, repositories }) {
 }
   
 // Create a query called homepageQuery
-const homepageQuery = `*[_type == "homepage"][0] {
+const heroQuery = `*[_type == "hero"][0] {
 title,
 subtitle,
 "ctaUrl": cta {
@@ -44,7 +44,7 @@ imagecaption
 }`;
   
   export async function getStaticProps() {
-	const homepageData = await client.fetch(homepageQuery);
+	const homepageData = await client.fetch(heroQuery);
 	// const siteHeaderData = await client.fetch(siteHeaderQuery);
 	
 	console.log(process.env.GITHUB_AUTH_TOKEN);
