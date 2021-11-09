@@ -4,8 +4,8 @@ import userData from "@constants/data";
 export default function Projects() {
   return (
     <section className="">
-      <div className="max-w-6xl mx-auto h-38">
-        <h1 className=" text-5xl md:text-9xl font-bold py-10 text-center md:text-left dark:text-white">
+       <div className="max-w-6xl mx-auto h-48">
+        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
           Projects
         </h1>
       </div>

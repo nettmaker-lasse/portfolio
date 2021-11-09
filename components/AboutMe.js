@@ -10,10 +10,10 @@ export default function AboutMe() {
         </h1>
       </div>
       <div className="-mt-10">
-        <div className="text-container max-w-6xl mx-auto pt-20">
+        <div className="text-container max-w-6xl mx-auto md:pt-20">
           <p
-            className="leading-loose text-2xl md:text-4xl font-semibold dark:text-white"
-            style={{ lineHeight: "3rem" }}
+            className="leading-tight text-2xl md:text-4xl md:leading-10 font-semibold dark:text-white"
+            // style={{ lineHeight: "3rem" }}
           >
             {userData.about.title}. Currently working at {" "}
             <a
