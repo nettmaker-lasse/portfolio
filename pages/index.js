@@ -10,7 +10,7 @@ import userData from "@constants/data";
 import client from '@lib/sanity';
 
 
-export default function Home({ hero, projects, repositories }) {
+export default function Home({ hero, projects, posts, repositories }) {
 
   return (
 	<>
@@ -21,7 +21,7 @@ export default function Home({ hero, projects, repositories }) {
       <Hero hero={hero} />
       <FavouriteProjects projects={projects} />
       <LatestCode repositories={repositories} />
-      <FavouritePosts />
+      <FavouritePosts posts={posts} />
     </ContainerBlock>
 	</>
   );
@@ -55,9 +55,25 @@ const projectsQuery = `*[_type == "projects"] {
 	slug
 	}`;
   
+// Create a query called projectsQuery
+const postsQuery = `*[_type == "posts"] {
+	title,
+	subtitle,
+	"ctaUrl": cta {
+		current
+			},
+	image {
+		...asset->
+	},
+	imagecaption,
+	postcontent,
+	slug
+	}`;
+
   export async function getStaticProps() {
 	const heroData = await client.fetch(heroQuery);
 	const projectsData = await client.fetch(projectsQuery);
+	const postsData = await client.fetch(postsQuery);
 	
 	console.log(process.env.GITHUB_AUTH_TOKEN);
   let token = process.env.GITHUB_AUTH_TOKEN;
@@ -67,12 +83,14 @@ const projectsQuery = `*[_type == "projects"] {
 
 	const hero = { heroData };
 	const projects = { projectsData };
+	const posts = { postsData };
   
 	return {
 	  props: {
 		hero,
 		repositories,
-		projects
+		projects,
+		posts
 	  },
 	  revalidate: 1,
 	};

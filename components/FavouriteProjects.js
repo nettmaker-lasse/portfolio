@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function FavouriteProjects({projects}) {
+export default function FavouriteProjects({ projects }) {
+  const [allFields, setFields] = useState([null]);
 
-	const [allFields, setFields] = useState([null]);
-
-	useEffect(async () => {
-		setFields(projects);
-		console.log(projects);
-	  }, []);
+  useEffect(async () => {
+    setFields(projects);
+    console.log(projects);
+  }, []);
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="dark:bg-black">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:mt-40 mb-30">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">
             Projects
           </h1>
+          <div className="flex-1 mr-8">
+            <span className="font-mono block text-right dark:text-white">
+              View all projects
+            </span>
+          </div>
           <Link href="/work">
             <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-black">
               <svg
@@ -40,20 +44,31 @@ export default function FavouriteProjects({projects}) {
         </header>
 
         {/* Grid starts here */}
-			<div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
-			{
-				Object.keys(projects.projectsData).map((item, i) => (
-					<Link href={'/' + projects.projectsData[item].slug}>
-					<div className="single-project relative overflow-hidden w-full block shadow-2xl cursor-pointer" key={i + projects.projectsData[item].slug}>
-						<img srcSet={projects.projectsData[item].image.url} className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" />
-						<h2 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">{ projects.projectsData[item].title }</h2>
-						<h2 className="absolute bottom-10 right-10 text-white font-bold text-base bg-red rounded-md px-2">{ projects.projectsData[item].projectcontent }</h2>
-					</div>
-					</Link>
-				))
-			}  
-			</div>	
+        <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
+          {Object.keys(projects.projectsData).map((item, i) => (
+            <Link
+              href={"/" + projects.projectsData[item].slug}
+              key={projects.projectsData[item].slug}
+            >
+              <div
+                className="single-project rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer"
+                key={i + projects.projectsData[item].slug}
+              >
+                <img
+                  srcSet={projects.projectsData[item].image.url}
+                  className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+                />
+                <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-lg rounded-md px-2 py-1">
+                  {projects.projectsData[item].title}
+                </h2>
+                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
+                  {projects.projectsData[item].projectcontent}
+                </h3>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import userData from "@constants/data";
 
 export default function Skills() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className=" dark:bg-black">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center md:mt-20 mb-10 lg:mt-20">
           <h2 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">

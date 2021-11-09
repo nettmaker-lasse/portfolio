@@ -3,14 +3,14 @@ import postData from "@constants/dataPosts";
 
 export default function Posts() {
   return (
-    <section className="bg-white dark:bg-black">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-black">
+    <section className="dark:bg-black">
+      <div className="max-w-6xl mx-auto h-48 dark:bg-black">
         <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
           Blog
         </h1>
       </div>
       {/* Grid starts here */}
-      <div className="bg-white dark:bg-black">
+      <div className="dark:bg-black">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
           {postData.projects.map((proj, idx) => (
             <PostCard

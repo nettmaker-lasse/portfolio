@@ -9,17 +9,22 @@ export default function LatestCode({ repositories }) {
   useEffect(async () => {
     setRepos(repositories);
   }, []);
-  
+
   return (
-    <section className="bg-white dark:bg-black lg:mt-10 mb-10 py-14">
+    <section className="dark:bg-black lg:mt-10 mb-10 py-14">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center  lg:my-10">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
             Code
           </h1>
-
+          <div className="flex-1 mr-8">
+            <span className="font-mono block text-right dark:text-white">
+              View all repositories
+            </span>
+          </div>
           <a
             href={`https://github.com/${userData.githubUsername}`}
+            target="_blank"
             className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-black"
           >
             <svg
@@ -46,7 +51,10 @@ export default function LatestCode({ repositories }) {
 
         {repos &&
           repos.map((latestRepo, idx) => (
-            <GithubRepoCard latestRepo={latestRepo} key={'idx' + latestRepo.id} />
+            <GithubRepoCard
+              latestRepo={latestRepo}
+              key={"idx" + latestRepo.id}
+            />
           ))}
       </div>
     </section>
@@ -55,7 +63,7 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="github-repo shadow-xl rounded-md p-6 flex justify-between flex-col dark:border border-white">
+    <div className="github-repo bg-white shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-black border border-white">
       <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
         {latestRepo.name}
       </h1>
@@ -64,7 +72,7 @@ const GithubRepoCard = ({ latestRepo }) => {
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold group flex flex-row space-x-2 w-full items-center dark:text-white"
+        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white"
       >
         <p>View Repository </p>
         <div className="transform  group-hover:translate-x-2 transition duration-300">
