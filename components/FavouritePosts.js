@@ -10,7 +10,7 @@ export default function FavouritePosts({ posts }) {
   }, []);
 
   return (
-    <div className="dark:bg-black">
+    <div className="">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:mt-15 mb-30">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">

@@ -3,13 +3,13 @@ import userData from "@constants/data";
 
 export default function AboutMe() {
   return (
-    <section className="dark:bg-black">
-      <div className="max-w-6xl mx-auto h-48 dark:bg-black">
+    <section className="">
+      <div className="max-w-6xl mx-auto h-48">
         <h1 className=" text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
           About
         </h1>
       </div>
-      <div className="-mt-10 dark:bg-black">
+      <div className="-mt-10">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
             className="leading-loose text-2xl md:text-4xl font-semibold dark:text-white"
@@ -25,7 +25,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="dark:bg-black">
+      <div className="">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">

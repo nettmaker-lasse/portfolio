@@ -3,7 +3,7 @@ import userData from "@constants/data";
 
 export default function Skills() {
   return (
-    <div className=" dark:bg-black">
+    <div className="">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center md:mt-20 mb-10 lg:mt-20">
           <h2 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">
@@ -50,7 +50,7 @@ export default function Skills() {
 const SkillCard = ({ title }) => {
 	return (
 	<div className="relative">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
 		{title}
 		</h4>
 	</div>
@@ -60,7 +60,7 @@ const SkillCard = ({ title }) => {
 const ToolCard = ({ title }) => {
 	return (
 	<div className="relative flex">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
 		{title}
 		</h4>
 	</div>
@@ -70,7 +70,7 @@ const ToolCard = ({ title }) => {
 const OtherCard = ({ title }) => {
 	return (
 	<div className="relative flex">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
 		{title}
 		</h4>
 	</div>

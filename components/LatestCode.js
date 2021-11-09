@@ -11,7 +11,7 @@ export default function LatestCode({ repositories }) {
   }, []);
 
   return (
-    <section className="dark:bg-black lg:mt-10 mb-10 py-14">
+    <section className="lg:mt-10 mb-10 py-14">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center  lg:my-10">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
@@ -72,7 +72,7 @@ const GithubRepoCard = ({ latestRepo }) => {
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white"
+        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-black dark:bg-white"
       >
         <p>View Repository </p>
         <div className="transform  group-hover:translate-x-2 transition duration-300">
