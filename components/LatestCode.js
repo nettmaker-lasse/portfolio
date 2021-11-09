@@ -17,7 +17,7 @@ export default function LatestCode({ repositories }) {
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
             Code
           </h1>
-          <div className="flex-1 mr-8">
+          <div className="flex-1 md:mr-8">
             <span className="font-mono block text-right dark:text-white">
               View all repositories
             </span>
@@ -63,7 +63,7 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="github-repo bg-white shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-black border border-white">
+    <div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-black border border-white">
       <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
         {latestRepo.name}
       </h1>

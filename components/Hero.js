@@ -20,12 +20,12 @@ export default function Hero({ hero }) {
         <div className="relative md:w-1/2 mb-5">
           <RoughNotationGroup show={true}>
             <RainbowHighlight color={colors[0]}>
-              <h1 className="text-6xl md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
+              <h1 className="text-6xl my-4 md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
                 {hero.heroData.title}.
               </h1>
             </RainbowHighlight>
             <RainbowHighlight color={colors[1]}>
-              <h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
+              <h1 className="text-6xl my-4 md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
                 {hero.heroData.subtitle}.
               </h1>
             </RainbowHighlight>

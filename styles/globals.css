@@ -47,4 +47,9 @@ a {
 	.favourite-img, .favourite-img-50 {
 	 height: 450px;
 	}
+
+	.max-width-50 {
+		max-width: 100%;
+		justify-content:center;
+	}
 }

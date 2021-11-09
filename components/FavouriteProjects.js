@@ -16,7 +16,7 @@ export default function FavouriteProjects({ projects }) {
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white">
             Projects
           </h1>
-          <div className="flex-1 mr-8">
+          <div className="flex-1 md:mr-8">
             <span className="font-mono block text-right dark:text-white">
               View all projects
             </span>
