@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="space-x-8 hidden md:block">
+        <div className="space-x-8 hidden md:block flex-1 mr-8 text-right">
           <Link href="/about">
             <a
               className={`text-base hover:underline hover:text-red dark:text-white ${
@@ -85,7 +85,7 @@ export default function Navbar() {
               )}
             </a>
           </Link>
-          <Link href="/experience">
+          {/* <Link href="/experience">
             <a
               className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/experience"
@@ -110,7 +110,7 @@ export default function Navbar() {
                 </svg>
               )}
             </a>
-          </Link>
+          </Link> */}
 		  <Link href="/blog">
             <a
               className={`text-base hover:underline hover:text-red dark:text-white ${
@@ -137,7 +137,7 @@ export default function Navbar() {
               )}
             </a>
           </Link>
-          <Link href="/contact">
+          {/* <Link href="/contact">
             <a
               className={`text-base hover:underline hover:text-red dark:text-white ${
                 router.asPath === "/contact"
@@ -162,7 +162,7 @@ export default function Navbar() {
                 </svg>
               )}
             </a>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="space-x-4 flex flex-row items-center">
@@ -247,25 +247,25 @@ export default function Navbar() {
       </div>
       <div className="space-x-8 block md:hidden mt-4">
         <Link href="/about">
-          <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+          <a className="text-base font-normal text-gray-600 dark:text-white-300">
             About
           </a>
         </Link>
         <Link href="/projects">
-          <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+          <a className="text-base font-normal text-gray-600 dark:text-white-300">
             Projects
           </a>
         </Link>
-        <Link href="/experience">
-          <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+        {/* <Link href="/experience">
+          <a className="text-base font-normal text-gray-600 dark:text-white-300">
             Experience
           </a>
         </Link>
         <Link href="/contact">
-          <a className="text-base font-normal text-gray-600 dark:text-gray-300">
+          <a className="text-base font-normal text-gray-600 dark:text-white-300">
             Contact
           </a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

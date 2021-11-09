@@ -46,7 +46,7 @@ export default function LatestCode({ repositories }) {
 
         {repos &&
           repos.map((latestRepo, idx) => (
-            <GithubRepoCard latestRepo={latestRepo} key="idx" />
+            <GithubRepoCard latestRepo={latestRepo} key={'idx' + latestRepo.id} />
           ))}
       </div>
     </section>
@@ -55,11 +55,11 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="github-repo">
+    <div className="github-repo shadow-xl rounded-md p-6 flex justify-between flex-col dark:border border-white">
       <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-4 text-gray-500 dark:text-white">
+      <p className="text-base font-normal my-8 text-gray-500 dark:text-white">
         {latestRepo.description}
       </p>
       <a

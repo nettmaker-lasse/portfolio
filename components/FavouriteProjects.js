@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function FavouriteProjects() {
+export default function FavouriteProjects({projects}) {
+
+	const [allFields, setFields] = useState([null]);
+
+	useEffect(async () => {
+		setFields(projects);
+		console.log(projects);
+	  }, []);
+
   return (
     <div className="bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto">
@@ -32,68 +40,20 @@ export default function FavouriteProjects() {
         </header>
 
         {/* Grid starts here */}
-        <div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
-          {/* Single card */}
-          <a
-            href="https://lassebuus.dk"
-            className="w-full block col-span-3 shadow-2xl"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                srcSet="/img-5.jpg"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
-              />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
-			  	Project in progress
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
-                01
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://lassebuus.dk"
-            className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
-          >
-            <div className="relative overflow-hidden">
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                srcSet="/img-7.jpg"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out favourite-img-50"
-              />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
-			  Project in progress
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
-                02
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://lassebuus.dk"
-            className="w-full block col-span-3 sm:col-span-1  object-cover"
-          >
-            <div className="relative overflow-hidden shadow-2xl">
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                srcSet="/img-3.jpg"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl favourite-img-50"
-              />
-              <h1 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">
-			  Project in progress
-              </h1>
-              <h1 className="absolute bottom-10 left-10 text-white font-bold text-xl">
-                03
-              </h1>
-            </div>
-          </a>
+			<div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
+			{
+				Object.keys(projects.projectsData).map((item, i) => (
+					<Link href={'/' + projects.projectsData[item].slug}>
+					<div className="single-project relative overflow-hidden w-full block shadow-2xl cursor-pointer" key={i + projects.projectsData[item].slug}>
+						<img srcSet={projects.projectsData[item].image.url} className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" />
+						<h2 className="absolute top-10 left-10 text-white font-bold text-xl bg-red rounded-md px-2">{ projects.projectsData[item].title }</h2>
+						<h2 className="absolute bottom-10 right-10 text-white font-bold text-base bg-red rounded-md px-2">{ projects.projectsData[item].projectcontent }</h2>
+					</div>
+					</Link>
+				))
+			}  
+			</div>	
         </div>
       </div>
-    </div>
   );
 }
