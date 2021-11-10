@@ -1,40 +1,78 @@
-import React from "react";
+import Head from 'next/head'
+import imageUrlBuilder from '@sanity/image-url';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import ContainerBlock from "../components/ContainerBlock";
-import Projects from "../components/Projects";
-import client from '@lib/sanity';
 
-export default function projects({projects}) {
+export default function Home({ projects }) {
+  const router = useRouter();
+  const [mappedProjects, setMappedProjects] = useState([]);
+
+  useEffect(() => {
+    if (projects.length) {
+      const imgBuilder = imageUrlBuilder({
+        projectId: 'vn88o3gc',
+  		dataset: 'production',
+      });
+
+	  console.log(projects)
+      setMappedProjects(
+        projects.map(p => {
+          return {
+            ...p,
+            image: imgBuilder.image(p.image),
+          }
+		  
+        })
+      );
+    } else {
+      setMappedProjects([]);
+    }
+  }, [projects]);
+
   return (
-    <ContainerBlock title="Lasse Buus - Projects">
-      <Projects projects={projects} />
-    </ContainerBlock>
+	 <ContainerBlock title="Lasse Buus - Projects">
+	 <section>
+      <div className="max-w-6xl mx-auto h-48">
+	  <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
+          Blog
+        </h1>
+		</div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+          {projects.length ? mappedProjects.map((projects, item) => (
+            <div onClick={() => router.push(`/projects/${projects.slug.current}`)} key={item} className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer">
+              <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={projects.image} />
+			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
+                  {projects.title}
+                </h2>
+                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
+                  {projects.projectcontent}
+                </h3>
+            </div>
+          )) : <>No Projects Yet</>}
+        </div>
+    </section>
+	</ContainerBlock>
   );
 }
 
-// Create a query called projectsQuery
-const projectsQuery = `*[_type == "projects"] {
-	title,
-	subtitle,
-	"ctaUrl": cta {
-		current
-			},
-	image {
-		...asset->
-	},
-	imagecaption,
-	projectcontent,
-	slug
-	}`;
+export const getServerSideProps = async pageContext => {
+  const query = encodeURIComponent('*[ _type == "projects" ]');
+  const url = `https://vn88o3gc.api.sanity.io/v1/data/query/production?query=${query}`;
+  const result = await fetch(url).then(res => res.json());
 
-	export async function getStaticProps() {
-		const projectsData = await client.fetch(projectsQuery);
-	
-		const projects = { projectsData };
-	  
-		return {
-		  props: {
-			projects,
-		  },
-		  revalidate: 1,
-		};
-	  }
+  if (!result.result || !result.result.length) {
+    return {
+      props: {
+        projects: [],
+      }
+    }
+  } else {
+    return {
+      props: {
+        projects: result.result,
+      }
+    }
+  }
+};
+
