@@ -35,7 +35,7 @@ export default function Home({ projects }) {
 	 <section>
       <div className="max-w-6xl mx-auto h-48">
 	  <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
-          Blog
+          Projects
         </h1>
 		</div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
