@@ -67,7 +67,8 @@ const postsQuery = `*[_type == "posts"] {
 	},
 	imagecaption,
 	postcontent,
-	slug
+	slug,
+	launchAt
 	}`;
 
   export async function getStaticProps() {

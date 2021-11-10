@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 export default function FavouritePosts({ posts }) {
   const [allFields, setFields] = useState([null]);
+  const router = useRouter();
 
   useEffect(async () => {
     setFields(posts);
@@ -45,7 +47,11 @@ export default function FavouritePosts({ posts }) {
 
         {/* Grid starts here */}
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
-          {Object.keys(posts.postsData).slice(0, 3).map((item, i) => (
+          {Object.keys(posts.postsData)
+		  .slice(0, 3)
+		  .sort(posts.postsData.title)
+		  .map((item, i) => (
+			<div onClick={() => router.push(`/blog/${posts.postsData[item].slug.current}`)}>
             <Link
               href={"/blog/" + posts.postsData[item].slug.current}
               key={posts.postsData[item].slug.current}
@@ -66,6 +72,7 @@ export default function FavouritePosts({ posts }) {
                 </h3>
               </div>
             </Link>
+			</div>
           ))}
         </div>
       </div>
