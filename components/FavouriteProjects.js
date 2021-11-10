@@ -45,7 +45,7 @@ export default function FavouriteProjects({ projects }) {
 
         {/* Grid starts here */}
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
-          {Object.keys(projects.projectsData).map((item, i) => (
+          {Object.keys(projects.projectsData).slice(0, 3).map((item, i) => (
             <Link
               href={"/projects/" + projects.projectsData[item].slug.current}
               key={projects.projectsData[item].slug.current}

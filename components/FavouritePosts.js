@@ -45,7 +45,7 @@ export default function FavouritePosts({ posts }) {
 
         {/* Grid starts here */}
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
-          {Object.keys(posts.postsData).map((item, i) => (
+          {Object.keys(posts.postsData).slice(0, 3).map((item, i) => (
             <Link
               href={"/blog/" + posts.postsData[item].slug.current}
               key={posts.postsData[item].slug.current}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import postData from "@constants/dataPosts";
 import Link from "next/link";
 
 export default function Posts({posts}) {
