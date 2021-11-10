@@ -46,7 +46,7 @@ export default function Home({ projects }) {
                   {projects.title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {projects.blockText}
+                  {projects.status}
                 </h3>
             </div>
           )) : <>No Projects Yet</>}

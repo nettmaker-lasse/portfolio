@@ -68,7 +68,7 @@ export default function FavouritePosts({ posts }) {
                   {posts.postsData[item].title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {posts.postsData[item].postcontent}
+                  {posts.postsData[item].status}
                 </h3>
               </div>
             </Link>
