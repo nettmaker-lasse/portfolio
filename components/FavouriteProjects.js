@@ -21,7 +21,7 @@ export default function FavouriteProjects({ projects }) {
               View all projects
             </span>
           </div>
-          <Link href="/work">
+          <Link href="/projects">
             <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function FavouriteProjects({ projects }) {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
           {Object.keys(projects.projectsData).map((item, i) => (
             <Link
-              href={"/" + projects.projectsData[item].slug.current}
+              href={"/projects/" + projects.projectsData[item].slug.current}
               key={projects.projectsData[item].slug.current}
             >
               <div

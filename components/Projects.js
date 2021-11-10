@@ -21,7 +21,7 @@ export default function Projects({projects}) {
 			  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
           {Object.keys(projects.projectsData).map((item, i) => (
             <Link
-              href={"/" + projects.projectsData[item].slug.current}
+              href={"/projects/" + projects.projectsData[item].slug.current}
               key={projects.projectsData[item].slug.current}
             >
               <div
