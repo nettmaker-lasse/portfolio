@@ -43,6 +43,13 @@ a {
 	max-width: 55%;
 }
 
+.full-w-image {
+	max-width: 100%;
+	width: 100%;
+	height: 750px;
+	object-fit: cover;
+}
+
 @media (max-width: 600px) {
 	.favourite-img, .favourite-img-50 {
 	 height: 450px;

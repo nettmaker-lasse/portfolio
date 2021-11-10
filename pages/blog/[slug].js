@@ -19,10 +19,10 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 	<ContainerBlock title="Lasse Buus - Blog">
     <div>
       <div className="">
-        {imageUrl && <img className="" src={imageUrl} />}
-		<span className="max-w-6xl mx-auto block">{caption}</span>
-        <div className="max-w-6xl mx-auto h-48">
-			<h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
+        {imageUrl && <img className="max-w-6xl full-w-image mx-auto" src={imageUrl} />}
+		<span className="max-w-6xl mx-auto block py-4">{caption}</span>
+        <div className="max-w-6xl mx-auto h-40">
+			<h1 className=" text-5xl md:text-9xl font-bold py-21 text-center md:text-left dark:text-white">
 			{title}
 			</h1>
 		</div>
