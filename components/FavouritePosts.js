@@ -47,12 +47,12 @@ export default function FavouritePosts({ posts }) {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
           {Object.keys(posts.postsData).map((item, i) => (
             <Link
-              href={"/" + posts.postsData[item].slug}
-              key={posts.postsData[item].slug}
+              href={"/" + posts.postsData[item].slug.current}
+              key={posts.postsData[item].slug.current}
             >
               <div
                 className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer"
-                key={i + posts.postsData[item].slug}
+                key={i + posts.postsData[item].slug.current}
               >
                 <img
                   srcSet={posts.postsData[item].image.url}

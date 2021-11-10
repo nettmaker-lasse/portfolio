@@ -47,12 +47,12 @@ export default function FavouriteProjects({ projects }) {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 ">
           {Object.keys(projects.projectsData).map((item, i) => (
             <Link
-              href={"/" + projects.projectsData[item].slug}
-              key={projects.projectsData[item].slug}
+              href={"/" + projects.projectsData[item].slug.current}
+              key={projects.projectsData[item].slug.current}
             >
               <div
                 className="single-project rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer"
-                key={i + projects.projectsData[item].slug}
+                key={i + projects.projectsData[item].slug.current}
               >
                 <img
                   srcSet={projects.projectsData[item].image.url}
