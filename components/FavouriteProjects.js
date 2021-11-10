@@ -62,7 +62,7 @@ export default function FavouriteProjects({ projects }) {
                   {projects.projectsData[item].title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {projects.projectsData[item].projectcontent}
+                  {projects.projectsData[item].status}
                 </h3>
               </div>
             </Link>

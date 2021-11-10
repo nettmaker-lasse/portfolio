@@ -51,8 +51,9 @@ const projectsQuery = `*[_type == "projects"] {
 		...asset->
 	},
 	imagecaption,
-	projectcontent,
-	slug
+	blockText,
+	slug,
+	status
 	}`;
   
 // Create a query called projectsQuery
@@ -66,9 +67,9 @@ const postsQuery = `*[_type == "posts"] {
 		...asset->
 	},
 	imagecaption,
-	postcontent,
+	blockText,
 	slug,
-	launchAt
+	status
 	}`;
 
   export async function getStaticProps() {

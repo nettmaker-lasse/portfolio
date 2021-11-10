@@ -25,11 +25,10 @@ export const Project = ({ title, body, image, projectstatus, content, caption })
 			<h1 className=" text-5xl md:text-9xl font-bold py-21 text-center md:text-left dark:text-white">
 			{title}
 			</h1>
-		</div>
-        <div className="max-w-6xl mx-auto h-48">
 			<span className="block">{projectstatus}</span>
-			<p>{content}</p>
-          <BlockContent blocks={body} />
+		</div>
+        <div className="max-w-6xl mx-auto">
+			<BlockContent blocks={content} />
         </div>
       </div>
     </div>
@@ -62,7 +61,7 @@ export const getServerSideProps = async pageContext => {
         projectstatus: project.status,
         title: project.title,
         image: project.image,
-		content: project.projectcontent,
+		content: project.blockText,
 		caption: project.imagecaption
       }
     }

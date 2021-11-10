@@ -40,13 +40,13 @@ export default function Home({ projects }) {
 		</div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
           {projects.length ? mappedProjects.map((projects, item) => (
-            <div onClick={() => router.push(`/projects/${projects.slug.current}`)} key={item} className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer">
+            <div onClick={() => router.push(`/projects/${projects.slug.current}`)} key={item + projects.slug.current} className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer">
               <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={projects.image} />
 			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
                   {projects.title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {projects.projectcontent}
+                  {projects.blockText}
                 </h3>
             </div>
           )) : <>No Projects Yet</>}
