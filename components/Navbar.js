@@ -146,7 +146,7 @@ export default function Navbar() {
               }`}
             >
               Trips
-              {router.asPath === "/blog" && (
+              {router.asPath === "/trips" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
