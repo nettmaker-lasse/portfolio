@@ -64,12 +64,12 @@ export default function FavouriteTrips({ trips }) {
               key={trips.tripsData[item].slug.current}
             >
               <div
-                className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white"
+                className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border dark:border-white"
                 key={item + trips.tripsData[item].slug.current}
               >
                 <img
                   src={urlFor(trips.tripsData[item].images[0]).url()}
-                  className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+                  className="block transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
                   {trips.tripsData[item].title}
