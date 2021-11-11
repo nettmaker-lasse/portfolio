@@ -57,7 +57,7 @@ export default function FavouriteTrips({ trips }) {
 		<div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
           {Object.keys(trips.tripsData)
 		  .slice(0, 3)
-		  .sort(trips.tripsData.title)
+		//   .sort((a, b) => (a.title > b.title) ? -1 : 1)
 		  .map((item, i) => (
             <Link
               href={`/trips/${trips.tripsData[item].slug.current}`}

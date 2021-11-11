@@ -19,13 +19,15 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 	<ContainerBlock title="Lasse Buus - Blog">
     <div>
       <div className="">
-        {imageUrl && <img className="max-w-6xl full-w-image mx-auto" src={imageUrl} />}
-		<span className="max-w-6xl mx-auto block py-4">{caption}</span>
-        <div className="max-w-6xl mx-auto h-40">
-			<h1 className=" text-5xl md:text-9xl font-bold py-21 text-center md:text-left dark:text-white">
+		{imageUrl && <img className="max-w-6xl rounded-md full-w-image mx-auto" src={imageUrl} />}
+		<div className="max-w-6xl mx-auto relative -top-14">
+			<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">{caption}</span>
+			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">{poststatus}</span>
+		</div>
+        <div className="max-w-6xl mx-auto">
+			<h1 className="text-5xl md:text-9xl font-bold py-21 text-center md:text-left my-8 dark:text-white">
 			{title}
 			</h1>
-			<span className="block">{poststatus}</span>
 		</div>
         <div className="max-w-6xl mx-auto">
 			<BlockContent blocks={content} />

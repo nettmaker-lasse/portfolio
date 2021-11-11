@@ -15,9 +15,11 @@ export const Project = ({ title, images, date, slug }) => {
 	<ContainerBlock title="Lasse Buus - Blog">
     <div>
       <div className="">
-        <img className="max-w-6xl full-w-image mx-auto" src={urlFor(images[0]).url()} />
-        <div className="max-w-6xl mx-auto">
-			<span className="inline-block my-4 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">{moment(date).format("Do MMMM YYYY")}</span>
+        <img className="max-w-6xl rounded-md full-w-image mx-auto" src={urlFor(images[0]).url()} />
+        <div className="max-w-6xl mx-auto relative -top-14">
+			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">{moment(date).format("Do MMMM YYYY")}</span>
+		</div>
+		<div className="max-w-6xl mx-auto">
 			<h1 className=" text-5xl md:text-9xl mb-8 font-bold text-left dark:text-white">
 			{title}
 			</h1>

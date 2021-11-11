@@ -27,6 +27,10 @@ a {
   box-sizing: border-box;
 }
 
+.status-article {
+	left: 10em;
+}
+
 .favourite-img {
 	object-fit: cover;
 	height: 500px;
@@ -44,7 +48,7 @@ a {
 }
 
 .full-w-image {
-	max-width: 100%;
+	max-width: 1240px;
 	width: 100%;
 	height: 750px;
 	object-fit: cover;
