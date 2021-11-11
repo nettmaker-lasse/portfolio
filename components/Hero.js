@@ -37,7 +37,7 @@ export default function Hero({ hero }) {
             <img
               srcSet={hero.heroData.image.url}
               alt={hero.heroData.subtitle}
-              className="shadow rounded-md"
+              className="shadow rounded-md dark:border border-white"
             />
             <div className="flex flex-row justify-between mt-4">
               <div className="flex flex-row space-x-4 dark:text-white">

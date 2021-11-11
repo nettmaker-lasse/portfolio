@@ -56,7 +56,7 @@ export default function FavouritePosts({ posts }) {
               key={posts.postsData[item].slug.current}
             >
               <div
-                className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer"
+                className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white"
                 key={item + posts.postsData[item].slug.current}
               >
                 <img

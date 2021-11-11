@@ -13,7 +13,7 @@ export default function LatestCode({ repositories }) {
   return (
     <section className="lg:mt-10 mb-10 py-14">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center  lg:my-10">
+        <div className="flex flex-col md:flex-row justify-between items-center lg:my-10">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
             Code
           </h1>
@@ -53,7 +53,7 @@ export default function LatestCode({ repositories }) {
           repos.map((latestRepo, idx) => (
             <GithubRepoCard
               latestRepo={latestRepo}
-              key={"idx" + latestRepo.id}
+              key={idx + latestRepo.id}
             />
           ))}
       </div>
@@ -63,19 +63,19 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-black border border-white">
-      <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
+    <div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-white border border-white">
+      <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-black">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-8 text-gray-500 dark:text-white">
+      <p className="text-base font-normal my-8 text-gray-500 dark:text-black">
         {latestRepo.description}
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-black dark:bg-white"
+        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-black"
       >
         <p>View Repository </p>
-        <div className="transform  group-hover:translate-x-2 transition duration-300">
+        <div className="transform group-hover:translate-x-2 transition duration-300">
           &rarr;
         </div>
       </a>

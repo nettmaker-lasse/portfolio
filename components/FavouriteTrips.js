@@ -64,7 +64,7 @@ export default function FavouriteTrips({ trips }) {
               key={trips.tripsData[item].slug.current}
             >
               <div
-                className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer"
+                className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white"
                 key={item + trips.tripsData[item].slug.current}
               >
                 <img
