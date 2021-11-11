@@ -10,6 +10,9 @@ export default function FavouriteTrips({ trips }) {
   const router = useRouter();
   const builder = imageUrlBuilder(client)
 
+  // Sort the trips
+  // trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+
   function urlFor(source) {
 	return builder.image(source)
   }
@@ -55,27 +58,27 @@ export default function FavouriteTrips({ trips }) {
 
         {/* Grid starts here */}
 		<div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
-          {Object.keys(trips.tripsData)
-		  .slice(0, 3)
-		//   .sort((a, b) => (a.title > b.title) ? -1 : 1)
-		  .map((item, i) => (
+          {trips.tripsData
+			.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+			.slice(0, 3)
+			.map((item, i) => (
             <Link
-              href={`/trips/${trips.tripsData[item].slug.current}`}
-              key={trips.tripsData[item].slug.current}
+              href={`/trips/${item.slug.current}`}
+              key={item.slug.current}
             >
               <div
                 className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border dark:border-white"
-                key={item + trips.tripsData[item].slug.current}
+                key={item + item.slug.current}
               >
                 <img
-                  src={urlFor(trips.tripsData[item].images[0]).url()}
+                  src={urlFor(item.images[0]).url()}
                   className="block transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
-                  {trips.tripsData[item].title}
+                  {item.title}
                 </h2>
 				<h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {moment(trips.tripsData[item].releaseDate).format("Do MMMM YYYY")}
+                  {moment(item.releaseDate).format("Do MMMM YYYY")}
                 </h3>
               </div>
             </Link>

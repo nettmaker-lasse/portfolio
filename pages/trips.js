@@ -41,7 +41,9 @@ export default function Home({ trips }) {
         </h1>
 		</div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
-          {trips.length ? mappedTrips.map((trips, item) => (
+          	{trips.length ? mappedTrips
+			.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+		  	.map((trips, item) => (
             <div onClick={() => router.push(`/trips/${trips.slug.current}`)} key={item + trips.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white">
               <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={urlFor(trips.images[0]).url()} />
 			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">

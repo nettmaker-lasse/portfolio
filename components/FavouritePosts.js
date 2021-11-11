@@ -47,27 +47,27 @@ export default function FavouritePosts({ posts }) {
 
         {/* Grid starts here */}
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8">
-          {Object.keys(posts.postsData)
+          {posts.postsData
 		  .slice(0, 3)
-		  .sort(posts.postsData.title)
+		  .sort((a, b) => a.title > b.title ? 1 : -1)
 		  .map((item, i) => (
             <Link
-              href={`/blog/${posts.postsData[item].slug.current}`}
-              key={posts.postsData[item].slug.current}
+              href={`/blog/${item.slug.current}`}
+              key={item.slug.current}
             >
               <div
                 className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white"
-                key={item + posts.postsData[item].slug.current}
+                key={item + item.slug.current}
               >
                 <img
-                  srcSet={posts.postsData[item].image.url}
+                  srcSet={item.image.url}
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
-                  {posts.postsData[item].title}
+                  {item.title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {posts.postsData[item].status}
+                  {item.status}
                 </h3>
               </div>
             </Link>

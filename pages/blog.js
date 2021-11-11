@@ -39,7 +39,9 @@ export default function Home({ posts }) {
         </h1>
 		</div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
-          {mappedPosts.length ? mappedPosts.map((posts, item) => (
+          {mappedPosts.length ? mappedPosts
+			.sort((a, b) => a.title > b.title ? 1 : -1)
+		  	.map((posts, item) => (
             <div onClick={() => router.push(`/blog/${posts.slug.current}`)} key={item + posts.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white">
               <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={posts.image} />
 			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
