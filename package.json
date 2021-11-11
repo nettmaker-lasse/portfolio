@@ -13,6 +13,7 @@
     "@sanity/client": "^2.21.7",
     "@sanity/image-url": "^1.0.1",
     "axios": "^0.21.1",
+    "moment": "^2.29.1",
     "next": "10.x",
     "next-themes": "0.0.15",
     "react": "17.x",

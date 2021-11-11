@@ -3,53 +3,55 @@ import imageUrlBuilder from '@sanity/image-url';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import ContainerBlock from "../components/ContainerBlock";
+import client from '@lib/sanity';
+import moment from 'moment';
 
-export default function Home({ projects }) {
+export default function Home({ trips }) {
   const router = useRouter();
-  const [mappedProjects, setMappedProjects] = useState([]);
+  const [mappedTrips, setMappedTrips] = useState([]);
+  const builder = imageUrlBuilder(client)
+
+  function urlFor(source) {
+	return builder.image(source)
+  }
 
   useEffect(() => {
-    if (projects.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: 'vn88o3gc',
-  		dataset: 'production',
-      });
+    if (trips.length) {
 
-	//   console.log(projects)
-      setMappedProjects(
-        projects.map(p => {
+	  console.log(trips)
+      setMappedTrips(
+        trips.map(t => {
           return {
-            ...p,
-            image: imgBuilder.image(p.image),
+            ...t
           }
 		  
         })
       );
     } else {
-      setMappedProjects([]);
+      setMappedTrips([]);
     }
-  }, [projects]);
+  }, [trips]);
 
   return (
-	 <ContainerBlock title="Lasse Buus - Projects">
+	 <ContainerBlock title="Lasse Buus - Trips">
 	 <section>
       <div className="max-w-6xl mx-auto h-48">
 	  <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
-          Projects
+          Trips
         </h1>
 		</div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
-          {projects.length ? mappedProjects.map((projects, item) => (
-            <div onClick={() => router.push(`/projects/${projects.slug.current}`)} key={item + projects.slug.current} className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer">
-              <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={projects.image} />
+          {trips.length ? mappedTrips.map((trips, item) => (
+            <div onClick={() => router.push(`/trips/${trips.slug.current}`)} key={item + trips.slug.current} className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer">
+              <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={urlFor(trips.images[0]).url()} />
 			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
-                  {projects.title}
+                  {trips.title}
                 </h2>
                 <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {projects.status}
+					{moment(trips.releaseDate).format("Do MMMM YYYY")}
                 </h3>
             </div>
-          )) : <>No Projects Yet</>}
+          )) : <>No Trips Yet</>}
         </div>
     </section>
 	</ContainerBlock>
@@ -57,20 +59,20 @@ export default function Home({ projects }) {
 }
 
 export const getServerSideProps = async pageContext => {
-  const query = encodeURIComponent('*[ _type == "projects" ]');
+  const query = encodeURIComponent('*[ _type == "gallery" ]');
   const url = `https://vn88o3gc.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then(res => res.json());
 
   if (!result.result || !result.result.length) {
     return {
       props: {
-        projects: [],
+        trips: [],
       }
     }
   } else {
     return {
       props: {
-        projects: result.result,
+        trips: result.result,
       }
     }
   }
