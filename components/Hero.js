@@ -9,7 +9,7 @@ export default function Hero({ hero }) {
 
   useEffect(async () => {
     setFields(hero);
-    console.log(hero);
+    // console.log(hero);
   }, []);
 
   return (

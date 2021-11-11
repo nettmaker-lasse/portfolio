@@ -8,7 +8,7 @@ export default function FavouritePosts({ posts }) {
 
   useEffect(async () => {
     setFields(posts);
-    console.log(posts);
+    // console.log(posts);
   }, []);
 
   return (
@@ -51,14 +51,13 @@ export default function FavouritePosts({ posts }) {
 		  .slice(0, 3)
 		  .sort(posts.postsData.title)
 		  .map((item, i) => (
-			<div onClick={() => router.push(`/blog/${posts.postsData[item].slug.current}`)}>
             <Link
-              href={"/blog/" + posts.postsData[item].slug.current}
+              href={`/blog/${posts.postsData[item].slug.current}`}
               key={posts.postsData[item].slug.current}
             >
               <div
                 className="single-post rounded-md  relative overflow-hidden w-full block shadow-2xl cursor-pointer"
-                key={i + posts.postsData[item].slug.current}
+                key={item + posts.postsData[item].slug.current}
               >
                 <img
                   srcSet={posts.postsData[item].image.url}
@@ -72,7 +71,6 @@ export default function FavouritePosts({ posts }) {
                 </h3>
               </div>
             </Link>
-			</div>
           ))}
         </div>
       </div>

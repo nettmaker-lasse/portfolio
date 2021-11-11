@@ -7,7 +7,7 @@ export default function Projects({projects}) {
 
 	useEffect(async () => {
 	  setFields(projects);
-	  console.log(projects);
+	//   console.log(projects);
 	}, []);
 
   return (

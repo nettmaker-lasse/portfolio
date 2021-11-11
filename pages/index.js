@@ -77,7 +77,7 @@ const postsQuery = `*[_type == "posts"] {
 	const projectsData = await client.fetch(projectsQuery);
 	const postsData = await client.fetch(postsQuery);
 	
-	console.log(process.env.GITHUB_AUTH_TOKEN);
+	// console.log(process.env.GITHUB_AUTH_TOKEN);
   let token = process.env.GITHUB_AUTH_TOKEN;
 
   const repositories = await getLatestRepos(userData, token);

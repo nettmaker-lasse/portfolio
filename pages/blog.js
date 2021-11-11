@@ -15,7 +15,7 @@ export default function Home({ posts }) {
   		dataset: 'production',
       });
 
-	  console.log(posts)
+	//   console.log(posts)
       setMappedPosts(
         posts.map(p => {
           return {

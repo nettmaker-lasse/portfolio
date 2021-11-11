@@ -6,7 +6,7 @@ export default function FavouriteProjects({ projects }) {
 
   useEffect(async () => {
     setFields(projects);
-    console.log(projects);
+    // console.log(projects);
   }, []);
 
   return (

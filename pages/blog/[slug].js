@@ -61,7 +61,7 @@ export const getServerSideProps = async pageContext => {
         poststatus: post.status,
         title: post.title,
         image: post.image,
-		content: post.blocktext,
+		content: post.blockText,
 		caption: post.imagecaption
       }
     }
