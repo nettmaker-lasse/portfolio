@@ -59,4 +59,8 @@ a {
 		max-width: 100%;
 		justify-content:center;
 	}
+
+	.full-w-image {
+		height: 450px;
+	}
 }

@@ -289,7 +289,7 @@ export default function Navbar() {
         </Link>
 		<Link href="/trips">
           <a className="text-base font-normal text-gray-600 dark:text-white-300">
-            Blog
+            Trips
           </a>
         </Link>
         {/* <Link href="/experience">
