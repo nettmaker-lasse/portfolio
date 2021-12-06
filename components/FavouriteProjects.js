@@ -71,6 +71,8 @@ export default function FavouriteProjects({ projects }) {
               >
                 <img
                   srcSet={urlFor(item.image.url).quality(50).width(365).height(500)}
+				  width="365"
+				  height="500"
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-lg rounded-md px-2 py-1">
