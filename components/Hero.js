@@ -2,16 +2,30 @@ import React, { useEffect, useState } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
+import imageUrlBuilder from '@sanity/image-url';
+import client from '@lib/sanity';
+
 
 export default function Hero({ hero }) {
   const [fields, setFields] = useState([]);
   const colors = ["#161616", "#E03050", "#000"];
 
+  // Get a pre-configured url-builder from your sanity client
+const builder = imageUrlBuilder(client)
+
+// Then we like to make a simple function like this that gives the
+// builder an image and returns the builder for you to specify additional
+// parameters:
+function urlFor(source) {
+  return builder.image(source)
+}
+  
   useEffect(async () => {
     setFields(hero);
     // console.log(hero);
   }, []);
 
+  
   return (
     <div className="max-w-6xl mx-auto">
       <div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
@@ -35,7 +49,7 @@ export default function Hero({ hero }) {
         <div className="lg:block relative w-full md:w-1/2">
           <div className="">
             <img
-              srcSet={hero.heroData.image.url}
+              srcSet={urlFor(hero.heroData.image.url).quality(80)}
               alt={hero.heroData.subtitle}
               className="shadow rounded-md dark:border border-white"
             />

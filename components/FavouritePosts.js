@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import imageUrlBuilder from '@sanity/image-url';
+import client from '@lib/sanity';
 
 export default function FavouritePosts({ posts }) {
   const [allFields, setFields] = useState([null]);
   const router = useRouter();
+  const builder = imageUrlBuilder(client)
+
+  // Sort the trips
+  // trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
+
+  function urlFor(source) {
+	return builder.image(source)
+  }
 
   useEffect(async () => {
     setFields(posts);
@@ -60,7 +70,7 @@ export default function FavouritePosts({ posts }) {
                 key={item + item.slug.current}
               >
                 <img
-                  srcSet={item.image.url}
+                  srcSet={urlFor(item.image.url).quality(10)}
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">

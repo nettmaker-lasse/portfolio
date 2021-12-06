@@ -71,7 +71,7 @@ export default function FavouriteTrips({ trips }) {
                 key={item + item.slug.current}
               >
                 <img
-                  src={urlFor(item.images[0]).url()}
+                  src={urlFor(item.images[0]).quality(20).url()}
                   className="block transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
