@@ -49,7 +49,9 @@ function urlFor(source) {
         <div className="lg:block relative w-full md:w-1/2">
           <div className="">
             <img
-              srcSet={urlFor(hero.heroData.image.url).quality(80)}
+              srcSet={urlFor(hero.heroData.image.url).quality(80).width(575).height(765)}
+			  width="575"
+			  height="765"
               alt={hero.heroData.subtitle}
               className="shadow rounded-md dark:border border-white"
             />
