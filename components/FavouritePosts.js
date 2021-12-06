@@ -70,7 +70,7 @@ export default function FavouritePosts({ posts }) {
                 key={item + item.slug.current}
               >
                 <img
-                  srcSet={urlFor(item.image.url).quality(10)}
+                  srcSet={urlFor(item.image.url).quality(50)}
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
                 <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
