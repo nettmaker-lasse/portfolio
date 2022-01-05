@@ -68,6 +68,9 @@ const postsQuery = `*[_type == "posts"] {
 	image {
 		...asset->
 	},
+	imagefrontpage {
+		...asset->
+	},
 	imagecaption,
 	blockText,
 	slug,

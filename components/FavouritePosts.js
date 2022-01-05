@@ -18,7 +18,7 @@ export default function FavouritePosts({ posts }) {
 
   useEffect(async () => {
     setFields(posts);
-    // console.log(posts);
+    console.log(posts);
   }, []);
 
   return (
@@ -70,7 +70,7 @@ export default function FavouritePosts({ posts }) {
                 key={item + item.slug.current}
               >
                 <img
-                  srcSet={urlFor(item.image.url).width(365).height(500).quality(50)}
+                  srcSet={urlFor(item.imagefrontpage.url).width(365).height(500).quality(50)}
 				  width="365"
 				  height="500"
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
