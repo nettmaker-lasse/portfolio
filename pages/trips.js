@@ -44,12 +44,12 @@ export default function Home({ trips }) {
           	{trips.length ? mappedTrips
 			.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
 		  	.map((trips, item) => (
-            <div onClick={() => router.push(`/trips/${trips.slug.current}`)} key={item + trips.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white">
+            <div onClick={() => router.push(`/trips/${trips.slug.current}`)} key={item + trips.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl">
               <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={urlFor(trips.images[0]).url()} />
-			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
+			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-xl rounded-md px-2 py-1">
                   {trips.title}
                 </h2>
-                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
+                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
 					{moment(trips.releaseDate).format("Do MMMM YYYY")}
                 </h3>
             </div>

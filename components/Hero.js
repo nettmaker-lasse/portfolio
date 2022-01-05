@@ -8,8 +8,7 @@ import client from '@lib/sanity';
 
 export default function Hero({ hero }) {
   const [fields, setFields] = useState([]);
-  const colors = ["#161616", "#E03050", "#000"];
-
+  const colors = ["#161616", "#ff5caa", "#000"];
   // Get a pre-configured url-builder from your sanity client
 const builder = imageUrlBuilder(client)
 
@@ -34,7 +33,7 @@ function urlFor(source) {
         <div className="relative md:w-1/2 mb-5">
           <RoughNotationGroup show={true}>
             <RainbowHighlight color={colors[0]}>
-              <h1 className="text-6xl my-4 md:text-7xl font-bold text-red dark:text-red my-2 block sm:inline-block">
+              <h1 className="text-6xl my-4 md:text-7xl font-bold text-synthPink dark:text-synthPink my-2 block sm:inline-block">
                 {hero.heroData.title}.
               </h1>
             </RainbowHighlight>
@@ -53,10 +52,10 @@ function urlFor(source) {
 			  width="575"
 			  height="765"
               alt={hero.heroData.subtitle}
-              className="shadow rounded-md dark:border border-white"
+              className="shadow rounded-md dark:border border-synthPink"
             />
             <div className="flex flex-row justify-between mt-4">
-              <div className="flex flex-row space-x-4 dark:text-white">
+              <div className="flex text-synthPink flex-row space-x-4 dark:text-synthPink">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

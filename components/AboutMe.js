@@ -17,7 +17,7 @@ export default function AboutMe() {
           >
             {userData.about.title}. Currently working at {" "}
             <a
-              className="bg-red-500 rounded-md px-2 py-1 text-red hover:underline"
+              className="bg-synthPink-500 rounded-md px-2 py-1 text-synthPink hover:underline"
               href={userData.about.currentWorkUrl}
             >
               {userData.about.currentWork} 
@@ -37,7 +37,7 @@ export default function AboutMe() {
                 For any sort help / enquiry, shoot a{" "}
                 <a
                   href={`mailto:${userData.email}`}
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300 hover:text-red"
+                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300 hover:text-synthPink"
                 >
                   mail
                 </a>{" "}
@@ -54,7 +54,7 @@ export default function AboutMe() {
                 <a
                   href={userData.resumeUrl}
                   target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300 hover:text-red"
+                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300 hover:text-synthPink"
                 >
                   CV
                 </a>{" "}
@@ -69,7 +69,7 @@ export default function AboutMe() {
               <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.facebook}
-                  className="flex flex-row items-center space-x-4 group hover:text-red"
+                  className="flex flex-row items-center space-x-4 group hover:text-synthPink"
                 >
                   <div className="my-4">&rarr;</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300 hover:underline">
@@ -81,7 +81,7 @@ export default function AboutMe() {
               <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.twitter}
-                  className="flex flex-row items-center space-x-4 group hover:text-red"
+                  className="flex flex-row items-center space-x-4 group hover:text-synthPink"
                 >
                   <div className="my-4">&rarr;</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300 hover:underline">
@@ -93,7 +93,7 @@ export default function AboutMe() {
               <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.github}
-                  className="flex flex-row items-center space-x-4 group hover:text-red"
+                  className="flex flex-row items-center space-x-4 group hover:text-synthPink"
                 >
                   <div className="my-4">&rarr;</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300 hover:underline">
@@ -105,7 +105,7 @@ export default function AboutMe() {
               <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.linkedin}
-                  className="flex flex-row items-center space-x-4 group hover:text-red"
+                  className="flex flex-row items-center space-x-4 group hover:text-synthPink"
                 >
                   <div className="my-4">&rarr;</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300 hover:underline">
@@ -117,7 +117,7 @@ export default function AboutMe() {
               <div className="flex flex-row justify-start items-center dark:text-white">
                 <a
                   href={userData.socialLinks.twitter}
-                  className="flex flex-row items-center space-x-4 group hover:text-red"
+                  className="flex flex-row items-center space-x-4 group hover:text-synthPink"
                 >
                   <div className="my-4">&rarr;</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300 hover:underline">

@@ -29,12 +29,12 @@ export default function FavouriteProjects({ projects }) {
             Projects
           </h1>
           <div className="flex-1 md:mr-8">
-            <span className="font-mono block text-right dark:text-white">
+            <span className="font-mono block text-right text-synthPink dark:text-white">
               View all projects
             </span>
           </div>
           <Link href="/projects">
-            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-black">
+            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md shadow-lg bg-white text-xl font-semibold flex flex-row space-x-4 items-center dark:text-white dark:bg-synthPink dark:shadow-3xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -66,7 +66,7 @@ export default function FavouriteProjects({ projects }) {
               key={item.slug.current}
             >
               <div
-                className="single-project rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white"
+                className="single-project rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
                 key={i + item.slug.current}
               >
                 <img
@@ -75,10 +75,10 @@ export default function FavouriteProjects({ projects }) {
 				  height="500"
                   className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
                 />
-                <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-lg rounded-md px-2 py-1">
+                <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-lg rounded-md px-2 py-1">
                   {item.title}
                 </h2>
-                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
+                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
                   {item.status}
                 </h3>
               </div>

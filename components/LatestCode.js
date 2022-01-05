@@ -18,14 +18,14 @@ export default function LatestCode({ repositories }) {
             Code
           </h1>
           <div className="flex-1 md:mr-8">
-            <span className="font-mono block text-right dark:text-white">
+            <span className="font-mono block text-synthPink text-right dark:text-white bg">
               View all repositories
             </span>
           </div>
           <a
             href={`https://github.com/${userData.githubUsername}`}
             target="_blank"
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-black"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-white dark:bg-synthPink dark:shadow-xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,16 +63,16 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   return (
-    <div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-white border border-white">
-      <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-black">
+    <div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-synthPink dark:bg-opacity-75 dark:border dark:border-synthPink dark:shadow-3xl">
+      <h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-8 text-gray-500 dark:text-black">
+      <p className="text-base font-normal my-8 text-gray-500 dark:text-white">
         {latestRepo.description}
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold bg-black shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-black"
+        className="font-semibold bg-synthPink shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center"
       >
         <p>View Repository </p>
         <div className="transform group-hover:translate-x-2 transition duration-300">

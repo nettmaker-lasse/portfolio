@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="">
       <div className="max-w-6xl  mx-auto py-10 md:py-20">
-        <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
+        <div className="h-0.5 w-full bg-white dark:bg-synthPink"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
           <div>
 			<a

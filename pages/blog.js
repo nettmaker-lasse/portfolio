@@ -10,6 +10,7 @@ export default function Home({ posts }) {
 
   useEffect(() => {
     if (posts.length) {
+		// console.log(posts)
       const imgBuilder = imageUrlBuilder({
         projectId: 'vn88o3gc',
   		dataset: 'production',
@@ -42,13 +43,13 @@ export default function Home({ posts }) {
           {mappedPosts.length ? mappedPosts
 			.sort((a, b) => a.title > b.title ? 1 : -1)
 		  	.map((posts, item) => (
-            <div onClick={() => router.push(`/blog/${posts.slug.current}`)} key={item + posts.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white">
+            <div onClick={() => router.push(`/blog/${posts.slug.current}`)} key={item + posts.slug.current} className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl">
               <img className="transform hover:scale-125 transition duration-2000 ease-out favourite-img" src={posts.image} />
-			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-red shadow-xl rounded-md px-2 py-1">
+			  <h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-xl rounded-md px-2 py-1">
                   {posts.title}
                 </h2>
-                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">
-                  {posts.postcontent}
+                <h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
+                  {posts.status}
                 </h3>
             </div>
           )) : <>No Posts Yet</>}

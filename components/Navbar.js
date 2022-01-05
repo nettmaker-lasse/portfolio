@@ -16,16 +16,16 @@ export default function Navbar() {
 
   return (
     <div className="max-w-6xl mx-auto py-10">
-      <div className="flex  md:flex-row justify-between items-center">
+      <div className="flex md:flex-row justify-between items-center">
         {/* Logo / Home / Text */}
 
         <div className="flex flex-col">
           <Link href="/">
             <a>
-              <h1 className="font-semibold text-xl dark:text-gray-100 dark:text-white">
+              <h1 className="font-semibold text-xl text-synthPink dark:text-white">
                 {userData.name}
               </h1>
-              <p className="text-base font-light text-gray-500 dark:text-gray-300 dark:text-white">
+              <p className="text-base font-light text-synthPink dark:text-white">
                 {userData.designation}
               </p>
             </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block flex-1 mr-8 text-right">
           <Link href="/about">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/about"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Link>
           <Link href="/projects">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/projects"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -87,7 +87,7 @@ export default function Navbar() {
           </Link>
           {/* <Link href="/experience">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/experience"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -113,7 +113,7 @@ export default function Navbar() {
           </Link> */}
 		  <Link href="/blog">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/blog"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -139,7 +139,7 @@ export default function Navbar() {
           </Link>
 		  <Link href="/trips">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/trips"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -165,7 +165,7 @@ export default function Navbar() {
           </Link>
           {/* <Link href="/contact">
             <a
-              className={`text-base hover:underline hover:text-red dark:text-white ${
+              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
                 router.asPath === "/contact"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
@@ -273,32 +273,32 @@ export default function Navbar() {
       </div>
       <div className="space-x-8 block md:hidden mt-4">
         <Link href="/about">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             About
           </a>
         </Link>
         <Link href="/projects">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             Projects
           </a>
         </Link>
 		<Link href="/blog">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             Blog
           </a>
         </Link>
 		<Link href="/trips">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             Trips
           </a>
         </Link>
         {/* <Link href="/experience">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             Experience
           </a>
         </Link>
         <Link href="/contact">
-          <a className="text-base font-normal text-gray-600 dark:text-white-300">
+          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
             Contact
           </a>
         </Link> */}

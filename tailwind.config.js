@@ -10,6 +10,9 @@ module.exports = {
 				2000: "2000ms",
 				4000: "4000ms",
 			},
+			boxShadow: {
+				'3xl': '0 35px 60px -15px rgba(255, 92, 170, 0.3)',
+			  },
 		},
 		colors: {
 			transparent: 'transparent',
@@ -18,6 +21,12 @@ module.exports = {
 				light: '#cccccc',
 				DEFAULT: '#ffffff',
 				dark: '#009eeb',
+			},
+			synth: {
+				DEFAULT: '#89f9fc',
+			},
+			synthPink: {
+				DEFAULT: '#ff5caa',
 			},
 			black: {
 				light: '#1d1d1d',
@@ -42,19 +51,19 @@ module.exports = {
 		screens: {
 			'sm': '640px',
 			// => @media (min-width: 640px) { ... }
-	  
+
 			'md': '768px',
 			// => @media (min-width: 768px) { ... }
-	  
+
 			'lg': '1024px',
 			// => @media (min-width: 1024px) { ... }
-	  
+
 			'xl': '1280px',
 			// => @media (min-width: 1280px) { ... }
-	  
+
 			'2xl': '1536px',
 			// => @media (min-width: 1536px) { ... }
-		  }
+		}
 	},
 	variants: {
 		extend: {},

@@ -12,7 +12,7 @@ export default function Skills() {
         </header>
 		<div className="flex flex-wrap content-between">
 			<div className="mb-4 w-full sm:w-1/3">
-				<h3 className="text-red text-lg mb-2">Code</h3>
+				<h3 className="text-synthPink text-lg mb-2">Code</h3>
 				<div className="flex flex-wrap">
 				{userData.frontendCode.map((skill, idx) => (
 					<SkillCard
@@ -22,7 +22,7 @@ export default function Skills() {
 				</div>
 			</div>
 			<div className="mb-4 w-full sm:w-1/3">
-				<h3 className="text-red text-lg mb-2">Design</h3>
+				<h3 className="text-synthPink text-lg mb-2">Design</h3>
 				<div className="flex flex-wrap">
 				{userData.frontendDesign.map((skill, idx) => (
 					<ToolCard
@@ -32,7 +32,7 @@ export default function Skills() {
 				</div>
 			</div>
 			<div className="mb-4 w-full sm:w-1/3">
-				<h3 className="text-red text-lg mb-2">Tools</h3>
+				<h3 className="text-synthPink text-lg mb-2">Tools</h3>
 				<div className="flex flex-wrap">
 				{userData.frontendOthers.map((skill, idx) => (
 					<OtherCard
@@ -50,7 +50,7 @@ export default function Skills() {
 const SkillCard = ({ title }) => {
 	return (
 	<div className="relative">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-synthPink hover:cursor-default dark:border-synthPink">
 		{title}
 		</h4>
 	</div>
@@ -60,7 +60,7 @@ const SkillCard = ({ title }) => {
 const ToolCard = ({ title }) => {
 	return (
 	<div className="relative flex">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-synthPink hover:cursor-default dark:border-synthPink">
 		{title}
 		</h4>
 	</div>
@@ -70,7 +70,7 @@ const ToolCard = ({ title }) => {
 const OtherCard = ({ title }) => {
 	return (
 	<div className="relative flex">
-		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-red hover:cursor-default dark:border-red">
+		<h4 className="text-black dark:text-white border-2 p-2 mr-2 mb-2 border-borderBlue rounded-sm text-xs hover:border-synthPink hover:cursor-default dark:border-synthPink">
 		{title}
 		</h4>
 	</div>
