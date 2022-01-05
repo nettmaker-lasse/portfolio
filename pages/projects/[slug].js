@@ -19,10 +19,10 @@ export const Project = ({ title, body, image, projectstatus, content, caption })
 	<ContainerBlock title="Lasse Buus - Blog">
     <div>
       <div className="">
-        {imageUrl && <img className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-white" src={imageUrl} />}
+        {imageUrl && <img className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-synthPink dark:shadow-3xl" src={imageUrl} />}
 		<div className="max-w-6xl mx-auto relative -top-14">
 			<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">{caption}</span>
-			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">{projectstatus}</span>
+			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">{projectstatus}</span>
 		</div>
         <div className="max-w-6xl mx-auto">
 			<h1 className=" text-5xl md:text-9xl font-bold py-21 md:text-left my-8 dark:text-white">

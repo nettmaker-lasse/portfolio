@@ -15,12 +15,12 @@ export const Project = ({ title, images, date, slug }) => {
 	<ContainerBlock title="Lasse Buus - Blog">
     <div>
       <div className="">
-        <img className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-white" src={urlFor(images[0]).url()} />
+        <img className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-synthPink dark:shadow-3xl" src={urlFor(images[0]).url()} />
         <div className="max-w-6xl mx-auto relative -top-14">
-			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-red shadow-lg rounded-md px-2 py-1">{moment(date).format("Do MMMM YYYY")}</span>
+			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">{moment(date).format("Do MMMM YYYY")}</span>
 		</div>
 		<div className="max-w-6xl mx-auto">
-			<h1 className=" text-5xl md:text-9xl mb-8 font-bold text-left dark:text-white">
+			<h1 className=" text-5xl md:text-8xl my-12 font-bold text-left dark:text-white">
 			{title}
 			</h1>
 		</div>
@@ -29,7 +29,7 @@ export const Project = ({ title, images, date, slug }) => {
 		  .keys(images)
 		  .filter((e, i) => i!=0)
 		  .map((item, i)  => (
-			<div className="w-full rounded-md relative overflow-hidden shadow-2xl dark:border border-white" key={images[item]._key}>
+			<div className="w-full rounded-md relative overflow-hidden shadow-2xl dark:border border-synthPink dark:shadow-3xl" key={images[item]._key}>
 			<img
 				src={urlFor(images[item]).url()}
 				className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
