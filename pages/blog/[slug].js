@@ -25,7 +25,7 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">{poststatus}</span>
 		</div>
         <div className="max-w-6xl mx-auto">
-			<h1 className="text-5xl md:text-9xl font-bold py-21 text-center md:text-left my-8 dark:text-white">
+			<h1 className="text-5xl md:text-8xl font-bold my-12 py-21 text-center md:text-left my-8 dark:text-white">
 			{title}
 			</h1>
 		</div>

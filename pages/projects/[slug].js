@@ -25,7 +25,7 @@ export const Project = ({ title, body, image, projectstatus, content, caption })
 			<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">{projectstatus}</span>
 		</div>
         <div className="max-w-6xl mx-auto">
-			<h1 className=" text-5xl md:text-9xl font-bold py-21 md:text-left my-8 dark:text-white">
+			<h1 className="text-5xl md:text-8xl my-12 font-bold py-21 md:text-left my-8 dark:text-white">
 			{title}
 			</h1>
 		</div>
