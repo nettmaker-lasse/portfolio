@@ -53,7 +53,7 @@ function urlFor(source) {
 
 		  <section className='my-5 md:mt-12'>
                 <main className='flex flex-col items-start justify-center'>
-					<span className="text-xl my-4 md:text-2xl font-bold text-black dark:text-white my-2 block sm:inline-block">Currently listening to:</span>
+					<span className="text-xl my-4 font-bold text-black dark:text-white my-2 block sm:inline-block">Currently listening to:</span>
                     <a
                         target='_blank'
                         rel='noopener noreferer'
