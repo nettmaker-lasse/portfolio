@@ -60,7 +60,7 @@ function urlFor(source) {
                         href={
                             data?.isPlaying
                                 ? data.songUrl
-                                : 'https://open.spotify.com/user/erence21?si=yTsrZT5JSHOp7tn3ist7Ig'
+                                : 'https://open.spotify.com/user/113671250?si=73f1c554e0544785'
                         }
                         className='relative flex items-center p-4 space-x-4 w-[100%] transition-shadow border rounded-md hover:shadow-md md:w-[70%] dark:border-synthPink dark:shadow-3xl'
                     >
