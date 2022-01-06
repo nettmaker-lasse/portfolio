@@ -39,11 +39,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@emailjs/browser@^3.0.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-3.3.1.tgz#573ed344933edf79790522f8f3ca31077f4e5926"
-  integrity sha512-hFoz5GHlaR7Wh/C6XaoZflX3UH3/Evev3y00S3jgLROMwKV+/Yu41muIpB5f755XGDnK7LT++KdMO6MOa2cAOQ==
-
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.npmjs.org/@hapi/accept/-/accept-5.0.2.tgz"
