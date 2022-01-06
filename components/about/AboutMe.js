@@ -5,7 +5,7 @@ export default function AboutMe() {
 	return (
 		<section className="">
 			<div className="max-w-6xl mx-auto h-48">
-				<h1 className=" text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
+				<h1 className="text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
 					About
 				</h1>
 			</div>
