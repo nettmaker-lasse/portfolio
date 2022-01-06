@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 import userData from "@constants/data";
-import emailjs from '@emailjs/browser';
-import Swal from 'sweetalert2';
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const SERVICE_ID = "service_7l79lu8";
 const TEMPLATE_ID = "template_lmq8h7e";
@@ -12,23 +12,25 @@ export default function Contact() {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
-		  .then((result) => {
-			console.log(result.text);
-			Swal.fire({
-			  icon: 'success',
-			  title: 'Message sent successfully',
-			  text: 'I will get in touch with you soon!',
-			})
-		  }, (error) => {
-			console.log(error.text);
-			Swal.fire({
-			  icon: 'error',
-			  title: 'Ooops, something went wrong',
-			  text: error.text,
-			})
-		  });
-		e.target.reset()
+		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID).then(
+			(result) => {
+				console.log(result.text);
+				Swal.fire({
+					icon: "success",
+					title: "Message sent successfully",
+					text: "I will get in touch with you soon!",
+				});
+			},
+			(error) => {
+				console.log(error.text);
+				Swal.fire({
+					icon: "error",
+					title: "Ooops, something went wrong",
+					text: error.text,
+				});
+			}
+		);
+		e.target.reset();
 	};
 
 	return (
@@ -149,14 +151,41 @@ export default function Contact() {
 					</div>
 					<div className="contactform mt-10 md:mt-0">
 						<h2 className="text-2xl font-bold mb-6">Contact me</h2>
-						<form ref={form} onSubmit={sendEmail} className="form rounded-lg flex flex-col">
-							<label className="text-sm text-black dark:text-white">Your Name</label>
-							<input className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black" type="text" name="user_name" />
-							<label className="text-sm text-black dark:text-white">Email</label>
-							<input className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black" type="email" name="user_email" required />
-							<labe className="text-sm text-black dark:text-white">Message</labe>
-							<textarea className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black" name="message" required />
-							<input className="border-black border-solid bg-white border cursor-pointer rounded-md w-1/2 mt-8 py-2 text-black text-xs font-bold hover:bg-synthPink hover:text-white dark:text-white dark:bg-synthPink" type="submit" value="Send Message" />
+						<form
+							ref={form}
+							onSubmit={sendEmail}
+							className="form rounded-lg flex flex-col"
+						>
+							<label className="text-sm text-black dark:text-white">
+								Your Name
+							</label>
+							<input
+								className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black"
+								type="text"
+								name="user_name"
+							/>
+							<label className="text-sm text-black dark:text-white">
+								Email
+							</label>
+							<input
+								className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black"
+								type="email"
+								name="user_email"
+								required
+							/>
+							<labe className="text-sm text-black dark:text-white">
+								Message
+							</labe>
+							<textarea
+								className="font-light bg-white text-black text-sm rounded-md border focus:outline-none py-2 mt-2 mb-6 px-3 focus:ring-2 focus:border-none ring-synthPink dark:border-black"
+								name="message"
+								required
+							/>
+							<input
+								className="border-black border-solid bg-white border cursor-pointer rounded-md w-1/2 mt-8 py-2 text-black text-xs font-bold hover:bg-synthPink hover:text-white dark:text-white dark:bg-synthPink"
+								type="submit"
+								value="Send Message"
+							/>
 						</form>
 					</div>
 				</div>
