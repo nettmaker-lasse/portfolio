@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import userData from "@constants/data";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
+import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 
 const SERVICE_ID = "service_7l79lu8";
