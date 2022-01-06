@@ -3,9 +3,9 @@ import ContainerBlock from "../components/ContainerBlock";
 import Contact from "../components/Contact";
 
 export default function contact() {
-  return (
-    <ContainerBlock title="Lasse Buus - Contact">
-      <Contact />
-    </ContainerBlock>
-  );
+	return (
+		<ContainerBlock title="Lasse Buus - Contact">
+			<Contact />
+		</ContainerBlock>
+	);
 }

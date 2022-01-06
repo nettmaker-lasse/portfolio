@@ -8,27 +8,25 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
-import client from '@lib/sanity';
-
+import client from "@lib/sanity";
 
 export default function Home({ hero, projects, repositories, posts, trips }) {
-
-  return (
-	<>
-    <ContainerBlock
-      title="Lasse Buus - Developer, Designer"
-      description="This is my portfolio"
-    >
-      <Hero hero={hero} />
-      <FavouriteProjects projects={projects} />
-      <LatestCode repositories={repositories} />
-      <FavouritePosts posts={posts} />
-      <FavouriteTrips trips={trips} />
-    </ContainerBlock>
-	</>
-  );
+	return (
+		<>
+			<ContainerBlock
+				title="Lasse Buus - Developer, Designer"
+				description="This is my portfolio"
+			>
+				<Hero hero={hero} />
+				<FavouriteProjects projects={projects} />
+				<LatestCode repositories={repositories} />
+				<FavouritePosts posts={posts} />
+				<FavouriteTrips trips={trips} />
+			</ContainerBlock>
+		</>
+	);
 }
-  
+
 // Create a query called heroQuery
 const heroQuery = `*[_type == "hero"][0] {
 title,
@@ -57,7 +55,7 @@ const projectsQuery = `*[_type == "projects"] {
 	slug,
 	status
 	}`;
-  
+
 // Create a query called postQuery
 const postsQuery = `*[_type == "posts"] {
 	title,
@@ -85,31 +83,31 @@ const tripsQuery = `*[_type == "gallery"] {
 	releaseDate
 	}`;
 
-  export async function getStaticProps() {
+export async function getStaticProps() {
 	const heroData = await client.fetch(heroQuery);
 	const projectsData = await client.fetch(projectsQuery);
 	const postsData = await client.fetch(postsQuery);
 	const tripsData = await client.fetch(tripsQuery);
-	
+
 	// console.log(process.env.GITHUB_AUTH_TOKEN);
 	let token = process.env.GITHUB_AUTH_TOKEN;
 
-  const repositories = await getLatestRepos(userData, token);
-  // console.log("REPOSITORIES", repositories);
+	const repositories = await getLatestRepos(userData, token);
+	// console.log("REPOSITORIES", repositories);
 
 	const hero = { heroData };
 	const projects = { projectsData };
 	const posts = { postsData };
 	const trips = { tripsData };
-  
+
 	return {
-	  props: {
-		hero,
-		repositories,
-		projects,
-		posts,
-		trips
-	  },
-	  revalidate: 1,
+		props: {
+			hero,
+			repositories,
+			projects,
+			posts,
+			trips,
+		},
+		revalidate: 1,
 	};
-  }
+}

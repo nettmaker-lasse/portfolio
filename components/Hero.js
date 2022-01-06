@@ -2,124 +2,126 @@ import React, { useEffect, useState } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
-import imageUrlBuilder from '@sanity/image-url';
-import client from '@lib/sanity';
-import useSWR from 'swr';
-import { SiSpotify } from 'react-icons/si';
-
+import imageUrlBuilder from "@sanity/image-url";
+import client from "@lib/sanity";
+import useSWR from "swr";
+import { SiSpotify } from "react-icons/si";
 
 export default function Hero({ hero }) {
-  const [fields, setFields] = useState([]);
-  const colors = ["#161616", "#ff5caa", "#000"];
+	const [fields, setFields] = useState([]);
+	const colors = ["#161616", "#ff5caa", "#000"];
 
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data } = useSWR('/api/spotify', fetcher);
+	const fetcher = (url) => fetch(url).then((r) => r.json());
+	const { data } = useSWR("/api/spotify", fetcher);
 
-  // Get a pre-configured url-builder from your sanity client
-const builder = imageUrlBuilder(client)
+	// Get a pre-configured url-builder from your sanity client
+	const builder = imageUrlBuilder(client);
 
-// Then we like to make a simple function like this that gives the
-// builder an image and returns the builder for you to specify additional
-// parameters:
-function urlFor(source) {
-  return builder.image(source)
-}
-  
-  useEffect(async () => {
-    setFields(hero);
-    // console.log(hero);
-  }, []);
+	// Then we like to make a simple function like this that gives the
+	// builder an image and returns the builder for you to specify additional
+	// parameters:
+	function urlFor(source) {
+		return builder.image(source);
+	}
 
-  
-  return (
-    <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
-        {/* Text container */}
+	useEffect(async () => {
+		setFields(hero);
+		// console.log(hero);
+	}, []);
 
-        <div className="relative w-[100%] md:w-1/2 mb-5">
-          <RoughNotationGroup show={true}>
-            <RainbowHighlight color={colors[0]}>
-              <h1 className="text-6xl my-4 md:text-7xl font-bold text-synthPink dark:text-synthPink my-2 block sm:inline-block">
-                {hero.heroData.title}.
-              </h1>
-            </RainbowHighlight>
-            <RainbowHighlight color={colors[1]}>
-              <h1 className="text-6xl my-4 md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
-                {hero.heroData.subtitle}.
-              </h1>
-            </RainbowHighlight>
-			{console.log(data)}
-          </RoughNotationGroup>
+	return (
+		<div className="max-w-6xl mx-auto">
+			<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
+				{/* Text container */}
 
-		  <section className='my-5 md:mt-12'>
-                <main className='flex flex-col items-start justify-center'>
-					<span className="text-xl my-4 font-bold text-black dark:text-white my-2 block sm:inline-block">Currently listening to:</span>
-                    <a
-                        target='_blank'
-                        rel='noopener noreferer'
-                        href={
-                            data?.isPlaying
-                                ? data.songUrl
-                                : 'https://open.spotify.com/user/113671250?si=73f1c554e0544785'
-                        }
-                        className='relative flex items-center p-4 space-x-4 w-[100%] transition-shadow border rounded-md hover:shadow-md md:w-[70%] dark:border-synthPink dark:shadow-3xl'
-                    >
-                        <div className='w-16'>
-                            {data?.isPlaying ? (
-                                <img
-                                    className='w-16 shadow-sm'
-                                    src={data?.albumImageUrl}
-                                    alt={data?.album}
-                                />
-                            ) : (
-                                <SiSpotify size={64} color={'#ff5caa'} />
-                            )}
-                        </div>
+				<div className="relative w-[100%] md:w-1/2 mb-5">
+					<RoughNotationGroup show={true}>
+						<RainbowHighlight color={colors[0]}>
+							<h1 className="text-6xl my-4 md:text-7xl font-bold text-synthPink dark:text-synthPink my-2 block sm:inline-block">
+								{hero.heroData.title}.
+							</h1>
+						</RainbowHighlight>
+						<RainbowHighlight color={colors[1]}>
+							<h1 className="text-6xl my-4 md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
+								{hero.heroData.subtitle}.
+							</h1>
+						</RainbowHighlight>
+						{console.log(data)}
+					</RoughNotationGroup>
 
-                        <div className='flex-1'>
-                            <p className='font-bold component'>
-                                {data?.isPlaying ? data.title : 'Not Listening'}
-                            </p>
-                            <p className='text-xs font-dark'>
-                                {data?.isPlaying ? data.artist : 'Spotify'}
-                            </p>
-                        </div>
-                    </a>
-                </main>
-            </section>
+					<section className="my-5 md:mt-12">
+						<main className="flex flex-col items-start justify-center">
+							<span className="text-xl my-4 font-bold text-black dark:text-white my-2 block sm:inline-block">
+								Currently listening to:
+							</span>
+							<a
+								target="_blank"
+								rel="noopener noreferer"
+								href={
+									data?.isPlaying
+										? data.songUrl
+										: "https://open.spotify.com/user/113671250?si=73f1c554e0544785"
+								}
+								className="relative flex items-center p-4 space-x-4 w-[100%] transition-shadow border rounded-md hover:shadow-md md:w-[70%] dark:border-synthPink dark:shadow-3xl"
+							>
+								<div className="w-16">
+									{data?.isPlaying ? (
+										<img
+											className="w-16 shadow-sm"
+											src={data?.albumImageUrl}
+											alt={data?.album}
+										/>
+									) : (
+										<SiSpotify size={64} color={"#ff5caa"} />
+									)}
+								</div>
 
-        </div>
-        {/* Image container */}
-        <div className="lg:block relative w-full md:w-1/2">
-          <div className="">
-            <img
-              srcSet={urlFor(hero.heroData.image.url).quality(80).width(575).height(765)}
-			  width="575"
-			  height="765"
-              alt={hero.heroData.subtitle}
-              className="shadow rounded-md dark:border border-synthPink"
-            />
-            <div className="flex flex-row justify-between mt-4">
-              <div className="flex text-synthPink flex-row space-x-4 dark:text-synthPink">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-arrow-90deg-up"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
-                  />
-                </svg>
-                <p className="font-mono">{hero.heroData.imagecaption}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+								<div className="flex-1">
+									<p className="font-bold component">
+										{data?.isPlaying ? data.title : "Not Listening"}
+									</p>
+									<p className="text-xs font-dark">
+										{data?.isPlaying ? data.artist : "Spotify"}
+									</p>
+								</div>
+							</a>
+						</main>
+					</section>
+				</div>
+				{/* Image container */}
+				<div className="lg:block relative w-full md:w-1/2">
+					<div className="">
+						<img
+							srcSet={urlFor(hero.heroData.image.url)
+								.quality(80)
+								.width(575)
+								.height(765)}
+							width="575"
+							height="765"
+							alt={hero.heroData.subtitle}
+							className="shadow rounded-md dark:border border-synthPink"
+						/>
+						<div className="flex flex-row justify-between mt-4">
+							<div className="flex text-synthPink flex-row space-x-4 dark:text-synthPink">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									className="bi bi-arrow-90deg-up"
+									viewBox="0 0 16 16"
+								>
+									<path
+										fillRule="evenodd"
+										d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
+									/>
+								</svg>
+								<p className="font-mono">{hero.heroData.imagecaption}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
