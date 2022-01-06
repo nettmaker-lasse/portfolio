@@ -3,7 +3,7 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
-import PlayingNow from "./spotify/PlayingNow";
+import PlayingNow from "../spotify/PlayingNow";
 
 export default function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
