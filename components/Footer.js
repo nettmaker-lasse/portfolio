@@ -1,25 +1,30 @@
 import React from "react";
 import userData from "@constants/data";
-import Link from "next/link";
+import PlayingNowFooter from "./spotify/PlayingNowFooter";
+import moment from "moment";
 
 export default function Footer() {
 	return (
 		<div className="">
-			<div className="max-w-6xl  mx-auto py-10 md:py-20">
-				<div className="h-0.5 w-full bg-white dark:bg-synthPink"></div>
-				<div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
-					<div>
+			<div className="max-w-6xl mx-auto py-10 md:py-20">
+				<div className="h-0.5 w-full bg-synthPink"></div>
+				<div className="flex flex-col gap-y-4 lg:flex-row space-y-4 md:space-y-0 justify-between md:items-center mt-8">
+					<PlayingNowFooter />
+					<div className="w-full mb-8 text-center lg:w-4/12">
 						<a
 							href="/"
-							className="text-base font-normal text-gray-600 dark:text-gray-300 dark:text-white"
+							className="text-base font-normal text-gray-600 dark:text-gray-300
+							dark:text-white"
 						>
 							<p>
-								Copyright &copy; 2021 <b>Lasse Buus</b>
+								Copyright &copy; {moment().format("YYYY")} <b>Lasse Buus</b>
 							</p>
 						</a>
 					</div>
-					<div></div>
-					<div className="space-x-4 flex flex-row items-center">
+					<div
+						className="space-x-4 flex flex-row items-center w-full justify-center 
+					lg:w-4/12 lg:justify-end"
+					>
 						<a
 							href={userData.socialLinks.instagram}
 							className="text-base font-normal dark:text-gray-300"

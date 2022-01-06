@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
-import userData from "@constants/data";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
-import useSWR from "swr";
-import { SiSpotify } from "react-icons/si";
+import PlayingNow from "./spotify/PlayingNow";
 
 export default function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
 	const colors = ["#161616", "#ff5caa", "#000"];
-
-	const fetcher = (url) => fetch(url).then((r) => r.json());
-	const { data } = useSWR("/api/spotify", fetcher);
 
 	// Get a pre-configured url-builder from your sanity client
 	const builder = imageUrlBuilder(client);
@@ -33,7 +28,6 @@ export default function Hero({ hero }) {
 		<div className="max-w-6xl mx-auto">
 			<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
 				{/* Text container */}
-
 				<div className="relative w-[100%] md:w-1/2 mb-5">
 					<RoughNotationGroup show={true}>
 						<RainbowHighlight color={colors[0]}>
@@ -46,47 +40,12 @@ export default function Hero({ hero }) {
 								{hero.heroData.subtitle}.
 							</h1>
 						</RainbowHighlight>
-						{console.log(data)}
 					</RoughNotationGroup>
-
-					<section className="my-5 md:mt-12">
-						<main className="flex flex-col items-start justify-center">
-							<span className="text-xl my-4 font-bold text-black dark:text-white my-2 block sm:inline-block">
-								Currently listening to:
-							</span>
-							<a
-								target="_blank"
-								rel="noopener noreferer"
-								href={
-									data?.isPlaying
-										? data.songUrl
-										: "https://open.spotify.com/user/113671250?si=73f1c554e0544785"
-								}
-								className="relative flex items-center p-4 space-x-4 w-[100%] transition-shadow border rounded-md hover:shadow-md md:w-[70%] dark:border-synthPink dark:shadow-3xl"
-							>
-								<div className="w-16">
-									{data?.isPlaying ? (
-										<img
-											className="w-16 shadow-sm"
-											src={data?.albumImageUrl}
-											alt={data?.album}
-										/>
-									) : (
-										<SiSpotify size={64} color={"#ff5caa"} />
-									)}
-								</div>
-
-								<div className="flex-1">
-									<p className="font-bold component">
-										{data?.isPlaying ? data.title : "Not Listening"}
-									</p>
-									<p className="text-xs font-dark">
-										{data?.isPlaying ? data.artist : "Spotify"}
-									</p>
-								</div>
-							</a>
-						</main>
-					</section>
+					{/* Spotify Playing now */}
+					<span className="text-xl mt-12 mb-2 font-bold text-black dark:text-white dark:my-2 block sm:inline-block">
+						Currently listening to:
+					</span>
+					<PlayingNow />
 				</div>
 				{/* Image container */}
 				<div className="lg:block relative w-full md:w-1/2">
