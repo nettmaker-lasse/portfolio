@@ -42,7 +42,7 @@ export default function Hero({ hero }) {
 						</RainbowHighlight>
 					</RoughNotationGroup>
 					{/* Spotify Playing now */}
-					<span className="text-xl mt-12 mb-2 font-bold text-black dark:text-white dark:my-2 block sm:inline-block">
+					<span className="text-xl mt-10 mb-4 font-bold text-black dark:text-white block sm:inline-block">
 						Currently listening to:
 					</span>
 					<PlayingNow />
