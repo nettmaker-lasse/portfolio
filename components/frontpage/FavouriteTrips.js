@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
@@ -19,7 +20,7 @@ export default function FavouriteTrips({ trips }) {
 
 	useEffect(async () => {
 		setFields(trips);
-		console.log(trips);
+		// console.log(trips);
 	}, []);
 
 	return (
@@ -67,18 +68,16 @@ export default function FavouriteTrips({ trips }) {
 								key={item.slug.current}
 							>
 								<div
-									className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border dark:border-synthPink dark:shadow-3xl"
+									className="w-full rounded-md relative overflow-hidden block shadow-2xl cursor-pointer dark:border dark:border-synthPink dark:shadow-3xl"
 									key={item + item.slug.current}
 								>
-									<img
+									<Image
 										src={urlFor(item.images[0])
-											.quality(50)
-											.width(365)
-											.height(500)
 											.url()}
+										layout="responsive"
 										width="365"
 										height="500"
-										className="block transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+										className="block object-cover transform hover:scale-125 transition duration-2000 ease-out favourite-img"
 									/>
 									<h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-xl rounded-md px-2 py-1">
 										{item.title}

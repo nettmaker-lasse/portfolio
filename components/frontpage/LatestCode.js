@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import moment from "moment";
 
 export default function LatestCode({ repositories }) {
 	const [repos, setRepos] = useState([]);
 
 	useEffect(async () => {
 		setRepos(repositories);
+		console.log(repositories);
 	}, []);
 
 	return (
@@ -60,13 +60,14 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 flex justify-between flex-col dark:bg-synthPink dark:bg-opacity-75 dark:border dark:border-synthPink dark:shadow-3xl">
-			<h1 className="font-semibold text-3xl dark:text-gray-200 text-gray-700 dark:text-white">
+		<div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 justify-evenly flex gap-1 flex-col dark:bg-synthPink dark:bg-opacity-75 dark:border dark:border-synthPink dark:shadow-3xl">
+			<h1 className="font-bold capitalize text-2xl dark:text-gray-200 text-gray-700 dark:text-white leading-none">
 				{latestRepo.name}
 			</h1>
-			<p className="text-base font-normal my-8 text-gray-500 dark:text-white">
+			<p className="text-base font-normal my-6 text-gray-500 dark:text-white">
 				{latestRepo.description}
 			</p>
+			<div className="flex flex-row justify-between">
 			<a
 				href={latestRepo.clone_url}
 				className="font-semibold bg-synthPink shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center"
@@ -76,6 +77,11 @@ const GithubRepoCard = ({ latestRepo }) => {
 					&rarr;
 				</div>
 			</a>
+			<span className="text-[10px] mt-2">
+				{/* <span className="font-bold">Updated: </span> */}
+				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
+			</span>
+			</div>
 		</div>
 	);
 };

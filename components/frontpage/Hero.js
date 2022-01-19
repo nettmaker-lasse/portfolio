@@ -3,6 +3,7 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
+import Image from "next/image";
 import PlayingNow from "../spotify/PlayingNow";
 
 export default function Hero({ hero }) {
@@ -50,13 +51,10 @@ export default function Hero({ hero }) {
 				{/* Image container */}
 				<div className="lg:block relative w-full md:w-1/2">
 					<div className="">
-						<img
-							srcSet={urlFor(hero.heroData.image.url)
-								.quality(80)
-								.width(575)
-								.height(765)}
-							width="575"
-							height="765"
+						<Image
+							src={hero.heroData.image.url}
+							width={575}
+							height={765}
 							alt={hero.heroData.subtitle}
 							className="shadow rounded-md dark:border border-synthPink"
 						/>

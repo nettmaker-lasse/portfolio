@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import imageUrlBuilder from "@sanity/image-url";
-import client from "@lib/sanity";
+import Image from "next/image";
 
 export default function FavouriteProjects({ projects }) {
 	const [allFields, setFields] = useState([null]);
-
-	// Get a pre-configured url-builder from your sanity client
-	const builder = imageUrlBuilder(client);
-
-	// Then we like to make a simple function like this that gives the
-	// builder an image and returns the builder for you to specify additional
-	// parameters:
-	function urlFor(source) {
-		return builder.image(source);
-	}
 
 	useEffect(async () => {
 		setFields(projects);
@@ -66,17 +55,15 @@ export default function FavouriteProjects({ projects }) {
 								key={item.slug.current}
 							>
 								<div
-									className="single-project rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
+									className="rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
 									key={i + item.slug.current}
 								>
-									<img
-										srcSet={urlFor(item.image.url)
-											.quality(50)
-											.width(365)
-											.height(500)}
+									<Image
+										src={item.image.url}
+										layout="responsive"
 										width="365"
 										height="500"
-										className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+										className="transform object-cover hover:scale-125 transition duration-2000 ease-out favourite-img"
 									/>
 									<h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-lg rounded-md px-2 py-1">
 										{item.title}
