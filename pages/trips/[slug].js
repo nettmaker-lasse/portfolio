@@ -66,7 +66,7 @@ export const getServerSideProps = async (pageContext) => {
 
 	const result = await fetch(url).then((res) => res.json());
 	const trips = result.result[0];
-	console.log(trips);
+	// console.log(trips);
 
 	if (!trips) {
 		return {

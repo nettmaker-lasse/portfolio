@@ -1,45 +1,44 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
+import Image from "next/image";
 import BlockContent from "@sanity/block-content-to-react";
 import ContainerBlock from "../../components/ContainerBlock";
+import client from "@lib/sanity";
 
 export const Post = ({ title, body, image, poststatus, content, caption }) => {
-	const [imageUrl, setImageUrl] = useState(null);
+	const builder = imageUrlBuilder(client);
 
-	useEffect(() => {
-		const imgBuilder = imageUrlBuilder({
-			projectId: "vn88o3gc",
-			dataset: "production",
-		});
-
-		setImageUrl(imgBuilder.image(image));
-	}, [image]);
+	function urlFor(source) {
+		return builder.image(source);
+	}
 
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
 			<div>
 				<div className="">
-					{imageUrl && (
-						<img
-							className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-synthPink dark:shadow-3xl"
-							src={imageUrl}
+					<div className="relative max-w-[1240px] flex flex-col rounded-md mx-auto dark:border border-synthPink dark:shadow-3xl">
+						<div className="w-full h-[750px] object-fill">
+						<Image
+							className="max-w-6xl rounded-md mx-auto object-cover"
+							src={urlFor(image).url()}
+							layout="fill"
 						/>
-					)}
-					<div className="max-w-6xl mx-auto relative -top-14">
-						<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
-							{caption}
-						</span>
-						<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
-							{poststatus}
-						</span>
+						</div>
+						<div className="absolute bottom-8 left-8">
+							<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
+								{caption}
+							</span>
+							<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
+								{poststatus}
+							</span>
+						</div>
 					</div>
-					<div className="max-w-6xl mx-auto">
-						<h1 className="text-5xl md:text-8xl font-bold my-12 py-21 text-center md:text-left my-8 dark:text-white">
+					<div className="max-w-[92%] lg:max-w-3xl mx-auto">
+						<h1 className="text-5xl md:text-8xl font-bold py-21 text-left md:text-left my-8 dark:text-white">
 							{title}
 						</h1>
 					</div>
-					<div className="max-w-6xl mx-auto">
-						<BlockContent blocks={content} className="dark:text-white" />
+					<div className="max-w-[92%] lg:max-w-3xl mx-auto">
+						<BlockContent blocks={content} className="dark:text-white blog-content text-lg" />
 					</div>
 				</div>
 			</div>

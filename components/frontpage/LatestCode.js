@@ -7,7 +7,7 @@ export default function LatestCode({ repositories }) {
 
 	useEffect(async () => {
 		setRepos(repositories);
-		console.log(repositories);
+		// console.log(repositories);
 	}, []);
 
 	return (

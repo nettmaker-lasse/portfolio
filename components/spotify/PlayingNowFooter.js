@@ -7,7 +7,7 @@ export default function PlayingNowFooter() {
 	const { data } = useSWR("/api/spotify", fetcher);
 
 	return (
-		<section className="w-full lg:w-4/12">
+		<section className="w-50 lg:w-4/12">
 			<main className="flex flex-col items-start justify-center">
 				<a
 					target="_blank"
