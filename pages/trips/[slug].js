@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ContainerBlock from "../../components/ContainerBlock";
 import moment from "moment";
 import client from "@lib/sanity";
-import Image from "next/image";
+import Image from "../../components/Image";
 import { SRLWrapper } from "simple-react-lightbox";
 
 export const Project = ({ title, images, date, slug }) => {
@@ -38,14 +38,15 @@ export const Project = ({ title, images, date, slug }) => {
 								.filter((e, i) => i != 0)
 								.map((item, i) => (
 									<div
-										className="aspect-w-1 aspect-h-1 w-full rounded-md relative overflow-hidden shadow-2xl dark:border border-synthPink dark:shadow-3xl"
+										className="aspect-w-1 aspect-h-1 w-full rounded-md relative overflow-hidden shadow-2xl dark:border border-synthPink dark:shadow-3xl bg-synthPink bg-opacity-30"
 										key={images[item]._key}
 									>
 										<Image
 											src={urlFor(images[item]).url()}
 											layout="fill"
 											objectFit="cover"
-											className="transform hover:scale-125 transition duration-2000 ease-out favourite-img group-hover:opacity-75"
+											className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+											placeholder="blur"
 										/>
 									</div>
 								))}
