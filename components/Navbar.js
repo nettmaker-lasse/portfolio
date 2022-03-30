@@ -17,8 +17,6 @@ export default function Navbar() {
 	return (
 		<div className="max-w-6xl mx-auto py-10">
 			<div className="flex md:flex-row justify-between items-center">
-				{/* Logo / Home / Text */}
-
 				<div className="flex flex-col">
 					<Link href="/">
 						<a>
@@ -42,21 +40,7 @@ export default function Navbar() {
 							}`}
 						>
 							About
-							{router.asPath === "/about" && (
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									className="bi bi-arrow-down inline-block h-3 w-3"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fillRule="evenodd"
-										d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-									/>
-								</svg>
-							)}
+							{router.asPath === "/about"}
 						</a>
 					</Link>
 					<Link href="/projects">
@@ -68,49 +52,21 @@ export default function Navbar() {
 							}`}
 						>
 							Projects
-							{router.asPath === "/projects" && (
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									className="bi bi-arrow-down inline-block h-3 w-3"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fillRule="evenodd"
-										d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-									/>
-								</svg>
-							)}
+							{router.asPath === "/projects"}
 						</a>
 					</Link>
 					{/* <Link href="/experience">
-            <a
-              className={`text-base hover:underline hover:text-red dark:text-synthPink ${
-                router.asPath === "/experience"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
-            >
-              Experience
-              {router.asPath === "/experience" && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-arrow-down inline-block h-3 w-3"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-                  />
-                </svg>
-              )}
-            </a>
-          </Link> */}
+						<a
+							className={`text-base hover:underline hover:text-red dark:text-synthPink ${
+								router.asPath === "/experience"
+									? "text-gray-800 font-bold dark:text-gray-400"
+									: "text-gray-600 dark:text-gray-300 font-normal "
+							}`}
+						>
+							Experience
+							{router.asPath === "/experience"}
+						</a>
+					</Link> */}
 					<Link href="/blog">
 						<a
 							className={`text-base hover:underline hover:text-red dark:text-synthPink ${
@@ -120,21 +76,7 @@ export default function Navbar() {
 							}`}
 						>
 							Blog
-							{router.asPath === "/blog" && (
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									className="bi bi-arrow-down inline-block h-3 w-3"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fillRule="evenodd"
-										d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-									/>
-								</svg>
-							)}
+							{router.asPath === "/blog"}
 						</a>
 					</Link>
 					<Link href="/trips">
@@ -146,21 +88,7 @@ export default function Navbar() {
 							}`}
 						>
 							Trips
-							{router.asPath === "/trips" && (
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									className="bi bi-arrow-down inline-block h-3 w-3"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fillRule="evenodd"
-										d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-									/>
-								</svg>
-							)}
+							{router.asPath === "/trips"}
 						</a>
 					</Link>
 					<Link href="/contact">
@@ -172,21 +100,7 @@ export default function Navbar() {
 							}`}
 						>
 							Contact
-							{router.asPath === "/contact" && (
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									className="bi bi-arrow-down inline-block h-3 w-3"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fillRule="evenodd"
-										d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-									/>
-								</svg>
-							)}
+							{router.asPath === "/contact"}
 						</a>
 					</Link>
 				</div>
@@ -293,15 +207,15 @@ export default function Navbar() {
 					</a>
 				</Link>
 				{/* <Link href="/experience">
-          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
-            Experience
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
-            Contact
-          </a>
-        </Link> */}
+					<a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
+						Experience
+					</a>
+				</Link> */}
+				<Link href="/contact">
+					<a className="text-base font-normal text-gray-600 dark:text-synthPink-300">
+						Contact
+					</a>
+				</Link>
 			</div>
 		</div>
 	);

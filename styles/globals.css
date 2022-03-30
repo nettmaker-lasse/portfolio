@@ -12,16 +12,13 @@ body {
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-html {
+html.light {
 	background-image: url('../public/pattern-bg.svg');
 }
 
 html.dark {
-	background-image: url('../public/pattern-bg-dark.svg');
-}
-
-html.dark>body {
-	background-image: none;
+	background-color: rgba(0, 0, 0, 0.95);
+	background-image: url('../public/pattern-bg-dark.svg')
 }
 
 a {

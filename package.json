@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3002",
+    "dev": "next dev -p 3011",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.5.0",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/cli": "^2.21.7",
     "@sanity/client": "^2.21.7",
     "@sanity/image-url": "^1.0.1",
     "@sendgrid/mail": "^7.6.0",
     "axios": "^0.21.1",
+    "clsx": "^1.1.1",
     "emailjs-com": "^3.2.0",
     "moment": "^2.29.1",
     "next": "10.x",
@@ -22,6 +24,7 @@
     "react-dom": "17.x",
     "react-icons": "^4.3.1",
     "react-rough-notation": "^1.0.1",
+    "react-scroll": "^1.8.6",
     "simple-react-lightbox": "^3.6.9-0",
     "sweetalert2": "^11.3.3",
     "swr": "^1.1.2"

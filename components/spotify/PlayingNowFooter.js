@@ -24,10 +24,10 @@ export default function PlayingNowFooter() {
 					</div>
 
 					<div className="flex-1">
-						<p className="font-bold component">
+						<p className="font-bold component dark:text-white">
 							{data?.isPlaying ? data.title : "Not Listening"}
 						</p>
-						<p className="text-xs font-dark">
+						<p className="text-xs font-dark dark:text-white">
 							{data?.isPlaying ? data.artist : "Spotify"}
 						</p>
 					</div>
