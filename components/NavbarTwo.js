@@ -85,13 +85,13 @@ export function NavPopover({ display = "md:hidden", className, ...props }) {
 				onClick={() => setIsOpen(true)}
 			>
 				<span className="sr-only">Navigation</span>
-				<svg width="24" height="24" fill="none" aria-hidden="true">
+				<svg width="24" height="24" fill="#ff5caa" aria-hidden="true">
 					<path
-						d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+						d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
 						stroke="currentColor"
-						strokeWidth="1.5"
-						strokeLinecap="round"
-						strokeLinejoin="round"
+						strokeWidth="0"
+						strokeLinecap="butt"
+						strokeLinejoin="butt"
 					/>
 				</svg>
 			</button>
