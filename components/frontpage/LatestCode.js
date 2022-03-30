@@ -60,7 +60,7 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="github-repo bg-white shadow sm:shadow-lg rounded-md p-6 justify-evenly flex gap-1 flex-col dark:bg-synthPink dark:bg-opacity-75 dark:border dark:border-synthPink dark:shadow-3xl">
+		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 justify-between flex gap-1 flex-col dark:bg-synthPink dark:bg-opacity-75 dark:border dark:border-synthPink dark:shadow-3xl">
 			<h1 className="font-bold capitalize text-2xl dark:text-gray-200 text-gray-700 dark:text-white leading-none">
 				{latestRepo.name}
 			</h1>
@@ -70,14 +70,14 @@ const GithubRepoCard = ({ latestRepo }) => {
 			<div className="flex flex-row justify-between">
 			<a
 				href={latestRepo.clone_url}
-				className="font-semibold bg-synthPink shadow-xl rounded-md px-2 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center"
+				className="font-normal text-sm bg-synthPink shadow-xl rounded-md px-4 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center"
 			>
 				<p>View Repository </p>
 				<div className="transform group-hover:translate-x-2 transition duration-300">
 					&rarr;
 				</div>
 			</a>
-			<span className="text-[10px] mt-2">
+			<span className="text-[10px] mt-2 text-black dark:text-white">
 				{/* <span className="font-bold">Updated: </span> */}
 				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 			</span>

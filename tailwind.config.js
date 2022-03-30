@@ -15,9 +15,9 @@ module.exports = {
 				2000: "2000ms",
 				4000: "4000ms",
 			},
-			boxShadow: {
-				"3xl": "0 35px 60px -15px rgba(255, 92, 170, 0.3)",
-		},
+		// 	boxShadow: {
+		// 		"3xl": "0 35px 60px -15px rgba(255, 92, 170, 0.3)",
+		// },
 		colors: {
 			transparent: "transparent",
 			current: "currentColor",
