@@ -178,7 +178,7 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
       </Listbox.Button>
       <Listbox.Options
         className={clsx(
-          'absolute z-10 top-[5em] right-0 bg-white rounded-lg ring-1 ring-synthPink shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-synthPink dark:highlight-white/5 dark:text-black',
+          'absolute z-10 top-[5em] right-0 bg-white rounded-lg ring-1 ring-synthPink shadow-lg overflow-hidden w-28 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-synthPink dark:highlight-white/5 dark:text-black',
           panelClassName
         )}
       >
@@ -187,7 +187,7 @@ export function ThemeToggle({ panelClassName = 'mt-4' }) {
             {({ active, selected }) => (
               <li
                 className={clsx(
-                  'py-1 px-2 flex items-center cursor-pointer',
+                  'p-2 flex items-center justify-end cursor-pointer',
                   selected && 'text-sky-500',
                   active && 'bg-slate-50 dark:bg-slate-600/30'
                 )}

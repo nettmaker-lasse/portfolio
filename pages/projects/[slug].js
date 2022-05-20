@@ -41,7 +41,7 @@ export const Project = ({
 						</span>
 					</div>
 					<div className="max-w-6xl mx-auto">
-						<h1 className="text-5xl md:text-8xl my-12 font-bold py-21 md:text-left my-8 dark:text-white">
+						<h1 className="text-5xl md:text-8xl font-bold py-21 md:text-left my-8 dark:text-white">
 							{title}
 						</h1>
 					</div>

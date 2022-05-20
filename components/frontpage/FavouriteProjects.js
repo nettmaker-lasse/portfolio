@@ -65,10 +65,10 @@ export default function FavouriteProjects({ projects }) {
 										height="500"
 										className="transform object-cover hover:scale-125 transition duration-2000 ease-out favourite-img"
 									/>
-									<h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-lg rounded-md px-2 py-1">
+									<h2 className="absolute top-5 left-5 text-white font-bold text-base bg-synthPink shadow-lg rounded-md px-2 py-1">
 										{item.title}
 									</h2>
-									<h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
+									<h3 className="absolute bottom-5 right-5 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
 										{item.status}
 									</h3>
 								</div>

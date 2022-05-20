@@ -20,10 +20,10 @@ export default function Navbar() {
 				<div className="flex flex-col">
 					<Link href="/">
 						<a>
-							<h1 className="font-semibold text-xl text-synthPink dark:text-white">
+							<h1 className="font-semibold text-xl text-black dark:text-white">
 								{userData.name}
 							</h1>
-							<p className="text-base font-light text-synthPink dark:text-white">
+							<p className="text-base font-light text-black dark:text-white">
 								{userData.designation}
 							</p>
 						</a>

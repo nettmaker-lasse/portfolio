@@ -24,10 +24,10 @@ export default function Navbar() {
 		<div className="max-w-6xl mx-auto relative py-6 lg:py-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-synthPink">
 			<Link href="/">
 				<a>
-					<h1 className="font-semibold text-xl text-synthPink dark:text-white">
+					<h1 className="font-semibold text-xl text-black dark:text-white">
 						{userData.name}
 					</h1>
-					<p className="text-base font-light text-synthPink dark:text-white">
+					<p className="text-base font-light text-black dark:text-white">
 						{userData.designation}
 					</p>
 				</a>

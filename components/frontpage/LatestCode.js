@@ -67,17 +67,17 @@ const GithubRepoCard = ({ latestRepo }) => {
 			<p className="text-base font-normal my-6 text-gray-500 dark:text-white">
 				{latestRepo.description}
 			</p>
-			<div className="flex flex-row justify-between">
+			<div className="flex flex-row justify-between items-center">
 			<a
 				href={latestRepo.clone_url}
-				className="font-normal text-sm bg-synthPink shadow-xl rounded-md px-4 py-1 text-white group max-width-50 flex flex-row space-x-2 items-center"
+				className="font-normal text-sm bg-black shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center"
 			>
 				<p>View Repository </p>
-				<div className="transform group-hover:translate-x-2 transition duration-300">
+				<div>
 					&rarr;
 				</div>
 			</a>
-			<span className="text-[10px] mt-2 text-black dark:text-white">
+			<span className="text-[10px] text-black dark:text-white self-end">
 				{/* <span className="font-bold">Updated: </span> */}
 				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 			</span>
