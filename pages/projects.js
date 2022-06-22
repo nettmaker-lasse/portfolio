@@ -47,7 +47,7 @@ export default function Home({ projects }) {
 										router.push(`/projects/${projects.slug.current}`)
 									}
 									key={item + projects.slug.current}
-									className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
+									className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl"
 								>
 									<img
 										className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"

@@ -68,7 +68,7 @@ export default function FavouriteTrips({ trips }) {
 								key={item.slug.current}
 							>
 								<div
-									className="w-full rounded-md relative overflow-hidden block shadow-2xl cursor-pointer dark:border dark:border-synthPink dark:shadow-3xl"
+									className="w-full rounded-md relative overflow-hidden block shadow-2xl cursor-pointer dark:border dark:border-white dark:shadow-3xl"
 									key={item + item.slug.current}
 								>
 									<Image

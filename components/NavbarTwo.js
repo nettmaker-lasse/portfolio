@@ -9,6 +9,7 @@ import { Logo } from "@components/Logo";
 import clsx from "clsx";
 import { Dialog } from "@headlessui/react";
 import Router from "next/router";
+import Image from "next/image";
 
 export default function Navbar() {
 	const router = useRouter();
@@ -21,7 +22,7 @@ export default function Navbar() {
 	}, []);
 
 	return (
-		<div className="max-w-6xl mx-auto relative py-6 lg:py-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-synthPink">
+		<div className="max-w-6xl mx-auto relative py-6 lg:py-8 flex items-center justify-between text-slate-700 font-light text-sm leading-6 dark:text-synthPink">
 			<Link href="/">
 				<a>
 					<h1 className="font-semibold text-xl text-black dark:text-white">
@@ -45,8 +46,11 @@ export default function Navbar() {
 						<a
 							href="https://github.com/nettmaker-lasse"
 							className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+							target="_blank"
 						>
-							<span className="sr-only">Tailwind CSS on GitHub</span>
+							<span className="sr-only">
+								Tailwind CSS on GitHub
+							</span>
 							<svg
 								viewBox="0 0 16 16"
 								className="w-5 h-5"
@@ -148,27 +152,37 @@ export function NavItems() {
 		<>
 			<li>
 				<Link href="/about">
-					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-white dark:text-synthPink">About</a>
+					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+						About
+					</a>
 				</Link>
 			</li>
 			<li>
 				<Link href="/projects">
-					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-white dark:text-synthPink">Projects</a>
+					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+						Projects
+					</a>
 				</Link>
 			</li>
 			<li>
 				<Link href="/blog">
-					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-white dark:text-synthPink">Blog</a>
+					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+						Blog
+					</a>
 				</Link>
 			</li>
 			<li>
 				<Link href="/trips">
-					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-white dark:text-synthPink">Trips</a>
+					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+						Trips
+					</a>
 				</Link>
 			</li>
 			<li>
 				<Link href="/contact">
-					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-white dark:text-synthPink">Contact</a>
+					<a className="text-black hover:text-synthPink cursor-pointer hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+						Contact
+					</a>
 				</Link>
 			</li>
 		</>

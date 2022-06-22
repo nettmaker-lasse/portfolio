@@ -55,7 +55,7 @@ export default function FavouriteProjects({ projects }) {
 								key={item.slug.current}
 							>
 								<div
-									className="rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
+									className="rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl"
 									key={i + item.slug.current}
 								>
 									<Image

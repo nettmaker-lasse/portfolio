@@ -64,7 +64,7 @@ export default function FavouritePosts({ posts }) {
 						.map((item, i) => (
 							<Link href={`/blog/${item.slug.current}`} key={item.slug.current}>
 								<div
-									className="w-full rounded-md  relative overflow-hidden block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
+									className="w-full rounded-md  relative overflow-hidden block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl"
 									key={item + item.slug.current}
 								>
 									<Image
