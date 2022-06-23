@@ -139,28 +139,28 @@ const userData = {
 			company: "Lazzaweb / Denmark - Aalborg",
 			date: "Dec 2017 - Feb 2018",
 			content:
-				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+				"Convert designs into real world applications and pages using multiple front-end technologies. Frequently working on e-commerce projects.",
 		},
 		{
 			title: "Frontend Developer (Intern - In Office)",
 			company: "Adnovation / Denmark - Aalborg",
 			date: "Jun 2017 - Nov 2017",
 			content:
-				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+				"Convert designs into real world applications and pages using multiple front-end technologies. Frequently working on e-commerce projects.",
 		},
 		{
 			title: "Frontend Developer (Intern - In Office)",
 			company: "Lazzaweb / Denmark - Aalborg",
 			date: "Aug 2016 - Oct 2016",
 			content:
-				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+				"Through my education to become a Digital Concept Developer, I had the opportunity to get an internship at LAZZAWEB. Here I had the following tasks: Frontend and backend development, social media, sales and marketing & SEO. I developed everything from small to large websites to which the implementation of e-commerce could occur.",
 		},
 		{
 			title: "Multimediadesigner (Intern - In Office)",
 			company: "Creative Dot / Denmark - Frederikshavn",
 			date: "Jan 2015 - Apr 2015",
 			content:
-				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+				"During my stay as an intern at Creative Dot, I worked in the following areas: WordPress, WooCommerce, SEO, newsletters and design of shipping packages. It was at Creative Dot that I got a taste for E-commerce and web design.",
 		},
 	],
 	aboutSchool: [
@@ -169,19 +169,22 @@ const userData = {
 			school: "UCN North Jytland / Denmark - Aalborg",
 			date: "Aug 2015 - Jan 2017",
 			degree: "Bachelor",
-			content: "Studying Digital Concept Development, you will learn to create digital concepts that make it easy for users to navigate across media and platforms. You will learn how to create value for businesses by developing their digital presence on websites, apps and in digital services. As a developer, you will also learn to conduct user surveys, analyse data and suggest solutions based on the users’ needs and the business’ aims.",
+			content:
+				"Studying Digital Concept Development, you will learn to create digital concepts that make it easy for users to navigate across media and platforms. You will learn how to create value for businesses by developing their digital presence on websites, apps and in digital services. As a developer, you will also learn to conduct user surveys, analyse data and suggest solutions based on the users’ needs and the business’ aims.",
 		},
 		{
 			title: "Multimediadesign",
 			school: "UCN North Jytland / Denmark - Aalborg",
 			date: "Aug 2015 - Jan 2017",
-			content: "Studying Multimedia Design, you will learn how to bring a new website to life for a company. You will learn to analyse challenges and analyse users, to develop the right user-friendly design and to finally develop and implement the user interface.",
+			content:
+				"Studying Multimedia Design, you will learn how to bring a new website to life for a company. You will learn to analyse challenges and analyse users, to develop the right user-friendly design and to finally develop and implement the user interface.",
 		},
 		{
 			title: "Medialogy",
 			school: "Aalborg University / Denmark - Aalborg",
 			date: "Sep 2012 - Jun 2014",
-			content: "In the Medialogy master’s programme, you will learn about the science and technology behind ground-breaking interactive digital systems, and you will develop computer games, computer-generated 3D-graphics and interactive media products.",
+			content:
+				"In the Medialogy master’s programme, you will learn about the science and technology behind ground-breaking interactive digital systems, and you will develop computer games, computer-generated 3D-graphics and interactive media products.",
 		},
 	],
 	posts: [{}],
