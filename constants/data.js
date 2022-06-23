@@ -6,7 +6,8 @@ const userData = {
 	email: "lassebuus91@gmail.com",
 	phone: "+47 91905635",
 	address: "Oslo, Norway",
-	projects: [{
+	projects: [
+		{
 			title: "Project title",
 			link: "https://lassebuus.dk/",
 			imgUrl: "/img-1.jpg",
@@ -25,80 +26,165 @@ const userData = {
 			title: "Project title",
 			link: "https://lassebuus.dk/",
 			imgUrl: "/img-4.jpg",
-		}
+		},
 	],
-	frontendCode: [{
+	frontendCode: [
+		{
 			language: "JavaScript",
+			url: "/skills/javascript.svg",
 		},
 		{
 			language: "React",
+			url: "/skills/react.svg",
 		},
 		{
 			language: "PHP",
+			url: "/skills/php.svg",
 		},
 		{
 			language: "HTML5",
+			url: "/skills/html5.svg",
 		},
 		{
 			language: "CSS3",
+			url: "/skills/css3.svg",
 		},
 		{
 			language: "Sass",
+			url: "/skills/sass.svg",
 		},
 		{
-			language: "Styled Components",
+			language: "Bootstrap",
+			url: "/skills/bootstrap.svg",
 		},
 		{
 			language: "TailwindCSS",
+			url: "/skills/tailwind.svg",
 		},
 		{
 			language: "NextJS",
+			url: "/skills/nextjs.svg",
 		},
 		{
 			language: "jQuery",
+			url: "/skills/jquery.svg",
 		},
 	],
-	frontendTools: [{
-		tool: "Firebase",
-	}],
-	frontendDesign: [{
-			design: "Figma",
-		},
+	frontendDesign: [
 		{
-			design: "Adobe XD",
+			design: "Figma",
+			url: "/skills/figma.svg",
 		},
 		{
 			design: "Sketch",
-		}
+			url: "/skills/sketch.svg",
+		},
+		{
+			design: "Adobe XD",
+			url: "/skills/adobe-xd.svg",
+		},
+		{
+			design: "Illustrator",
+			url: "/skills/adobe-illustrator.svg",
+		},
+		{
+			design: "Photoshop",
+			url: "/skills/adobe-photoshop.svg",
+		},
+		{
+			design: "Lightroom",
+			url: "/skills/adobe-lightroom.svg",
+		},
 	],
-	frontendOthers: [{
+	frontendOthers: [
+		{
 			other: "VS Code",
+			url: "/skills/vscode.svg",
 		},
 		{
-			other: "Terminal",
-		},
-		{
-			other: "Chrome/Firefox/Safari",
+			other: "Firebase",
+			url: "/skills/firebase.svg",
 		},
 		{
 			other: "Tower",
+			url: "/skills/towerapp.svg",
 		},
 		{
 			other: "Local",
+			url: "/skills/local.svg",
 		},
 		{
 			other: "WordPress",
+			url: "/skills/wordpress.svg",
 		},
 		{
 			other: "GitHub",
+			url: "/skills/github.svg",
 		},
 		{
 			other: "Git",
-		}
+			url: "/skills/git.svg",
+		},
 	],
-	posts: [{
-
-	}],
+	aboutExperience: [
+		{
+			title: "Frontend Developer (In Office)",
+			company: "Nettmaker / Norway - Oslo",
+			date: "May 2019 - Present",
+			content:
+				"Working on web applications and occasionally leading the development team. Convert designs into real world applications and pages using multiple front-end technologies. Occasionally working on e-commerce solutions.",
+		},
+		{
+			title: "Frontend Developer (Freelance - In Office)",
+			company: "Lazzaweb / Denmark - Aalborg",
+			date: "Dec 2017 - Feb 2018",
+			content:
+				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+		},
+		{
+			title: "Frontend Developer (Intern - In Office)",
+			company: "Adnovation / Denmark - Aalborg",
+			date: "Jun 2017 - Nov 2017",
+			content:
+				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+		},
+		{
+			title: "Frontend Developer (Intern - In Office)",
+			company: "Lazzaweb / Denmark - Aalborg",
+			date: "Aug 2016 - Oct 2016",
+			content:
+				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+		},
+		{
+			title: "Multimediadesigner (Intern - In Office)",
+			company: "Creative Dot / Denmark - Frederikshavn",
+			date: "Jan 2015 - Apr 2015",
+			content:
+				"Developing screens and UI components for the web application using React and Tailwind. - Fixing UI issues and integrating backend APIs with Redux Saga.",
+		},
+	],
+	aboutSchool: [
+		{
+			title: "Digital Concept Development",
+			school: "UCN North Jytland / Denmark - Aalborg",
+			date: "Aug 2015 - Jan 2017",
+			degree: "Bachelor",
+			content: "Studying Digital Concept Development, you will learn to create digital concepts that make it easy for users to navigate across media and platforms. You will learn how to create value for businesses by developing their digital presence on websites, apps and in digital services. As a developer, you will also learn to conduct user surveys, analyse data and suggest solutions based on the users’ needs and the business’ aims.",
+		},
+		{
+			title: "Multimediadesign",
+			school: "UCN North Jytland / Denmark - Aalborg",
+			date: "Aug 2015 - Jan 2017",
+			content: "Studying Multimedia Design, you will learn how to bring a new website to life for a company. You will learn to analyse challenges and analyse users, to develop the right user-friendly design and to finally develop and implement the user interface.",
+		},
+		{
+			title: "Medialogy",
+			school: "Aalborg University / Denmark - Aalborg",
+			date: "Sep 2012 - Jun 2014",
+			content: "In the Medialogy master’s programme, you will learn about the science and technology behind ground-breaking interactive digital systems, and you will develop computer games, computer-generated 3D-graphics and interactive media products.",
+		},
+	],
+	posts: [{}],
 	about: {
 		title: "Exploring about the possibility that happens when you try something you never tried",
 		description: [
@@ -115,7 +201,8 @@ const userData = {
 		currentWork: "Nettmaker",
 		currentWorkUrl: "https://nettmaker.no",
 	},
-	experience: [{
+	experience: [
+		{
 			title: "Experience title coming",
 			company: "company/school",
 			year: "2021",
