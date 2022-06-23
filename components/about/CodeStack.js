@@ -13,7 +13,7 @@ export default function CodeStack() {
 				<div className="flex flex-wrap content-between">
 					<div className="mb-4 w-full max-w-3xl mx-auto">
 						<RoughNotationGroup show={true}>
-							<RainbowHighlight color={colors[3]}>
+							<RainbowHighlight color={colors[1]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 									Code stack
 								</h3>
@@ -30,7 +30,7 @@ export default function CodeStack() {
 					</div>
 					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
 						<RoughNotationGroup show={true}>
-							<RainbowHighlight color={colors[3]}>
+							<RainbowHighlight color={colors[1]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 									Design tools
 								</h3>
@@ -47,7 +47,7 @@ export default function CodeStack() {
 					</div>
 					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
 						<RoughNotationGroup show={true}>
-							<RainbowHighlight color={colors[3]}>
+							<RainbowHighlight color={colors[1]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 									Productive tools
 								</h3>
