@@ -10,7 +10,6 @@ module.exports = {
 		fontFamily: {
 			'sans': ['Inter', 'system-ui'],
 			'serif': ['ui-serif', 'Georgia'],
-			'mono': ['ui-monospace', 'SFMono-Regular'],
 			'display': ['Oswald'],
 			'body': ['"Open Sans"'],
 		},
