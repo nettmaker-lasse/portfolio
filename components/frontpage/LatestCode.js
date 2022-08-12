@@ -51,7 +51,10 @@ export default function LatestCode({ repositories }) {
 
 				{repos &&
 					repos.map((latestRepo, idx) => (
-						<GithubRepoCard latestRepo={latestRepo} key={idx + latestRepo.id} />
+						<GithubRepoCard
+							latestRepo={latestRepo}
+							key={idx + latestRepo.id}
+						/>
 					))}
 			</div>
 		</section>
@@ -61,26 +64,24 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
 		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 justify-between flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
-			<h1 className="font-bold capitalize text-2xl dark:text-gray-200 text-gray-700 dark:text-white leading-none">
+			<h1 className="font-bold capitalize text-2xl text-black dark:text-white leading-none">
 				{latestRepo.name}
 			</h1>
-			<p className="text-base font-normal my-6 text-gray-500 dark:text-white">
+			<p className="text-base font-normal my-6 text-black dark:text-white font-sans">
 				{latestRepo.description}
 			</p>
 			<div className="flex flex-row justify-between items-center">
-			<a
-				href={latestRepo.clone_url}
-				className="font-normal text-sm bg-black shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-synthPink"
-			>
-				<p>View Repository </p>
-				<div>
-					&rarr;
-				</div>
-			</a>
-			<span className="text-[10px] text-black dark:text-white self-end">
-				{/* <span className="font-bold">Updated: </span> */}
-				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
-			</span>
+				<a
+					href={latestRepo.clone_url}
+					className="font-normal text-[12px] bg-black shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-synthPink"
+				>
+					<p>View Repository </p>
+					<div>&rarr;</div>
+				</a>
+				<span className="text-[10px] text-black dark:text-white self-end">
+					{/* <span className="font-bold">Updated: </span> */}
+					{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
+				</span>
 			</div>
 		</div>
 	);

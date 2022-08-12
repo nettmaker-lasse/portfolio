@@ -13,20 +13,24 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 
 	const serializers = {
 		marks: {
-		  internalLink: ({mark, children}) => {
-			const {slug = {}} = mark
-			const href = `/${slug.current}`
-			return <a href={href}>{children}</a>
-		  },
-		  link: ({mark, children}) => {
-			// Read https://css-tricks.com/use-target_blank/
-			const { blank, href } = mark
-			return blank ?
-			  <a href={href} target="_blank" rel="noopener">{children}</a>
-			  : <a href={href}>{children}</a>
-		  }
-		}
-	  }
+			internalLink: ({ mark, children }) => {
+				const { slug = {} } = mark;
+				const href = `/${slug.current}`;
+				return <a href={href}>{children}</a>;
+			},
+			link: ({ mark, children }) => {
+				// Read https://css-tricks.com/use-target_blank/
+				const { blank, href } = mark;
+				return blank ? (
+					<a href={href} target="_blank" rel="noopener">
+						{children}
+					</a>
+				) : (
+					<a href={href}>{children}</a>
+				);
+			},
+		},
+	};
 
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
@@ -34,11 +38,11 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 				<div className="">
 					<div className="relative max-w-[1240px] flex flex-col rounded-md mx-auto dark:border border-synthPink dark:shadow-3xl">
 						<div className="w-full h-[750px] object-fill">
-						<Image
-							className="max-w-6xl rounded-md mx-auto object-cover"
-							src={urlFor(image).url()}
-							layout="fill"
-						/>
+							<Image
+								className="max-w-6xl rounded-md mx-auto object-cover"
+								src={urlFor(image).url()}
+								layout="fill"
+							/>
 						</div>
 						<div className="absolute bottom-8 left-8">
 							<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
@@ -54,8 +58,12 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 							{title}
 						</h1>
 					</div>
-					<div className="max-w-[92%] lg:max-w-3xl mx-auto">
-						<BlockContent blocks={content} serializers={serializers} className="dark:text-white blog-content text-lg" />
+					<div className="max-w-[92%] lg:max-w-3xl mx-auto font-sans">
+						<BlockContent
+							blocks={content}
+							serializers={serializers}
+							className="dark:text-white blog-content text-lg"
+						/>
 					</div>
 				</div>
 			</div>

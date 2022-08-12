@@ -7,6 +7,14 @@ module.exports = {
 	],
 	darkMode: "class", // or 'media' or 'class'
 	theme: {
+		fontFamily: {
+			'sans': ['Inter', 'system-ui'],
+			'serif': ['ui-serif', 'Georgia'],
+			'mono': ['ui-monospace', 'SFMono-Regular'],
+			'display': ['Oswald'],
+			'body': ['"Open Sans"'],
+		},
+
 		extend: {
 			backgroundImage: (theme) => ({
 				darkBg: "url('./public/pattern-bg-dark.svg')",

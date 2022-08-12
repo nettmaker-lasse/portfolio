@@ -40,13 +40,16 @@ export const Project = ({
 							{projectstatus}
 						</span>
 					</div>
-					<div className="max-w-6xl mx-auto">
+					<div className="max-w-3xl mx-auto">
 						<h1 className="text-5xl md:text-8xl font-bold py-21 md:text-left my-8 dark:text-white">
 							{title}
 						</h1>
 					</div>
-					<div className="max-w-6xl mx-auto">
-						<BlockContent blocks={content} className="dark:text-white" />
+					<div className="max-w-3xl mx-auto font-sans tracking-tight leading-6">
+						<BlockContent
+							blocks={content}
+							className="dark:text-white"
+						/>
 					</div>
 				</div>
 			</div>

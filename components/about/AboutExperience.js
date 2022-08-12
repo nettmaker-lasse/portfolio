@@ -1,11 +1,10 @@
 import React from "react";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import userData from "@constants/data";
 import { RainbowHighlight } from "@components/frontpage/RainbowHighlight";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutExperience() {
-
 	const colors = ["#161616", "#ff5caa", "#000", "#E7E5E4"];
 
 	return (
@@ -13,7 +12,7 @@ export default function AboutExperience() {
 			<div className="max-w-6xl mx-auto mt-8">
 				<div className="flex flex-wrap content-between">
 					<div className="w-full max-w-3xl mx-auto mb-8">
-					<RoughNotationGroup show={true}>
+						<RoughNotationGroup show={true}>
 							<RainbowHighlight color={colors[1]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-8 inline-block">
 									Experiences
@@ -59,11 +58,19 @@ export default function AboutExperience() {
 
 const ExperienceCard = ({ title, date, company, content }) => {
 	return (
-		<div className="relative mt-6">
-			<span className="inline-block font-light text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-2 rounded-lg">{date}</span>
-			<h3 className="font-light text-2xl my-2 leading-none text-black dark:text-white">{title}</h3>
-			<h4 className="font-light text-sm text-synthPink mb-2">{company}</h4>
-			<p className="font-light text-base text-black dark:text-white">{content}</p>
+		<div className="relative mt-8">
+			<span className="inline-block font-regular text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-4 rounded-lg">
+				{date}
+			</span>
+			<h3 className="font-light text-2xl my-2 leading-none text-black dark:text-white">
+				{title}
+			</h3>
+			<h4 className="font-light text-sm text-synthPink mb-2">
+				{company}
+			</h4>
+			<p className="font-regular font-sans text-base text-black dark:text-white">
+				{content}
+			</p>
 		</div>
 	);
 };
@@ -71,11 +78,23 @@ const ExperienceCard = ({ title, date, company, content }) => {
 const SchoolCard = ({ title, date, school, content, degree }) => {
 	return (
 		<div className="relative w-full mt-6">
-			<span className="inline-block font-light text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-2 rounded-lg">{date}</span>
-			<h3 className="relative font-light text-2xl my-2 leading-none text-black dark:text-white">{title}</h3>
-			{ degree ? <span className="absolute right-0 top-0 font-light text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-4 rounded-lg">{degree}</span> : ""}
+			<span className="inline-block font-regular text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-2 rounded-lg">
+				{date}
+			</span>
+			<h3 className="relative font-light text-2xl my-2 leading-none text-black dark:text-white">
+				{title}
+			</h3>
+			{degree ? (
+				<span className="absolute right-0 top-0 font-light text-xs text-white bg-black dark:bg-synthPink dark:text-white p-2 mb-4 rounded-lg">
+					{degree}
+				</span>
+			) : (
+				""
+			)}
 			<h4 className="font-light text-sm text-synthPink mb-2">{school}</h4>
-			<p className="font-light text-base text-black dark:text-white">{content}</p>
+			<p className="font-regular font-sans text-base text-black dark:text-white">
+				{content}
+			</p>
 		</div>
 	);
 };

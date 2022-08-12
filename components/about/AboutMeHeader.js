@@ -12,13 +12,13 @@ export default function AboutMeHeader() {
 					Hey, I'm
 				</span>
 				<RoughNotationGroup show={true}>
-							<RainbowHighlight color={colors[1]}>
-				<h1 className="text-7xl font-bold text-black dark:text-white mb-4 inline-block">
-					Lasse Buus Nielsen
-				</h1>
-				</RainbowHighlight>
+					<RainbowHighlight color={colors[1]}>
+						<h1 className="text-6xl font-bold text-black dark:text-white mb-4 inline-block">
+							Lasse Buus Nielsen
+						</h1>
+					</RainbowHighlight>
 				</RoughNotationGroup>
-				<p className="font-light text-base dark:text-white leading-relaxed text-justify">
+				<p className="font-sans font-regular text-base dark:text-white leading-relaxed text-justify">
 					I am a Digital Concept Developer specializing in UI/UX and
 					web development, with a focus for details. I'm currently
 					working as a Frontend Developer for a company called
