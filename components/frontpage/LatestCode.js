@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import userData from "@constants/data";
 import moment from "moment";
+import { RoughNotationGroup } from "react-rough-notation";
+import { RainbowHighlight } from "./RainbowHighlight";
 
 export default function LatestCode({ repositories }) {
 	const [repos, setRepos] = useState([]);
@@ -62,26 +64,33 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
+	const colors = ["#161616", "#ff2975", "#000"];
+
 	return (
-		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
+		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl justify-between">
 			<span className="text-[10px] text-black my-2 dark:text-white self-start">
 				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 			</span>
 			<h3 className="font-bold capitalize text-xl text-black dark:text-white leading-none">
 				{latestRepo.name}
 			</h3>
-			<p className="text-sm font-normal leading-normal my-6 text-black dark:text-white font-sans">
+			<p className="text-sm font-normal leading-normal mt-6 text-black dark:text-white font-sans">
 				{latestRepo.description}
 			</p>
-			<div className="flex flex-row justify-between items-center">
-				<a
-					href={latestRepo.clone_url}
-					className="font-normal text-[12px] bg-synthPink shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-synthPink"
-				>
-					<p>View Repository </p>
-					<div>&rarr;</div>
-				</a>
-			</div>
+			<RoughNotationGroup show={true}>
+				<div className="flex mt-4 self-start">
+					<RainbowHighlight color={colors[1]} padding={[2, 8, 2, 8]} animate={false}>
+						<div>
+							<a
+								href={latestRepo.clone_url}
+								className="font-normal inline-block text-[12px] text-black dark:text-white"
+							>
+								<p>View Repository </p>
+							</a>
+						</div>
+					</RainbowHighlight>
+				</div>
+			</RoughNotationGroup>
 		</div>
 	);
 };
