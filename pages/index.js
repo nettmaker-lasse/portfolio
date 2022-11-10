@@ -7,6 +7,7 @@ import Hero from "../components/frontpage/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
 import client from "@lib/sanity";
+import Services from "@components/frontpage/Services";
 
 export default function Home({ hero, projects, repositories, posts, trips }) {
 	return (
@@ -16,6 +17,7 @@ export default function Home({ hero, projects, repositories, posts, trips }) {
 				description="This is my portfolio"
 			>
 				<Hero hero={hero} />
+				<Services />
 				<FavouriteProjects projects={projects} />
 				<LatestCode repositories={repositories} />
 				<FavouritePosts posts={posts} />

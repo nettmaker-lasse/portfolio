@@ -5,7 +5,7 @@ import { RainbowHighlight } from "@components/frontpage/RainbowHighlight";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutExperience() {
-	const colors = ["#161616", "#ff5caa", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
 
 	return (
 		<div className="">

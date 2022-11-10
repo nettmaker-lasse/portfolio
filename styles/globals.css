@@ -80,7 +80,7 @@ a {
 }
 
 .swal2-popup .swal2-actions button.swal2-confirm {
-	background-color: #ff5caa;
+	background-color: #ff2975;
 }
 
 .blog-content p {
@@ -89,5 +89,11 @@ a {
 
 .blog-content p a {
 	text-decoration: underline;
-	color: #ff5caa;
+	color: #ff2975;
+}
+
+.gradient-style {
+	background: linear-gradient(71.18deg, rgb(0, 34, 255) -27.32%, rgb(0, 34, 255) -16.39%, rgb(81, 121, 254) -7.38%, rgb(165, 237, 182) 30.59%, rgb(250, 232, 90) 46.06%, rgb(253, 172, 62) 62.61%, rgb(255, 92, 0) 75.82%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

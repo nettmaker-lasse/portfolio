@@ -20,7 +20,7 @@ export default function PlayingNowFooter() {
 					className="relative flex items-center p-4 space-x-4 w-[100%] transition-shadow rounded-md"
 				>
 					<div className="w-6">
-						<SiSpotify size={24} color={"#ff5caa"} />
+						<SiSpotify size={24} color={"#ff2975"} />
 					</div>
 
 					<div className="flex-1">

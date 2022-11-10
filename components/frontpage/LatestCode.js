@@ -14,11 +14,11 @@ export default function LatestCode({ repositories }) {
 		<section className="lg:mt-10 mb-10 py-14">
 			<div className="max-w-6xl mx-auto">
 				<div className="flex flex-col md:flex-row justify-between items-center lg:my-10">
-					<h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
+					<h1 className="text-5xl max-w-lg font-bold text-black my-10 md:my-0 md:text-black dark:text-white text-center lg:text-left">
 						Code
 					</h1>
 					<div className="flex-1 md:mr-8">
-						<span className="font-mono block text-synthPink text-right dark:text-white bg">
+						<span className="font-mono text-sm block text-synthPink text-right dark:text-white bg">
 							View all repositories
 						</span>
 					</div>
@@ -42,7 +42,7 @@ export default function LatestCode({ repositories }) {
 								d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
 							/>
 						</svg>
-						<p>View GitHub</p>
+						<p className="text-sm">View GitHub</p>
 					</a>
 				</div>
 			</div>
@@ -63,25 +63,24 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 justify-between flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
-			<h1 className="font-bold capitalize text-2xl text-black dark:text-white leading-none">
+		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
+			<span className="text-[10px] text-black my-2 dark:text-white self-start">
+				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
+			</span>
+			<h3 className="font-bold capitalize text-xl text-black dark:text-white leading-none">
 				{latestRepo.name}
-			</h1>
-			<p className="text-base font-normal my-6 text-black dark:text-white font-sans">
+			</h3>
+			<p className="text-sm font-normal leading-normal my-6 text-black dark:text-white font-sans">
 				{latestRepo.description}
 			</p>
 			<div className="flex flex-row justify-between items-center">
 				<a
 					href={latestRepo.clone_url}
-					className="font-normal text-[12px] bg-black shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-synthPink"
+					className="font-normal text-[12px] bg-synthPink shadow-xl rounded-md px-4 py-2 text-white group max-width-50 flex flex-row space-x-2 items-center dark:text-white dark:bg-synthPink"
 				>
 					<p>View Repository </p>
 					<div>&rarr;</div>
 				</a>
-				<span className="text-[10px] text-black dark:text-white self-end">
-					{/* <span className="font-bold">Updated: </span> */}
-					{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
-				</span>
 			</div>
 		</div>
 	);

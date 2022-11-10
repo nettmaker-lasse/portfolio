@@ -27,7 +27,7 @@ export default function PlayingNow() {
 								alt={data?.album}
 							/>
 						) : (
-							<SiSpotify size={38} color={"#ff5caa"} />
+							<SiSpotify size={38} color={"#ff2975"} />
 						)}
 					</div>
 

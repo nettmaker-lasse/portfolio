@@ -42,7 +42,7 @@ module.exports = {
 				DEFAULT: "#89f9fc",
 			},
 			synthPink: {
-				DEFAULT: "#ff5caa",
+				DEFAULT: "#ff2975",
 			},
 			amber: colors.amber,
 			emerald: colors.emerald,

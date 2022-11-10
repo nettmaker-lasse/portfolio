@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
@@ -8,7 +8,7 @@ import PlayingNow from "../spotify/PlayingNow";
 
 export default function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
-	const colors = ["#161616", "#ff5caa", "#000"];
+	const colors = ["#161616", "#ff2975", "#000"];
 
 	// Get a pre-configured url-builder from your sanity client
 	const builder = imageUrlBuilder(client);
@@ -27,21 +27,27 @@ export default function Hero({ hero }) {
 
 	return (
 		<div className="max-w-6xl mx-auto">
-			<div className="flex flex-col sm:flex-row justify-between sm:items-center items-start overflow-hidden">
+			<div className="flex flex-col md:flex-row justify-between sm:items-center items-start overflow-hidden">
 				{/* Text container */}
-				<div className="relative w-[100%] md:w-1/2 mb-5">
+				<div className="relative w-full md:w-1/2 mb-5">
+					<div>
 					<RoughNotationGroup show={true}>
-						<RainbowHighlight color={colors[0]}>
-							<h1 className="text-6xl md:text-7xl font-bold text-synthPink dark:text-synthPink my-2 block sm:inline-block">
-								{hero.heroData.title}.
-							</h1>
-						</RainbowHighlight>
-						<RainbowHighlight color={colors[1]}>
-							<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block sm:inline-block">
-								{hero.heroData.subtitle}.
-							</h1>
-						</RainbowHighlight>
+						<div className="mb-8 max-w-[400px]">
+							<RainbowHighlight color={colors[1]}>
+								<h1 className="pl-5 text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block">
+									{hero.heroData.title}
+								</h1>
+							</RainbowHighlight>
+						</div>
+						<div className="max-w-[425px]">
+							<RainbowHighlight color={colors[1]}>
+								<h1 className="pl-5 w-full text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block">
+									{hero.heroData.subtitle}
+								</h1>
+							</RainbowHighlight>
+						</div>
 					</RoughNotationGroup>
+					</div>
 					{/* Spotify Playing now */}
 					<span className="text-xl mt-10 mb-4 font-bold text-black dark:text-white block sm:inline-block">
 						Currently listening to:
@@ -50,13 +56,12 @@ export default function Hero({ hero }) {
 				</div>
 				{/* Image container */}
 				<div className="lg:block relative w-full md:w-1/2">
-					<div className="">
+					<div className="relative w-full h-[450px] sm:h-[700px]">
 						<Image
 							src={hero.heroData.image.url}
-							width={575}
-							height={765}
+							layout="fill"
 							alt={hero.heroData.subtitle}
-							className="shadow rounded-md dark:border border-synthPink"
+							className="shadow rounded-md dark:border border-synthPink w-full object-cover"
 						/>
 						<div className="flex flex-row justify-between mt-4">
 							<div className="flex text-synthPink flex-row space-x-4 dark:text-synthPink">

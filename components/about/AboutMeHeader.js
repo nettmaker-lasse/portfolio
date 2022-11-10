@@ -3,7 +3,7 @@ import { RainbowHighlight } from "@components/frontpage/RainbowHighlight";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutMeHeader() {
-	const colors = ["#161616", "#ff5caa", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
 
 	return (
 		<div className="max-w-6xl mx-auto sm:mt-[100px] mb-[50px]">

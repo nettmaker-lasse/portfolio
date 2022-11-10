@@ -3,17 +3,14 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
-import NextLink from "next/link";
 import { ThemeSelect, ThemeToggle } from "@components/ThemeToggle";
-import { Logo } from "@components/Logo";
 import clsx from "clsx";
 import { Dialog } from "@headlessui/react";
 import Router from "next/router";
-import Image from "next/image";
+
 
 export default function Navbar() {
 	const router = useRouter();
-	//   console.log(router.asPath);
 	const { theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -89,7 +86,7 @@ export function NavPopover({ display = "md:hidden", className, ...props }) {
 				onClick={() => setIsOpen(true)}
 			>
 				<span className="sr-only">Navigation</span>
-				<svg width="24" height="24" fill="#ff5caa" aria-hidden="true">
+				<svg width="24" height="24" fill="#ff2975" aria-hidden="true">
 					<path
 						d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
 						stroke="currentColor"
