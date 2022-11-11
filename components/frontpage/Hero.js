@@ -32,14 +32,14 @@ export default function Hero({ hero }) {
 				<div className="relative w-full md:w-1/2 mb-5">
 					<div>
 					<RoughNotationGroup show={true}>
-						<div className="ml-6 mb-8 max-w-[350px]">
+						<div className="ml-6 mb-8 max-w-[385px]">
 							<HeroHighlight color={colors[2]} padding={[2, 10]}>
 								<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.title}
 								</h1>
 							</HeroHighlight>
 						</div>
-						<div className="ml-6 max-w-[385px]">
+						<div className="ml-6 max-w-[350px]">
 							<HeroHighlight color={colors[4]} padding={[2, 10]}>
 								<h1 className="w-full text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.subtitle}
