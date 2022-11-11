@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { RoughNotationGroup } from "react-rough-notation";
-import { ServiceHighlight } from "./Highlight";
+import { ServiceHighlight, LabelHighlight } from "./Highlight";
 
 export default function Services() {
 	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
@@ -19,7 +19,12 @@ export default function Services() {
 				</div>
 				<RoughNotationGroup show={true} isShowing={true}>
 					<div className="flex flex-col md:flex-row gap-8 md:gap-8 mt-8 items-center ">
-						<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-2 lg:p-6 dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
+					<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
+						<LabelHighlight
+									color={colors[4]}
+									padding={[5, 0, 5, 0]}
+									animate={true}
+								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
 									color={colors[4]}
@@ -47,8 +52,14 @@ export default function Services() {
 									consider.
 								</p>
 							</div>
+							</LabelHighlight>
 						</div>
-						<div className="w-full md:w-1/3 h-[300px] text-center bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
+						<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
+						<LabelHighlight
+									color={colors[3]}
+									padding={[5, 0, 5, 0]}
+									animate={true}
+								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
 									color={colors[3]}
@@ -76,8 +87,14 @@ export default function Services() {
 									documentation.
 								</p>
 							</div>
+							</LabelHighlight>
 						</div>
-						<div className="w-full md:w-1/3 h-[300px] text-center bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl">
+						<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
+						<LabelHighlight
+									color={colors[2]}
+									padding={[5, 0, 5, 0]}
+									animate={true}
+								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
 									color={colors[2]}
@@ -105,6 +122,7 @@ export default function Services() {
 									capacity.
 								</p>
 							</div>
+							</LabelHighlight>
 						</div>
 					</div>
 				</RoughNotationGroup>

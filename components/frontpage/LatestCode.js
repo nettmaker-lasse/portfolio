@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import userData from "@constants/data";
 import moment from "moment";
 import { RoughNotationGroup } from "react-rough-notation";
-import { UnderlineHighlight } from "./Highlight";
+import { UnderlineHighlight, LabelHighlight } from "./Highlight";
 
 export default function LatestCode({ repositories }) {
 	const [repos, setRepos] = useState([]);
@@ -64,33 +64,52 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
+	const colors = [
+		"#161616",
+		"#ff2975",
+		"#a5edb6",
+		"#fae85a",
+		"#ff5c00",
+		"#5179fe",
+	];
 
 	return (
-		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-10 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl justify-between">
-			<span className="text-[10px] text-black my-2 dark:text-white self-start">
-				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
-			</span>
-			<h3 className="font-bold capitalize text-xl text-black dark:text-white leading-none">
-				{latestRepo.name}
-			</h3>
-			<p className="text-sm font-normal leading-normal mt-6 text-black dark:text-white font-sans">
-				{latestRepo.description}
-			</p>
-			<RoughNotationGroup show={true}>
-				<div className="flex mt-4 self-start">
-					<UnderlineHighlight color={colors[4]} padding={[2, 8, 2, 8]} animate={true}>
-						<div>
-							<a
-								href={latestRepo.clone_url}
-								className="font-normal inline-block text-[12px] text-black dark:text-white"
-							>
-								<p>View Repository </p>
-							</a>
-						</div>
-					</UnderlineHighlight>
-				</div>
-			</RoughNotationGroup>
-		</div>
+		<RoughNotationGroup show={true}>
+			<div className="bg-white rounded-md flex gap-2 flex-col dark:bg-black dark:bg-opacity-50 justify-between">
+				<LabelHighlight
+					color={colors[5]}
+					padding={[5, 5]}
+					animate={true}
+				>
+					<div className="p-6 h-[245px]">
+					<span className="text-[10px] text-black my-2 dark:text-white self-start">
+						{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
+					</span>
+					<h3 className="font-bold capitalize text-xl text-black dark:text-white leading-none">
+						{latestRepo.name}
+					</h3>
+					<p className="text-sm font-normal leading-normal mt-6 text-black dark:text-white font-sans">
+						{latestRepo.description}
+					</p>
+					<div className="flex mt-4 self-start">
+						<UnderlineHighlight
+							color={colors[2]}
+							padding={[2, 8, 2, 8]}
+							animate={true}
+						>
+							<div>
+								<a
+									href={latestRepo.clone_url}
+									className="font-normal inline-block text-[12px] text-black dark:text-white"
+								>
+									<p>View Repository </p>
+								</a>
+							</div>
+						</UnderlineHighlight>
+					</div>
+					</div>
+				</LabelHighlight>
+			</div>
+		</RoughNotationGroup>
 	);
 };

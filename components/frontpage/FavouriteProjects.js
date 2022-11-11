@@ -58,15 +58,15 @@ export default function FavouriteProjects({ projects }) {
 								key={item.slug.current}
 							>
 								<div
-									className="relative rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl h-[400px]"
+									className="relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:shadow-3xl h-[400px]"
 									key={i + item.slug.current}
 								>
 									<Image
 										src={item.image.url}
 										layout="fill"
-										className="transform object-cover hover:scale-125 transition duration-2000 ease-out favourite-img"
+										className="transform object-cover hover:scale-125 transition duration-2000 rounded ease-out favourite-img"
 									/>
-									<h3 className="absolute top-5 left-5 text-black font-bold text-base bg-white shadow-lg rounded-md px-2 py-1">
+									<h3 className="absolute top-5 left-5 text-black font-bold text-base bg-white px-2 py-1">
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
@@ -79,7 +79,7 @@ export default function FavouriteProjects({ projects }) {
 											</div>
 										</RoughNotationGroup>
 									</h3>
-									<h4 className="absolute bottom-5 right-5 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
+									<h4 className="absolute bottom-5 right-5 text-black font-semibold bold text-sm bg-white px-2 py-1">
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
