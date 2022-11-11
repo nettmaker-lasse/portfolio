@@ -38,17 +38,18 @@ module.exports = {
 			purple: colors.violet,
 			yellow: colors.amber,
 			pink: colors.fuchsia,
-			synth: {
-				DEFAULT: "#89f9fc",
-			},
-			synthPink: {
-				DEFAULT: "#ff2975",
-			},
 			amber: colors.amber,
 			emerald: colors.emerald,
 			yellow: colors.amber,
 			blue: colors.sky,
 			redd: colors.red,
+			synth: {
+				DEFAULT: "#89f9fc",
+			},
+			synthPink: {
+				DEFAULT: "#ff5c00",
+			},
+			gradBlue: "​#5179FE",
 		},
 		screens: {
 			sm: "640px",

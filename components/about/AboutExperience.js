@@ -8,7 +8,7 @@ import {
 import { RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutExperience() {
-	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="">
@@ -17,7 +17,7 @@ export default function AboutExperience() {
 					<div className="w-full max-w-3xl mx-auto mb-14">
 						<RoughNotationGroup show={true}>
 							<UnderlineHighlight
-								color={colors[1]}
+								color={colors[2]}
 								padding={[8, 8]}
 							>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-8 inline-block">
@@ -38,7 +38,7 @@ export default function AboutExperience() {
 					</div>
 					<div className="w-full max-w-3xl mx-auto my-8">
 						<RoughNotationGroup show={true} padding={[8, 8]}>
-							<UnderlineHighlight color={colors[1]}>
+							<UnderlineHighlight color={colors[5]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-8 inline-block">
 									Education
 								</h3>
@@ -63,7 +63,7 @@ export default function AboutExperience() {
 }
 
 const ExperienceCard = ({ title, date, company, content }) => {
-	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="relative mt-8">
@@ -71,7 +71,7 @@ const ExperienceCard = ({ title, date, company, content }) => {
 				<RoughNotationGroup show={true}>
 					<div className="flex self-start">
 						<LabelHighlight
-							color={colors[1]}
+							color={colors[2]}
 							padding={[4, 8, 4, 8]}
 							animate={true}
 						>
@@ -83,7 +83,7 @@ const ExperienceCard = ({ title, date, company, content }) => {
 			<h3 className="font-light text-xl my-4 leading-none text-black dark:text-white">
 				{title}
 			</h3>
-			<h4 className="font-light text-sm text-synthPink mb-2">
+			<h4 className="font-light text-md text-synthPink mb-2">
 				{company}
 			</h4>
 			<p className="font-regular font-sans text-base text-black dark:text-white">
@@ -94,7 +94,7 @@ const ExperienceCard = ({ title, date, company, content }) => {
 };
 
 const SchoolCard = ({ title, date, school, content, degree }) => {
-	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="relative w-full mt-6">
@@ -109,7 +109,7 @@ const SchoolCard = ({ title, date, school, content, degree }) => {
 				<RoughNotationGroup show={true}>
 					<div className="flex self-start">
 						<LabelHighlight
-							color={colors[1]}
+							color={colors[2]}
 							padding={[4, 8, 4, 8]}
 							animate={true}
 						>
@@ -121,7 +121,7 @@ const SchoolCard = ({ title, date, school, content, degree }) => {
 			<h3 className="relative font-light text-xl my-4 leading-none text-black dark:text-white">
 				{title}
 			</h3>
-			<h4 className="font-light text-sm text-synthPink mb-2">{school}</h4>
+			<h4 className="font-light text-md text-synthPink mb-2">{school}</h4>
 			<p className="font-regular font-sans text-base text-black dark:text-white">
 				{content}
 			</p>

@@ -10,7 +10,7 @@ export const HeroHighlight = ({ color, children, padding, animate }) => {
 			type="bracket"
 			padding={padding}
 			brackets={['left', 'right']}
-			strokeWidth={3}
+			strokeWidth={5}
 			animationDuration={animationDuration}
 			color={color}
 			animate={animate}

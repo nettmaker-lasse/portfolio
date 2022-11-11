@@ -3,7 +3,7 @@ import { HeroHighlight } from "@components/frontpage/Highlight";
 import { RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutMeHeader() {
-	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="max-w-6xl mx-auto sm:mt-[100px] mb-[50px]">
@@ -13,7 +13,7 @@ export default function AboutMeHeader() {
 				</span>
 				<div className="ml-5 my-4">
 				<RoughNotationGroup show={true}>
-					<HeroHighlight color={colors[1]} padding={[16, 10, 4]}>
+					<HeroHighlight color={colors[2]} padding={[16, 10, 4]}>
 						<h1 className="px-2 text-6xl font-bold text-black dark:text-white pb-4 inline-block mb-0">
 							Lasse Buus Nielsen
 						</h1>

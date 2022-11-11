@@ -12,7 +12,7 @@ export default function FavouriteTrips({ trips }) {
 	const [allFields, setFields] = useState([null]);
 	const router = useRouter();
 	const builder = imageUrlBuilder(client);
-	const colors = ["#161616", "#ff2975", "#000"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	// Sort the trips
 	// trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
@@ -87,7 +87,7 @@ export default function FavouriteTrips({ trips }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[1]}
+													color={colors[4]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>
@@ -100,7 +100,7 @@ export default function FavouriteTrips({ trips }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[1]}
+													color={colors[5]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>

@@ -8,7 +8,7 @@ import PlayingNow from "../spotify/PlayingNow";
 
 export default function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
-	const colors = ["#161616", "#ff2975", "#000"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	// Get a pre-configured url-builder from your sanity client
 	const builder = imageUrlBuilder(client);
@@ -33,14 +33,14 @@ export default function Hero({ hero }) {
 					<div>
 					<RoughNotationGroup show={true}>
 						<div className="ml-6 mb-8 max-w-[350px]">
-							<HeroHighlight color={colors[1]} padding={[2, 10]}>
+							<HeroHighlight color={colors[2]} padding={[2, 10]}>
 								<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.title}
 								</h1>
 							</HeroHighlight>
 						</div>
 						<div className="ml-6 max-w-[385px]">
-							<HeroHighlight color={colors[1]} padding={[2, 10]}>
+							<HeroHighlight color={colors[4]} padding={[2, 10]}>
 								<h1 className="w-full text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.subtitle}
 								</h1>

@@ -64,7 +64,7 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-	const colors = ["#161616", "#ff2975", "#000"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-10 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl justify-between">
@@ -79,7 +79,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 			</p>
 			<RoughNotationGroup show={true}>
 				<div className="flex mt-4 self-start">
-					<UnderlineHighlight color={colors[1]} padding={[2, 8, 2, 8]} animate={true}>
+					<UnderlineHighlight color={colors[4]} padding={[2, 8, 2, 8]} animate={true}>
 						<div>
 							<a
 								href={latestRepo.clone_url}

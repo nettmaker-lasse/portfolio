@@ -6,7 +6,7 @@ import { LabelHighlight } from "./Highlight";
 
 export default function FavouriteProjects({ projects }) {
 	const [allFields, setFields] = useState([null]);
-	const colors = ["#161616", "#ff2975", "#000"];
+	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	useEffect(async () => {
 		setFields(projects);
@@ -70,7 +70,7 @@ export default function FavouriteProjects({ projects }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[1]}
+													color={colors[5]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>
@@ -83,7 +83,7 @@ export default function FavouriteProjects({ projects }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[1]}
+													color={colors[2]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>
