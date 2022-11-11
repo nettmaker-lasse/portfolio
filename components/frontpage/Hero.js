@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
+import { HeroHighlight } from "./Highlight";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
 import Image from "next/image";
@@ -32,19 +32,19 @@ export default function Hero({ hero }) {
 				<div className="relative w-full md:w-1/2 mb-5">
 					<div>
 					<RoughNotationGroup show={true}>
-						<div className="ml-1 mb-8 max-w-[400px]">
-							<RainbowHighlight color={colors[1]} padding={[5, 0, 5, 0]}>
-								<h1 className="pl-5 text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block">
+						<div className="ml-6 mb-8 max-w-[350px]">
+							<HeroHighlight color={colors[1]} padding={[2, 10]}>
+								<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.title}
 								</h1>
-							</RainbowHighlight>
+							</HeroHighlight>
 						</div>
-						<div className="ml-1 max-w-[425px]">
-							<RainbowHighlight color={colors[1]} padding={[5, 0, 5, 0]}>
-								<h1 className="pl-5 w-full text-6xl md:text-7xl font-bold text-black dark:text-white my-2 block">
+						<div className="ml-6 max-w-[385px]">
+							<HeroHighlight color={colors[1]} padding={[2, 10]}>
+								<h1 className="w-full text-6xl md:text-7xl font-bold text-black dark:text-white block">
 									{hero.heroData.subtitle}
 								</h1>
-							</RainbowHighlight>
+							</HeroHighlight>
 						</div>
 					</RoughNotationGroup>
 					</div>

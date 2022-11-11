@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import userData from "@constants/data";
 import moment from "moment";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
+import { UnderlineHighlight } from "./Highlight";
 
 export default function LatestCode({ repositories }) {
 	const [repos, setRepos] = useState([]);
@@ -67,7 +67,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 	const colors = ["#161616", "#ff2975", "#000"];
 
 	return (
-		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-6 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl justify-between">
+		<div className="bg-white shadow-black shadow-lg sm:shadow-lg rounded-md p-10 flex gap-1 flex-col dark:bg-black dark:bg-opacity-50 dark:border dark:border-white dark:shadow-3xl justify-between">
 			<span className="text-[10px] text-black my-2 dark:text-white self-start">
 				{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 			</span>
@@ -79,7 +79,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 			</p>
 			<RoughNotationGroup show={true}>
 				<div className="flex mt-4 self-start">
-					<RainbowHighlight color={colors[1]} padding={[2, 8, 2, 8]} animate={false}>
+					<UnderlineHighlight color={colors[1]} padding={[2, 8, 2, 8]} animate={true}>
 						<div>
 							<a
 								href={latestRepo.clone_url}
@@ -88,7 +88,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 								<p>View Repository </p>
 							</a>
 						</div>
-					</RainbowHighlight>
+					</UnderlineHighlight>
 				</div>
 			</RoughNotationGroup>
 		</div>

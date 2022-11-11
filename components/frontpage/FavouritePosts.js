@@ -4,11 +4,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
+import { RoughNotationGroup } from "react-rough-notation";
+import { LabelHighlight } from "./Highlight";
 
 export default function FavouritePosts({ posts }) {
 	const [allFields, setFields] = useState([null]);
 	const router = useRouter();
 	const builder = imageUrlBuilder(client);
+	const colors = ["#161616", "#ff2975", "#000"];
 
 	// Sort the trips
 	// trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
@@ -26,9 +29,9 @@ export default function FavouritePosts({ posts }) {
 		<div className="">
 			<div className="max-w-6xl mx-auto">
 				<header className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:mt-15 mb-30">
-					<h1 className="text-5xl max-w-lg font-bold text-black my-10 md:my-0 md:text-black dark:text-white">
+					<h2 className="text-5xl max-w-lg font-bold text-black my-10 md:my-0 md:text-black dark:text-white">
 						Articles
-					</h1>
+					</h2>
 					<div className="flex-1 md:mr-8">
 						<span className="font-mono text-sm block text-synthPink text-right dark:text-white">
 							View all articles
@@ -64,22 +67,40 @@ export default function FavouritePosts({ posts }) {
 						.map((item, i) => (
 							<Link href={`/blog/${item.slug.current}`} key={item.slug.current}>
 								<div
-									className="w-full rounded-md  relative overflow-hidden block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl"
+									className="relative w-full rounded-md  relative overflow-hidden block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl h-[400px]"
 									key={item + item.slug.current}
 								>
 									<Image
 										src={item.imagefrontpage.url}
-										layout="responsive"
-										width="365"
-										height="500"
+										layout="fill"
 										className="transform object-cover hover:scale-125 transition duration-2000 ease-out favourite-img"
 									/>
-									<h2 className="absolute top-5 left-5 text-white font-bold text-base bg-synthPink shadow-xl rounded-md px-2 py-1">
-										{item.title}
-									</h2>
-									<h3 className="absolute bottom-5 right-5 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
-										{item.status}
+									<h3 className="absolute top-5 left-5 text-black font-bold text-base bg-white shadow-lg rounded-md px-2 py-1">
+										<RoughNotationGroup show={true}>
+											<div className="flex self-start">
+												<LabelHighlight
+													color={colors[1]}
+													padding={[3, 8, 3, 8]}
+													animate={true}
+												>
+													{item.title}
+												</LabelHighlight>
+											</div>
+										</RoughNotationGroup>
 									</h3>
+									<h4 className="absolute bottom-5 right-5 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
+										<RoughNotationGroup show={true}>
+											<div className="flex self-start">
+												<LabelHighlight
+													color={colors[1]}
+													padding={[3, 8, 3, 8]}
+													animate={true}
+												>
+													{item.status}
+												</LabelHighlight>
+											</div>
+										</RoughNotationGroup>
+									</h4>
 								</div>
 							</Link>
 						))}

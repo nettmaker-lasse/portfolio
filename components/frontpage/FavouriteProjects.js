@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { RoughNotationGroup } from "react-rough-notation";
+import { LabelHighlight } from "./Highlight";
 
 export default function FavouriteProjects({ projects }) {
 	const [allFields, setFields] = useState([null]);
+	const colors = ["#161616", "#ff2975", "#000"];
 
 	useEffect(async () => {
 		setFields(projects);
@@ -14,9 +17,9 @@ export default function FavouriteProjects({ projects }) {
 		<div className="">
 			<div className="max-w-6xl mx-auto">
 				<header className="flex flex-col md:flex-row justify-between items-center md:my-20 lg:mt-40 mb-30">
-					<h1 className="text-5xl max-w-lg font-bold text-black my-10 md:my-0 md:text-black dark:text-white">
+					<h2 className="text-5xl max-w-lg font-bold text-black my-10 md:my-0 md:text-black dark:text-white">
 						Projects
-					</h1>
+					</h2>
 					<div className="flex-1 md:mr-8">
 						<span className="font-mono block text-sm text-right text-synthPink dark:text-white">
 							View all projects
@@ -55,22 +58,40 @@ export default function FavouriteProjects({ projects }) {
 								key={item.slug.current}
 							>
 								<div
-									className="rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl"
+									className="relative rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-white dark:shadow-3xl h-[400px]"
 									key={i + item.slug.current}
 								>
 									<Image
 										src={item.image.url}
-										layout="responsive"
-										width="365"
-										height="500"
+										layout="fill"
 										className="transform object-cover hover:scale-125 transition duration-2000 ease-out favourite-img"
 									/>
-									<h2 className="absolute top-5 left-5 text-white font-bold text-base bg-synthPink shadow-lg rounded-md px-2 py-1">
-										{item.title}
-									</h2>
-									<h3 className="absolute bottom-5 right-5 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
-										{item.status}
+									<h3 className="absolute top-5 left-5 text-black font-bold text-base bg-white shadow-lg rounded-md px-2 py-1">
+										<RoughNotationGroup show={true}>
+											<div className="flex self-start">
+												<LabelHighlight
+													color={colors[1]}
+													padding={[3, 8, 3, 8]}
+													animate={true}
+												>
+													{item.title}
+												</LabelHighlight>
+											</div>
+										</RoughNotationGroup>
 									</h3>
+									<h4 className="absolute bottom-5 right-5 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
+										<RoughNotationGroup show={true}>
+											<div className="flex self-start">
+												<LabelHighlight
+													color={colors[1]}
+													padding={[3, 8, 3, 8]}
+													animate={true}
+												>
+													{item.status}
+												</LabelHighlight>
+											</div>
+										</RoughNotationGroup>
+									</h4>
 								</div>
 							</Link>
 						))}

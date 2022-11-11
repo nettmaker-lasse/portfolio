@@ -37,13 +37,13 @@ export default function Contact() {
 	return (
 		<section>
 			<div className="max-w-6xl mx-auto antialiased">
-				<h1 className="text-5xl md:text-9xl font-bold py-20 text-left md:text-left dark:text-white">
+				<h1 className="text-5xl md:text-6xl font-bold py-20 text-left md:text-left dark:text-white">
 					Contact
 				</h1>
 			</div>
-			<div className="relative z-10 rounded-md p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mb-20 -mt-4 dark:border border-synthPink dark:shadow-3xl">
+			<div className="relative z-10 rounded-md max-w-6xl mx-auto mb-20 -mt-4 dark:border border-synthPink dark:shadow-3xl">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-					<div className="md:ml-4">
+					<div className="">
 						<header className="">
 							<h1 className="text-black font-semibold text-2xl dark:text-white">
 								Get in touch, let's talk.

@@ -1,6 +1,6 @@
 import React from "react";
-import { RainbowHighlight } from "@components/frontpage/RainbowHighlight";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { HeroHighlight } from "@components/frontpage/Highlight";
+import { RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutMeHeader() {
 	const colors = ["#161616", "#ff2975", "#000", "#E7E5E4"];
@@ -11,13 +11,15 @@ export default function AboutMeHeader() {
 				<span className="block font-light text-lg text-synthPink dark:text-white">
 					Hey, I'm
 				</span>
+				<div className="ml-5 my-4">
 				<RoughNotationGroup show={true}>
-					<RainbowHighlight color={colors[1]}>
-						<h1 className="text-6xl font-bold text-black dark:text-white mb-4 inline-block">
+					<HeroHighlight color={colors[1]} padding={[16, 10, 4]}>
+						<h1 className="px-2 text-6xl font-bold text-black dark:text-white pb-4 inline-block mb-0">
 							Lasse Buus Nielsen
 						</h1>
-					</RainbowHighlight>
+					</HeroHighlight>
 				</RoughNotationGroup>
+				</div>
 				<p className="font-sans font-regular text-base dark:text-white leading-relaxed text-justify">
 					I am a Digital Concept Developer specializing in UI/UX and
 					web development, with a focus for details. I'm currently
