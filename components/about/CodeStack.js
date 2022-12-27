@@ -14,7 +14,7 @@ export default function CodeStack() {
 					<div className="mb-4 w-full max-w-3xl mx-auto">
 						<div className="relative">
 							<RoughNotationGroup show={true}>
-								<UnderlineHighlight color={colors[3]} padding={[12, 8]}>
+								<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
 									<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 										Code stack
 									</h3>
@@ -32,7 +32,7 @@ export default function CodeStack() {
 					</div>
 					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
 						<RoughNotationGroup show={true}>
-							<UnderlineHighlight color={colors[4]} padding={[12, 8]}>
+							<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 									Design tools
 								</h3>
@@ -49,7 +49,7 @@ export default function CodeStack() {
 					</div>
 					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
 						<RoughNotationGroup show={true}>
-							<UnderlineHighlight color={colors[5]} padding={[12, 8]}>
+							<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
 									Productive tools
 								</h3>

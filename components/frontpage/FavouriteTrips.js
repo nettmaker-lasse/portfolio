@@ -34,7 +34,7 @@ export default function FavouriteTrips({ trips }) {
 						Trips
 					</h2>
 					<div className="flex-1 md:mr-8">
-						<span className="font-mono text-sm block text-synthPink text-right dark:text-white">
+						<span className="font-mono text-sm block text-[#ff2975] text-right dark:text-white">
 							View all trips
 						</span>
 					</div>
@@ -87,7 +87,7 @@ export default function FavouriteTrips({ trips }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[4]}
+													color={colors[1]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>
@@ -100,7 +100,7 @@ export default function FavouriteTrips({ trips }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[5]}
+													color={colors[1]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>

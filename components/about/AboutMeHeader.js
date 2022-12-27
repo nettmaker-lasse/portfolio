@@ -13,7 +13,7 @@ export default function AboutMeHeader() {
 				</span>
 				<div className="ml-5 my-4">
 				<RoughNotationGroup show={true}>
-					<HeroHighlight color={colors[2]} padding={[16, 10, 4]}>
+					<HeroHighlight color={colors[1]} padding={[16, 10, 4]}>
 						<h1 className="px-2 text-6xl font-bold text-black dark:text-white pb-4 inline-block mb-0">
 							Lasse Buus Nielsen
 						</h1>

@@ -47,7 +47,7 @@ module.exports = {
 				DEFAULT: "#89f9fc",
 			},
 			synthPink: {
-				DEFAULT: "#ff5c00",
+				DEFAULT: "#ff2975",
 			},
 			gradBlue: "​#5179FE",
 		},

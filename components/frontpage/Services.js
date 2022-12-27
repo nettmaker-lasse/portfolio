@@ -21,13 +21,13 @@ export default function Services() {
 					<div className="flex flex-col md:flex-row gap-8 md:gap-8 mt-8 items-center ">
 					<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
 						<LabelHighlight
-									color={colors[4]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
-									color={colors[4]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>
@@ -56,13 +56,13 @@ export default function Services() {
 						</div>
 						<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
 						<LabelHighlight
-									color={colors[3]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
-									color={colors[3]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>
@@ -91,13 +91,13 @@ export default function Services() {
 						</div>
 						<div className="w-full md:w-1/3 md:h-[300px] text-center bg-white shadow-black rounded-md dark:bg-black dark:bg-opacity-50">
 						<LabelHighlight
-									color={colors[2]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>
 							<div className="flex flex-col justify-center items-center h-full p-6">
 								<ServiceHighlight
-									color={colors[2]}
+									color={colors[1]}
 									padding={[5, 0, 5, 0]}
 									animate={true}
 								>

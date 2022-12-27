@@ -78,7 +78,7 @@ export default function FavouritePosts({ posts }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[2]}
+													color={colors[1]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>
@@ -91,7 +91,7 @@ export default function FavouritePosts({ posts }) {
 										<RoughNotationGroup show={true}>
 											<div className="flex self-start">
 												<LabelHighlight
-													color={colors[3]}
+													color={colors[1]}
 													padding={[3, 8, 3, 8]}
 													animate={true}
 												>

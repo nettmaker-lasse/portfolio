@@ -77,7 +77,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 		<RoughNotationGroup show={true}>
 			<div className="bg-white rounded-md flex gap-2 flex-col dark:bg-black dark:bg-opacity-50 justify-between">
 				<LabelHighlight
-					color={colors[5]}
+					color={colors[1]}
 					padding={[5, 5]}
 					animate={true}
 				>
@@ -93,7 +93,7 @@ const GithubRepoCard = ({ latestRepo }) => {
 					</p>
 					<div className="flex mt-4 self-start">
 						<UnderlineHighlight
-							color={colors[2]}
+							color={colors[1]}
 							padding={[2, 8, 2, 8]}
 							animate={true}
 						>

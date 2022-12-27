@@ -7,7 +7,7 @@ export default function Footer() {
 	return (
 		<div className="">
 			<div className="max-w-6xl mx-auto py-10 md:py-20">
-				<div className="h-0.5 w-full bg-blue-600"></div>
+				<div className="h-0.5 w-full bg-[#ff2975]"></div>
 				<div className="flex flex-col gap-y-4 lg:flex-row space-y-4 md:space-y-0 justify-between md:items-center mt-8">
 					<PlayingNowFooter />
 					<div className="w-full mb-8 text-center lg:w-4/12">

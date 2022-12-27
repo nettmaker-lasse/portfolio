@@ -17,7 +17,7 @@ export default function AboutExperience() {
 					<div className="w-full max-w-3xl mx-auto mb-14">
 						<RoughNotationGroup show={true}>
 							<UnderlineHighlight
-								color={colors[2]}
+								color={colors[1]}
 								padding={[8, 8]}
 							>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-8 inline-block">
@@ -38,7 +38,7 @@ export default function AboutExperience() {
 					</div>
 					<div className="w-full max-w-3xl mx-auto my-8">
 						<RoughNotationGroup show={true} padding={[8, 8]}>
-							<UnderlineHighlight color={colors[5]}>
+							<UnderlineHighlight color={colors[1]}>
 								<h3 className="text-3xl font-medium text-black dark:text-white mb-8 inline-block">
 									Education
 								</h3>
@@ -71,7 +71,7 @@ const ExperienceCard = ({ title, date, company, content }) => {
 				<RoughNotationGroup show={true}>
 					<div className="flex self-start">
 						<LabelHighlight
-							color={colors[2]}
+							color={colors[1]}
 							padding={[4, 8, 4, 8]}
 							animate={true}
 						>
@@ -109,7 +109,7 @@ const SchoolCard = ({ title, date, school, content, degree }) => {
 				<RoughNotationGroup show={true}>
 					<div className="flex self-start">
 						<LabelHighlight
-							color={colors[2]}
+							color={colors[1]}
 							padding={[4, 8, 4, 8]}
 							animate={true}
 						>
