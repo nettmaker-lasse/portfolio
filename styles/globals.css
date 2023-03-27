@@ -8,17 +8,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+	font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-html.light {
-	background-image: url('../public/pattern-bg-light.svg');
-}
-
-html.dark {
-	background-color: rgba(0, 0, 0, 0.95);
-	background-image: url('../public/pattern-bg-dark.svg')
 }
 
 a {
@@ -34,17 +25,6 @@ a {
 	left: 10em;
 }
 
-.favourite-img {
-	object-fit: cover;
-	height: 501px;
-	width: 100%;
-}
-
-.favourite-img-50 {
-	object-fit: cover;
-	height: 450px;
-	width: 100%;
-}
 
 .max-width-50 {
 	max-width: 55%;
@@ -55,23 +35,6 @@ a {
 	width: 100%;
 	height: 750px;
 	object-fit: cover;
-}
-
-@media (max-width: 600px) {
-
-	.favourite-img,
-	.favourite-img-50 {
-		height: 450px;
-	}
-
-	.max-width-50 {
-		max-width: 100%;
-		justify-content: center;
-	}
-
-	.full-w-image {
-		height: 450px;
-	}
 }
 
 .swal2-container.swal2-center>.swal2-popup {

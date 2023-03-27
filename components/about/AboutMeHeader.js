@@ -3,24 +3,19 @@ import { HeroHighlight } from "@components/frontpage/Highlight";
 import { RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutMeHeader() {
-	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="max-w-6xl mx-auto sm:mt-[100px] mb-[50px]">
 			<div className="max-w-3xl mx-auto">
-				<span className="block font-light text-lg text-synthPink dark:text-white">
+				<span className="block text-lg font-light text-synthPink dark:text-white">
 					Hey, I'm
 				</span>
-				<div className="ml-5 my-4">
-				<RoughNotationGroup show={true}>
-					<HeroHighlight color={colors[1]} padding={[16, 10, 4]}>
-						<h1 className="px-2 text-6xl font-bold text-black dark:text-white pb-4 inline-block mb-0">
+				<div className="my-4 ml-0">
+						<h1 className="inline-block px-2 pb-4 pl-0 mb-0 text-4xl font-bold text-black dark:text-synthPink">
 							Lasse Buus Nielsen
 						</h1>
-					</HeroHighlight>
-				</RoughNotationGroup>
 				</div>
-				<p className="font-sans font-regular text-base dark:text-white leading-relaxed text-justify">
+				<p className="font-sans text-base leading-relaxed text-justify font-regular dark:text-white">
 					I am a Digital Concept Developer specializing in UI/UX and
 					web development, with a focus for details. I'm currently
 					working as a Frontend Developer for a company called

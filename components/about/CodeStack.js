@@ -5,59 +5,48 @@ import { UnderlineHighlight, LabelHighlight } from "@components/frontpage/Highli
 import { RoughNotationGroup } from "react-rough-notation";
 
 export default function CodeStack() {
-	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
 
 	return (
 		<div className="">
-			<div className="max-w-6xl mx-auto my-14 block">
+			<div className="block max-w-6xl mx-auto my-14">
 				<div className="flex flex-wrap content-between">
-					<div className="mb-4 w-full max-w-3xl mx-auto">
+					<div className="w-full max-w-3xl mx-auto mb-4">
 						<div className="relative">
-							<RoughNotationGroup show={true}>
-								<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
-									<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
+									<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 										Code stack
 									</h3>
-								</UnderlineHighlight>
-							</RoughNotationGroup>
 						</div>
-						<div className="grid grid-cols-4 sm:grid-cols-7 items-center gap-10 justify-between">
+						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendCode.map((skill, idx) => (
-								<SkillCard
+								<SkillCard key={idx}
 									title={skill.language}
 									url={skill.url}
 								/>
 							))}
 						</div>
 					</div>
-					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
-						<RoughNotationGroup show={true}>
-							<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
-								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
+					<div className="w-full max-w-3xl mx-auto mt-20 mb-4">
+								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 									Design tools
 								</h3>
-							</UnderlineHighlight>
-						</RoughNotationGroup>
-						<div className="grid grid-cols-4 sm:grid-cols-7 items-center gap-10 justify-between">
+						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendDesign.map((skill, idx) => (
 								<ToolCard
+									key={idx}
 									title={skill.language}
 									url={skill.url}
 								/>
 							))}
 						</div>
 					</div>
-					<div className="mb-4 w-full max-w-3xl mx-auto mt-12">
-						<RoughNotationGroup show={true}>
-							<UnderlineHighlight color={colors[1]} padding={[12, 8]}>
-								<h3 className="text-3xl font-medium text-black dark:text-white mb-12 inline-block">
+					<div className="w-full max-w-3xl mx-auto mt-20 mb-4">
+								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 									Productive tools
 								</h3>
-							</UnderlineHighlight>
-						</RoughNotationGroup>
-						<div className="grid grid-cols-4 sm:grid-cols-7 items-center gap-10 justify-between">
+						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendOthers.map((skill, idx) => (
 								<OtherCard
+									key={idx}
 									title={skill.language}
 									url={skill.url}
 								/>

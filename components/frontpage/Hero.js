@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { RoughNotationGroup } from "react-rough-notation";
-import { HeroHighlight } from "./Highlight";
+import React, { useEffect, useState, useCallback, memo } from "react";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
 import Image from "next/image";
 import PlayingNow from "../spotify/PlayingNow";
 
-export default function Hero({ hero }) {
+function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
-	const colors = ["#161616", "#ff2975", "#a5edb6", "#fae85a", "#ff5c00", "#5179fe"];
+	const synthPink = "#ff2975";
 
 	// Get a pre-configured url-builder from your sanity client
 	const builder = imageUrlBuilder(client);
@@ -16,55 +14,55 @@ export default function Hero({ hero }) {
 	// Then we like to make a simple function like this that gives the
 	// builder an image and returns the builder for you to specify additional
 	// parameters:
-	function urlFor(source) {
-		return builder.image(source);
-	}
+	const urlFor = useCallback(
+		(source) => {
+			return builder.image(source);
+		},
+		[builder]
+	);
 
-	useEffect(async () => {
+	useEffect(() => {
 		setFields(hero);
-		// console.log(hero);
-	}, []);
+	}, [hero]);
+
+	const { title, subtitle, image, imagecaption } = hero.heroData;
 
 	return (
 		<div className="max-w-6xl mx-auto">
-			<div className="flex flex-col md:flex-row justify-between sm:items-center items-start overflow-hidden">
+			<div className="flex flex-col items-start justify-between overflow-hidden md:flex-row sm:items-center">
 				{/* Text container */}
-				<div className="relative w-full md:w-1/2 mb-5">
+				<div className="relative w-full mb-5 md:w-1/2">
 					<div>
-					<RoughNotationGroup show={true}>
-						<div className="ml-6 mb-8 max-w-[385px]">
-							<HeroHighlight color={colors[1]} padding={[2, 10]}>
-								<h1 className="text-6xl md:text-7xl font-bold text-black dark:text-white block">
-									{hero.heroData.title}
-								</h1>
-							</HeroHighlight>
+						<div className="ml-0 text-left md:mb-4 max-w-[385px]">
+							<h1 className="block text-4xl font-bold text-black md:text-7xl dark:text-synthPink">
+								{title}
+							</h1>
 						</div>
-						<div className="ml-6 max-w-[350px]">
-							<HeroHighlight color={colors[1]} padding={[2, 10]}>
-								<h1 className="w-full text-6xl md:text-7xl font-bold text-black dark:text-white block">
-									{hero.heroData.subtitle}
-								</h1>
-							</HeroHighlight>
+						<div className="ml-0 text-left max-w-[385px]">
+							<h1 className="block w-full text-4xl font-bold text-black md:text-7xl dark:text-synthPink">
+								{subtitle}
+							</h1>
 						</div>
-					</RoughNotationGroup>
 					</div>
 					{/* Spotify Playing now */}
-					<span className="text-xl mt-10 mb-4 font-bold text-black dark:text-white block sm:inline-block">
+					<span className="block mt-10 mb-4 text-xl font-bold text-black dark:text-white sm:inline-block">
 						Currently listening to:
 					</span>
 					<PlayingNow />
 				</div>
 				{/* Image container */}
-				<div className="lg:block relative w-full md:w-1/2">
-					<div className="relative w-full h-[450px] sm:h-[700px]">
+				<div className="relative w-full lg:block md:w-1/2">
+					<div className="relative w-full">
 						<Image
-							src={hero.heroData.image.url}
-							layout="fill"
-							alt={hero.heroData.subtitle}
-							className="shadow rounded-md dark:border border-synthPink w-full object-cover"
+							src={image.url}
+							layout="responsive"
+							width={640}
+							height={570}
+							alt={subtitle}
+							className="object-cover w-full shadow dark:border border-synthPink"
 						/>
 						<div className="flex flex-row justify-between mt-4">
-							<div className="flex text-synthPink flex-row space-x-4 dark:text-synthPink">
+							<div className="flex flex-row space-x-4 text-synthPink dark:text-synthPink">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
@@ -78,9 +76,7 @@ export default function Hero({ hero }) {
 										d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
 									/>
 								</svg>
-								<p className="font-mono">
-									{hero.heroData.imagecaption}
-								</p>
+								<p className="font-mono">{imagecaption}</p>
 							</div>
 						</div>
 					</div>
@@ -89,3 +85,5 @@ export default function Hero({ hero }) {
 		</div>
 	);
 }
+
+export default memo(Hero);

@@ -32,35 +32,47 @@ export default function Home({ posts }) {
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
 			<section>
-				<div className="max-w-6xl mx-auto h-48">
-					<h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left dark:text-white">
+				<div className="max-w-6xl mx-auto mt-10 md:mt-20">
+					<h1 className="block text-5xl font-bold text-black dark:text-white">
 						Blog
 					</h1>
 				</div>
-				<div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-20 pb-40">
+				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-40 mx-auto md:grid-cols-3">
 					{mappedPosts.length ? (
 						mappedPosts
 							.sort((a, b) => (a.title > b.title ? 1 : -1))
 							.map((posts, item) => (
 								<div
-									onClick={() => router.push(`/blog/${posts.slug.current}`)}
+									onClick={() =>
+										router.push(
+											`/blog/${posts.slug.current}`
+										)
+									}
 									key={item + posts.slug.current}
-									className="single-post rounded-md relative overflow-hidden w-full block shadow-2xl cursor-pointer dark:border border-synthPink dark:shadow-3xl"
+									className="relative block w-full overflow-hidden cursor-pointer"
 								>
 									<img
-										className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
 										src={posts.image}
+										alt={posts.title}
+										quality={100}
+										className="w-[400px] h-[400px] object-cover"
 									/>
-									<h2 className="absolute top-10 left-10 text-white font-bold text-base bg-synthPink shadow-xl rounded-md px-2 py-1">
-										{posts.title}
-									</h2>
-									<h3 className="absolute bottom-10 right-10 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
-										{posts.status}
-									</h3>
+									<div>
+										<h3 className="relative px-2 py-1 pl-0 mt-2 text-lg font-bold text-black rounded-sm dark:text-white">
+											<div className="flex self-start">
+												{posts.title}
+											</div>
+										</h3>
+										<h4 className="relative px-2 py-1 pl-0 text-sm font-normal text-black rounded-sm dark:text-white">
+											<div className="flex self-start">
+												{posts.status}
+											</div>
+										</h4>
+									</div>
 								</div>
 							))
 					) : (
-						<>No Posts Yet</>
+						<>No Projects Yet</>
 					)}
 				</div>
 			</section>

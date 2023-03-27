@@ -19,33 +19,33 @@ export const Project = ({ title, images, date, slug }) => {
 			<div>
 				<div className="">
 					<img
-						className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-synthPink dark:shadow-3xl"
+						className="max-w-6xl mx-auto border full-w-image border-synthPink dark:shadow-3xl"
 						src={urlFor(images[0]).url()}
 					/>
-					<div className="max-w-6xl mx-auto relative -top-14">
-						<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
+					<div className="relative max-w-6xl mx-auto -top-14">
+						<span className="relative bottom-0 px-2 py-1 my-4 text-sm font-semibold text-white rounded-md shadow-lg bold bg-synthPink">
 							{moment(date).format("Do MMMM YYYY")}
 						</span>
 					</div>
 					<div className="max-w-6xl mx-auto">
-						<h1 className=" text-5xl md:text-8xl my-12 font-bold text-left dark:text-white">
+						<h1 className="my-12 text-5xl font-bold text-left md:text-8xl dark:text-white">
 							{title}
 						</h1>
 					</div>
 					<SRLWrapper>
-						<div className="container grid grid-cols sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+						<div className="container grid max-w-6xl gap-8 mx-auto grid-cols sm:grid-cols-3">
 							{Object.keys(images)
 								.filter((e, i) => i != 0)
 								.map((item, i) => (
 									<div
-										className="aspect-w-1 aspect-h-1 w-full rounded-md relative overflow-hidden shadow-2xl dark:border border-synthPink dark:shadow-3xl bg-synthPink bg-opacity-30"
+										className="relative w-full overflow-hidden border shadow-2xl aspect-w-1 aspect-h-1 border-synthPink dark:shadow-3xl bg-synthPink bg-opacity-30"
 										key={images[item]._key}
 									>
 										<Image
 											src={urlFor(images[item]).url()}
 											layout="fill"
 											objectFit="cover"
-											className="transform hover:scale-125 transition duration-2000 ease-out favourite-img"
+											className="transition ease-out transform hover:scale-125 duration-2000 favourite-img"
 											placeholder="blur"
 										/>
 									</div>

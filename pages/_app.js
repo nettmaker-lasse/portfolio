@@ -4,7 +4,7 @@ import SimpleReactLightbox from "simple-react-lightbox";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<ThemeProvider defaultTheme="light" attribute="class">
+		<ThemeProvider attribute="class" defaultTheme="light">
 			<SimpleReactLightbox>
 				<Component {...pageProps} />
 			</SimpleReactLightbox>

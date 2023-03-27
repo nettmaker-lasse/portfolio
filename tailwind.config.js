@@ -15,10 +15,9 @@ module.exports = {
 		},
 
 		extend: {
-			backgroundImage: (theme) => ({
-				darkBg: "url('./public/pattern-bg-dark.svg')",
-				lightBg: "url('./public/pattern-bg.svg')",
-			}),
+			boxShadow: {
+				'xl': '0 5px 20px -1px rgba(0, 0, 0, 0.3)',
+			  }
 		},
 		transitionDuration: {
 			0: "0ms",
