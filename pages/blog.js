@@ -10,25 +10,25 @@ export default function Home({ posts }) {
 
 	useEffect(() => {
 		if (posts.length) {
-			// console.log(posts)
-			const imgBuilder = imageUrlBuilder({
-				projectId: "vn88o3gc",
-				dataset: "production",
-			});
-
-			//   console.log(posts)
-			setMappedPosts(
-				posts.map((p) => {
-					return {
-						...p,
-						image: imgBuilder.image(p.image),
-					};
-				})
-			);
+		  const imgBuilder = imageUrlBuilder({
+			projectId: "vn88o3gc",
+			dataset: "production",
+		  });
+	  
+		  const sortedPosts = posts.sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt));
+	  
+		  setMappedPosts(
+			sortedPosts.map((p) => {
+			  return {
+				...p,
+				image: imgBuilder.image(p.image),
+			  };
+			})
+		  );
 		} else {
-			setMappedPosts([]);
+		  setMappedPosts([]);
 		}
-	}, [posts]);
+	  }, [posts]);
 
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
@@ -41,7 +41,6 @@ export default function Home({ posts }) {
 				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-20 mx-auto sm:grid-cols-2 md:grid-cols-3">
 					{mappedPosts.length ? (
 						mappedPosts
-							.sort((a, b) => (a.title > b.title ? 1 : -1))
 							.map((posts, item) => (
 								<div
 									onClick={() =>

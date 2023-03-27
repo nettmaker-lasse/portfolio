@@ -28,7 +28,7 @@ export const Project = ({
 			<div>
 				<div className="">
 					<div className="relative max-w-6xl mx-auto">
-						<div className="relative border full-w-image border-synthPink max-h-[400px] md:max-h-full">
+						<div className="relative border full-w-image max-h-[400px] md:max-h-full">
 						{imageUrl && (
 							<img
 							className="object-cover h-[400px] w-full sm:h-full"

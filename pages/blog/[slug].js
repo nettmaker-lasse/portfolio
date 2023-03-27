@@ -37,7 +37,7 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 			<div>
 				<div>
 					<div className="relative max-w-6xl mx-auto">
-						<div className="relative border full-w-image border-synthPink max-h-[400px] md:max-h-full">
+						<div className="relative border full-w-image max-h-[400px] md:max-h-full">
 							<Image
 								className="object-cover h-[400px] sm:h-full"
 								src={urlFor(image).url()}
