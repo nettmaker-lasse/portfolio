@@ -2,6 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import ContainerBlock from "../components/ContainerBlock";
+import Image from "next/dist/client/image";
 
 export default function Home({ posts }) {
 	const router = useRouter();
@@ -37,7 +38,7 @@ export default function Home({ posts }) {
 						Blog
 					</h1>
 				</div>
-				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-40 mx-auto md:grid-cols-3">
+				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-20 mx-auto sm:grid-cols-2 md:grid-cols-3">
 					{mappedPosts.length ? (
 						mappedPosts
 							.sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -51,12 +52,15 @@ export default function Home({ posts }) {
 									key={item + posts.slug.current}
 									className="relative block w-full overflow-hidden cursor-pointer"
 								>
-									<img
-										src={posts.image}
-										alt={posts.title}
-										quality={100}
-										className="w-[400px] h-[400px] object-cover"
-									/>
+									<div className="relative h-[400px]">
+										<img
+											src={posts.image}
+											alt={posts.title}
+											quality={70}
+											layout="fill"
+											className="w-full md:w-[400px] h-[400px] object-cover"
+										/>
+									</div>
 									<div>
 										<h3 className="relative px-2 py-1 pl-0 mt-2 text-lg font-bold text-black rounded-sm dark:text-white">
 											<div className="flex self-start">

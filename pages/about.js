@@ -7,8 +7,6 @@ import AboutExperience from "@components/about/AboutExperience";
 export default function about() {
 	return (
 		<ContainerBlock title="Lasse Buus - About me">
-			{/* <AboutMe />
-			<Skills /> */}
 			<AboutMeHeader />
 			<CodeStack />
 			<AboutExperience />

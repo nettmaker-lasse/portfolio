@@ -39,7 +39,7 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-8 md:items-center md:flex-row">
+		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-4 md:my-8 md:items-center md:flex-row">
 			<Link href="/">
 				<a>
 					<h1 className="text-xl font-semibold text-black dark:text-white">
@@ -50,10 +50,10 @@ const Navbar = () => {
 					</p>
 				</a>
 			</Link>
-			<div className="md:hidden">
+			<div className="absolute right-0 mt-[25px] md:hidden">
 				<button
 					onClick={toggleMenu}
-					className="absolute right-0 text-gray-900 transform -translate-x-1/2 -translate-y-1/2 top-1/2 dark:text-gray-100 focus:outline-none"
+					className="relative right-0 text-gray-900 transform -translate-x-1/2 -translate-y-1/2 top-1/2 dark:text-gray-100 focus:outline-none"
 				>
 					<FontAwesomeIcon icon={menuIcon} style={iconStyle} />
 				</button>
@@ -83,9 +83,9 @@ const Navbar = () => {
 				</a>
 			</div>
 			{mobileMenuOpen && (
-				<div className="flex flex-col w-full mt-4 space-y-4 md:hidden">
+				<div className="flex flex-col w-full mt-4 space-y-4 text-center md:hidden">
 					<ul>{menuItems}</ul>
-					<div className="flex items-center space-x-4">
+					<div className="flex items-center justify-center space-x-4">
 						<button
 							onClick={toggleDarkMode}
 							className="text-gray-900 dark:text-gray-100 focus:outline-none"

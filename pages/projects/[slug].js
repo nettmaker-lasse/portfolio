@@ -2,6 +2,9 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import BlockContent from "@sanity/block-content-to-react";
 import ContainerBlock from "../../components/ContainerBlock";
+import projects from "cmsportfolio/schemas/projects";
+import Image from "next/dist/client/image";
+import client from "@lib/sanity";
 
 export const Project = ({
 	title,
@@ -11,41 +14,41 @@ export const Project = ({
 	content,
 	caption,
 }) => {
-	const [imageUrl, setImageUrl] = useState(null);
+	const builder = imageUrlBuilder(client);
 
-	useEffect(() => {
-		const imgBuilder = imageUrlBuilder({
-			projectId: "vn88o3gc",
-			dataset: "production",
-		});
-
-		setImageUrl(imgBuilder.image(image));
-	}, [image]);
+	function urlFor(source) {
+		return builder.image(source);
+	}
 
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
 			<div>
 				<div className="">
-					{imageUrl && (
-						<img
-							className="max-w-6xl rounded-md full-w-image mx-auto dark:border border-synthPink dark:shadow-3xl"
-							src={imageUrl}
-						/>
-					)}
-					<div className="max-w-6xl mx-auto relative -top-14">
-						<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
-							{caption}
-						</span>
-						<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
-							{projectstatus}
-						</span>
+					<div className="relative max-w-6xl mx-auto">
+						<div className="relative border full-w-image border-synthPink max-h-[400px] md:max-h-full">
+							<Image
+								className="object-cover h-[400px] sm:h-full"
+								src={urlFor(image).url()}
+								quality={70}
+								layout="fill"
+							/>
+						</div>
+						<div className="absolute bottom-8 left-8">
+							<span className="relative p-3 my-6 text-sm font-semibold text-white bottom-3 bold bg-synthPink">
+								{caption}
+							</span>
+							<span className="relative p-3 my-6 ml-2 text-sm font-semibold text-black bg-white bottom-3 bold">
+								{projectstatus}
+							</span>
+						</div>
 					</div>
+					<div></div>
 					<div className="max-w-3xl mx-auto">
-						<h1 className="text-5xl md:text-8xl font-bold py-21 md:text-left my-8 dark:text-white">
+						<h1 className="my-6 text-3xl font-bold text-left md:text-5xl md:my-12 dark:text-white">
 							{title}
 						</h1>
 					</div>
-					<div className="max-w-3xl mx-auto font-sans tracking-tight leading-6">
+					<div className="max-w-3xl mx-auto font-sans leading-6 tracking-tight">
 						<BlockContent
 							blocks={content}
 							className="dark:text-white"

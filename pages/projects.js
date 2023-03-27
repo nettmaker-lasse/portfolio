@@ -34,11 +34,11 @@ export default function Home({ projects }) {
 		<ContainerBlock title="Lasse Buus - Projects">
 			<section>
 				<div className="max-w-6xl mx-auto mt-10 md:mt-20">
-					<h1 className="block text-5xl font-bold text-black dark:text-white">
+				<h1 className="block text-5xl font-bold text-black dark:text-white">
 						Projects
 					</h1>
 				</div>
-				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-40 mx-auto md:grid-cols-3">
+				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-10 mx-auto sm:grid-cols-2 md:grid-cols-3">
 					{projects.length ? (
 						mappedProjects
 							.sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -52,12 +52,15 @@ export default function Home({ projects }) {
 									key={index + project.slug.current}
 									className="relative block w-full overflow-hidden cursor-pointer"
 								>
+									<div className="relative h-[400px]">
 									<img
 										src={project.image}
 										alt={project.title}
-										quality={100}
-										className="w-[400px] h-[400px] object-cover"
+										quality={70}
+										layout="fill"
+										className="w-full md:w-[400px] h-[400px] object-cover"
 									/>
+									</div>
 									<div>
 										<h3 className="relative px-2 py-1 pl-0 mt-2 text-lg font-bold text-black rounded-sm dark:text-white">
 											<div className="flex self-start">

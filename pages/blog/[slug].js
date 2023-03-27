@@ -35,36 +35,37 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
 			<div>
-				<div className="">
-					<div className="relative max-w-[1240px] flex flex-col rounded-md mx-auto dark:border border-synthPink dark:shadow-3xl">
-						<div className="w-full h-[750px] object-fill">
+				<div>
+					<div className="relative max-w-6xl mx-auto">
+						<div className="relative border full-w-image border-synthPink max-h-[400px] md:max-h-full">
 							<Image
-								className="max-w-6xl rounded-md mx-auto object-cover"
+								className="object-cover h-[400px] sm:h-full"
 								src={urlFor(image).url()}
+								quality={70}
 								layout="fill"
 							/>
 						</div>
 						<div className="absolute bottom-8 left-8">
-							<span className="relative left-0 bottom-0 my-4 mr-4 text-black font-semibold bold text-sm bg-white shadow-lg rounded-md px-2 py-1">
+							<span className="relative p-3 my-6 text-sm font-semibold text-white bottom-3 bold bg-synthPink">
 								{caption}
 							</span>
-							<span className="relative bottom-0 my-4 text-white font-semibold bold text-sm bg-synthPink shadow-lg rounded-md px-2 py-1">
+							<span className="relative p-3 my-6 ml-2 text-sm font-semibold text-black bg-white bottom-3 bold">
 								{poststatus}
 							</span>
 						</div>
 					</div>
-					<div className="max-w-[92%] lg:max-w-3xl mx-auto">
-						<h1 className="text-5xl md:text-8xl font-bold py-21 text-left md:text-left my-8 dark:text-white">
-							{title}
-						</h1>
-					</div>
-					<div className="max-w-[92%] lg:max-w-3xl mx-auto font-sans">
-						<BlockContent
-							blocks={content}
-							serializers={serializers}
-							className="dark:text-white blog-content text-lg"
-						/>
-					</div>
+				</div>
+				<div className="max-w-[92%] lg:max-w-3xl mx-auto">
+					<h1 className="my-6 text-3xl font-bold text-left md:text-5xl md:my-12 dark:text-white">
+						{title}
+					</h1>
+				</div>
+				<div className="max-w-[92%] lg:max-w-3xl mx-auto font-sans">
+					<BlockContent
+						blocks={content}
+						serializers={serializers}
+						className="text-lg dark:text-white blog-content"
+					/>
 				</div>
 			</div>
 		</ContainerBlock>

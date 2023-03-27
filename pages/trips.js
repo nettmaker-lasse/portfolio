@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import ContainerBlock from "../components/ContainerBlock";
 import client from "@lib/sanity";
 import moment from "moment";
+import Image from "next/dist/client/image";
 
 export default function Home({ trips }) {
 	const router = useRouter();
@@ -37,7 +38,7 @@ export default function Home({ trips }) {
 						Trips
 					</h1>
 				</div>
-				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-40 mx-auto md:grid-cols-3">
+				<div className="grid max-w-6xl grid-cols-1 gap-8 pt-10 pb-10 mx-auto sm:grid-cols-2 md:grid-cols-3">
 					{trips.length ? (
 						mappedTrips
 						.sort(
@@ -55,12 +56,15 @@ export default function Home({ trips }) {
 									key={item + trips.slug.current}
 									className="relative block w-full overflow-hidden cursor-pointer"
 								>
-									<img
+									<div className="relative h-[400px]">
+									<Image
 										src={urlFor(trips.images[0]).url()}
 										alt={trips.title}
-										quality={100}
-										className="w-[400px] h-[400px] object-cover"
+										quality={70}
+										layout="fill"
+										className="w-full md:w-[400px] h-[400px] object-cover"
 									/>
+									</div>
 									<div>
 										<h3 className="relative px-2 py-1 pl-0 mt-2 text-lg font-bold text-black rounded-sm dark:text-white">
 											<div className="flex self-start">

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ContainerBlock from "../../components/ContainerBlock";
 import moment from "moment";
 import client from "@lib/sanity";
-import Image from "../../components/Image";
+import Image from "next/dist/client/image";
 import { SRLWrapper } from "simple-react-lightbox";
 
 export const Project = ({ title, images, date, slug }) => {
@@ -17,18 +17,24 @@ export const Project = ({ title, images, date, slug }) => {
 	return (
 		<ContainerBlock title="Lasse Buus - Blog">
 			<div>
-				<div className="">
-					<img
-						className="max-w-6xl mx-auto border full-w-image border-synthPink dark:shadow-3xl"
-						src={urlFor(images[0]).url()}
-					/>
-					<div className="relative max-w-6xl mx-auto -top-14">
-						<span className="relative bottom-0 px-2 py-1 my-4 text-sm font-semibold text-white rounded-md shadow-lg bold bg-synthPink">
-							{moment(date).format("Do MMMM YYYY")}
-						</span>
+				<div>
+					<div className="relative max-w-6xl mx-auto">
+						<div className="relative border full-w-image max-h-[400px] md:max-h-full">
+							<Image
+								className="object-cover h-[400px] sm:h-full"
+								src={urlFor(images[0]).url()}
+								quality={70}
+								layout="fill"
+							/>
+						</div>
+						<div className="absolute bottom-8 left-8">
+							<span className="relative p-3 my-6 text-sm font-semibold text-white bottom-3 bold bg-synthPink">
+								{moment(date).format("Do MMMM YYYY")}
+							</span>
+						</div>
 					</div>
 					<div className="max-w-6xl mx-auto">
-						<h1 className="my-12 text-5xl font-bold text-left md:text-8xl dark:text-white">
+						<h1 className="my-6 text-3xl font-bold text-left md:text-5xl md:my-12 dark:text-white">
 							{title}
 						</h1>
 					</div>
@@ -38,15 +44,16 @@ export const Project = ({ title, images, date, slug }) => {
 								.filter((e, i) => i != 0)
 								.map((item, i) => (
 									<div
-										className="relative w-full overflow-hidden border shadow-2xl aspect-w-1 aspect-h-1 border-synthPink dark:shadow-3xl bg-synthPink bg-opacity-30"
+										className="relative w-full overflow-hidden border shadow-2xl aspect-w-1 aspect-h-1 bg-synthPink bg-opacity-30"
 										key={images[item]._key}
 									>
 										<Image
 											src={urlFor(images[item]).url()}
 											layout="fill"
 											objectFit="cover"
-											className="transition ease-out transform hover:scale-125 duration-2000 favourite-img"
+											className="transition ease-out transform hover:scale-125 duration-2000"
 											placeholder="blur"
+											quality={30}
 										/>
 									</div>
 								))}
