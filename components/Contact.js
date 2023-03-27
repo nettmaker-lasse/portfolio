@@ -4,9 +4,9 @@ import userData from "@constants/data";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 
-const SERVICE_ID = "service_7l79lu8";
-const TEMPLATE_ID = "template_lmq8h7e";
-const USER_ID = "user_GKSqvXwQ0S6kq6qLtlc7W";
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
 
 export default function Contact() {
 	const form = useRef();
