@@ -16,12 +16,13 @@ export default function Home({ posts }) {
 		  });
 	  
 		  const sortedPosts = posts.sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt));
-	  
+		  
 		  setMappedPosts(
 			sortedPosts.map((p) => {
 			  return {
 				...p,
 				image: imgBuilder.image(p.image),
+				imagefrontpage: imgBuilder.image(p.imagefrontpage),
 			  };
 			})
 		  );
@@ -53,7 +54,7 @@ export default function Home({ posts }) {
 								>
 									<div className="relative h-[400px]">
 										<img
-											src={posts.image}
+											src={posts.imagefrontpage}
 											alt={posts.title}
 											quality={70}
 											layout="fill"
