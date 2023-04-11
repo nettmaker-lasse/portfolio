@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import SimpleReactLightbox from "simple-react-lightbox";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
 			<SimpleReactLightbox>
 				<Component {...pageProps} />
 			</SimpleReactLightbox>
+			<Analytics />
 		</ThemeProvider>
 	);
 }
