@@ -19,6 +19,7 @@
     "@sanity/client": "^2.21.7",
     "@sanity/image-url": "^1.0.1",
     "@sendgrid/mail": "^7.6.0",
+    "@vercel/analytics": "^0.1.11",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "emailjs-com": "^3.2.0",
