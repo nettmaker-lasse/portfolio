@@ -47,12 +47,12 @@ export const Project = ({
 						</div>
 					</div>
 					<div></div>
-					<div className="max-w-3xl mx-auto">
+					<div className="max-w-2xl mx-auto">
 						<h1 className="my-6 text-3xl font-bold text-left md:text-5xl md:my-12 dark:text-white">
 							{title}
 						</h1>
 					</div>
-					<div className="max-w-3xl mx-auto font-sans leading-6 tracking-tight">
+					<div className="max-w-2xl mx-auto font-sans leading-6 tracking-tight">
 						<BlockContent
 							blocks={content}
 							className="dark:text-white"

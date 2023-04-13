@@ -6,7 +6,7 @@ export default function AboutExperience() {
 		<div>
 			<div className="max-w-6xl mx-auto mt-20">
 				<div className="flex flex-wrap content-between">
-					<div className="w-full max-w-3xl mx-auto mb-14">
+					<div className="w-full max-w-2xl mx-auto mb-14">
 						<h3 className="inline-block text-3xl font-medium text-black dark:text-white">
 							Experiences
 						</h3>
@@ -22,7 +22,7 @@ export default function AboutExperience() {
 							))}
 						</div>
 					</div>
-					<div className="w-full max-w-3xl mx-auto my-8">
+					<div className="w-full max-w-2xl mx-auto my-8">
 						<h3 className="inline-block mb-8 text-3xl font-medium text-black dark:text-white">
 							Education
 						</h3>

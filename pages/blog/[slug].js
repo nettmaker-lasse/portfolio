@@ -55,12 +55,12 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 						</div>
 					</div>
 				</div>
-				<div className="max-w-[92%] lg:max-w-3xl mx-auto">
+				<div className="max-w-[92%] lg:max-w-2xl mx-auto">
 					<h1 className="my-6 text-3xl font-bold text-left md:text-5xl md:my-12 dark:text-white">
 						{title}
 					</h1>
 				</div>
-				<div className="max-w-[92%] lg:max-w-3xl mx-auto font-sans">
+				<div className="max-w-[92%] lg:max-w-2xl mx-auto font-sans">
 					<BlockContent
 						blocks={content}
 						serializers={serializers}

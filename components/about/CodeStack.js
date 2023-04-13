@@ -10,7 +10,7 @@ export default function CodeStack() {
 		<div className="">
 			<div className="block max-w-6xl mx-auto my-14">
 				<div className="flex flex-wrap content-between">
-					<div className="w-full max-w-3xl mx-auto mb-4">
+					<div className="w-full max-w-2xl mx-auto mb-4">
 						<div className="relative">
 									<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 										Code stack
@@ -25,7 +25,7 @@ export default function CodeStack() {
 							))}
 						</div>
 					</div>
-					<div className="w-full max-w-3xl mx-auto mt-20 mb-4">
+					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
 								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 									Design tools
 								</h3>
@@ -39,7 +39,7 @@ export default function CodeStack() {
 							))}
 						</div>
 					</div>
-					<div className="w-full max-w-3xl mx-auto mt-20 mb-4">
+					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
 								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
 									Productive tools
 								</h3>
