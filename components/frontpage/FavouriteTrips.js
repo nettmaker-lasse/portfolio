@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
 import moment from "moment";
@@ -9,11 +8,7 @@ import ArrowButton from "@components/ArrowButton";
 
 export default function FavouriteTrips({ trips }) {
 	const [allFields, setFields] = useState([null]);
-	const router = useRouter();
 	const builder = imageUrlBuilder(client);
-
-	// Sort the trips
-	// trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
 
 	function urlFor(source) {
 		return builder.image(source);
@@ -21,7 +16,6 @@ export default function FavouriteTrips({ trips }) {
 	const linkRef = useRef(null);
 	useEffect(async () => {
 		setFields(trips);
-		// console.log(trips);
 	}, []);
 
 	return (
@@ -32,7 +26,7 @@ export default function FavouriteTrips({ trips }) {
 						Trips
 					</h2>
 					<div className="flex-1 md:mr-8">
-						<span className="font-mono text-sm block text-[#ff2975] text-right dark:text-white">
+						<span className="block font-mono text-sm text-right text-synthPink dark:text-white">
 							View all trips
 						</span>
 					</div>

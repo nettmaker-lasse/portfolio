@@ -2,15 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 export default function Services() {
-	const colors = [
-		"#161616",
-		"#ff2975",
-		"#a5edb6",
-		"#fae85a",
-		"#ff5c00",
-		"#5179fe",
-	];
-
 	return (
 		<div className="">
 			<div className="max-w-6xl mx-auto my-10">

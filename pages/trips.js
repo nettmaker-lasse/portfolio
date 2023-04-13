@@ -17,7 +17,6 @@ export default function Home({ trips }) {
 
 	useEffect(() => {
 		if (trips.length) {
-			// console.log(trips);
 			setMappedTrips(
 				trips.map((t) => {
 					return {

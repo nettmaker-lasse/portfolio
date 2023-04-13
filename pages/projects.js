@@ -3,7 +3,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import ContainerBlock from "../components/ContainerBlock";
-import Image from "next/dist/client/image";
 
 export default function Home({ projects }) {
 	const router = useRouter();
@@ -16,7 +15,6 @@ export default function Home({ projects }) {
 				dataset: "production",
 			});
 
-			//   console.log(projects)
 			setMappedProjects(
 				projects.map((p) => {
 					return {

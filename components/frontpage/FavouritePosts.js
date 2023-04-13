@@ -1,18 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "@lib/sanity";
 import ArrowButton from "@components/ArrowButton";
 
 export default function FavouritePosts({ posts }) {
 	const [allFields, setFields] = useState([null]);
-	const router = useRouter();
 	const builder = imageUrlBuilder(client);
-
-	// Sort the trips
-	// trips.tripsData.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))
 
 	function urlFor(source) {
 		return builder.image(source);
@@ -22,7 +17,6 @@ export default function FavouritePosts({ posts }) {
 
 	useEffect(async () => {
 		setFields(posts);
-		// console.log(posts);
 	}, []);
 
 	return (

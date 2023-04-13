@@ -7,7 +7,6 @@ export default function FavouriteProjects({ projects }) {
 	const [allFields, setFields] = useState([null]);
 	useEffect(async () => {
 		setFields(projects);
-		// console.log(projects);
 	}, []);
 
 	const linkRef = useRef(null);

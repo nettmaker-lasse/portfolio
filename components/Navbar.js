@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { faBars, faTimes, faMoon } from "@fortawesome/free-solid-svg-icons";
 import userData from "@constants/data";
 import { useTheme } from "next-themes";
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 					}}
 				>
 					<FontAwesomeIcon
-						icon={theme === "dark" ? faSun : faMoon}
+						icon={theme === "dark" ? faLightbulb : faMoon}
 						style={iconStyle}
 					/>
 				</button>
@@ -95,7 +95,7 @@ const Navbar = () => {
 							}}
 						>
 							<FontAwesomeIcon
-								icon={theme === "dark" ? faSun : faMoon}
+								icon={theme === "dark" ? faLightbulb : faMoon}
 								style={iconStyle}
 							/>
 						</button>
@@ -108,6 +108,7 @@ const Navbar = () => {
 							<FontAwesomeIcon
 								icon={faGithub}
 								style={iconStyle}
+								className="dark:invert"
 							/>
 						</a>
 					</div>

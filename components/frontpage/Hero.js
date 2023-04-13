@@ -6,7 +6,6 @@ import PlayingNow from "../spotify/PlayingNow";
 
 function Hero({ hero }) {
 	const [fields, setFields] = useState([]);
-	const synthPink = "#ff2975";
 
 	// Get a pre-configured url-builder from your sanity client
 	const builder = imageUrlBuilder(client);

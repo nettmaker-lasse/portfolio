@@ -89,11 +89,9 @@ export async function getStaticProps() {
 	const postsData = await client.fetch(postsQuery);
 	const tripsData = await client.fetch(tripsQuery);
 
-	// console.log(process.env.GITHUB_AUTH_TOKEN);
 	let token = process.env.GITHUB_AUTH_TOKEN;
 
 	const repositories = await getLatestRepos(userData, token);
-	// console.log("REPOSITORIES", repositories);
 
 	const hero = { heroData };
 	const projects = { projectsData };

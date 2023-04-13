@@ -8,7 +8,6 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 export const Project = ({ title, images, date, slug }) => {
 	const builder = imageUrlBuilder(client);
-	const [toggler, setToggler] = useState(false);
 
 	function urlFor(source) {
 		return builder.image(source);
@@ -81,7 +80,6 @@ export const getServerSideProps = async (pageContext) => {
 
 	const result = await fetch(url).then((res) => res.json());
 	const trips = result.result[0];
-	// console.log(trips);
 
 	if (!trips) {
 		return {
