@@ -28,7 +28,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
 					rel="canonical"
 					href={`https://yourwebsite.com${router.asPath}`}
 				/>
-				<link rel="shortcut icon" href="/favicon-me.svg" />
+				<link rel="shortcut icon" href="/f-favicon.svg" />
 				<meta property="og:type" content={meta.type} />
 				<meta property="og:site_name" content="Lasse Buus" />
 				<meta property="og:description" content={meta.description} />
