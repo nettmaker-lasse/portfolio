@@ -29,7 +29,6 @@
     "react": "17.x",
     "react-dom": "17.x",
     "react-icons": "^4.3.1",
-    "react-rough-notation": "^1.0.1",
     "react-scroll": "^1.8.6",
     "simple-react-lightbox": "^3.6.9-0",
     "sweetalert2": "^11.3.3",

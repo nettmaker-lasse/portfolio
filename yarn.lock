@@ -2457,13 +2457,6 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react-rough-notation@^1.0.1":
-  "integrity" "sha512-UZQZ09XiZgbDRZFFP0qaFmTzs0rMKO929Npa5fHb2TOzLvKNEamaUtjRwjBx79cFzf+xMl/y8Y4HbYvvcKHQGQ=="
-  "resolved" "https://registry.npmjs.org/react-rough-notation/-/react-rough-notation-1.0.1.tgz"
-  "version" "1.0.1"
-  dependencies:
-    "rough-notation" "^0.4.0"
-
 "react-scroll@^1.8.6":
   "integrity" "sha512-VbbvjzLXvCjr2kiiG/lpLFim6mHpkXMdvOXQqwoSnUKyQPNmAo72r46x9C5PTLPSJq/dBd0gwrlZnnxqj5Yz1Q=="
   "resolved" "https://registry.npmjs.org/react-scroll/-/react-scroll-1.8.6.tgz"

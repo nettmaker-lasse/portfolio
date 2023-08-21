@@ -1,8 +1,6 @@
 import React from "react";
 import userData from "@constants/data";
 import Image from "next/image";
-import { UnderlineHighlight, LabelHighlight } from "@components/frontpage/Highlight";
-import { RoughNotationGroup } from "react-rough-notation";
 
 export default function CodeStack() {
 

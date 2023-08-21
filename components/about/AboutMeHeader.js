@@ -1,6 +1,4 @@
 import React from "react";
-import { HeroHighlight } from "@components/frontpage/Highlight";
-import { RoughNotationGroup } from "react-rough-notation";
 
 export default function AboutMeHeader() {
 
