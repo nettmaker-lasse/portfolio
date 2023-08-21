@@ -69,7 +69,7 @@ export default function FavouritePosts({ posts }) {
 										</h3>
 									</div>
 									<div className="relative block">
-									<div className="sm:hidden">
+										<div className="sm:hidden">
 											<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
 												{item.title}
 											</h3>
