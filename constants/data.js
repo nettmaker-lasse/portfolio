@@ -175,7 +175,7 @@ const userData = {
 		{
 			title: "Multimediadesign",
 			school: "UCN North Jytland / Denmark - Aalborg",
-			date: "Aug 2015 - Jan 2017",
+			date: "Aug 2014 - Jun 2015",
 			content:
 				"Studying Multimedia Design, you will learn how to bring a new website to life for a company. You will learn to analyse challenges and analyse users, to develop the right user-friendly design and to finally develop and implement the user interface.",
 		},

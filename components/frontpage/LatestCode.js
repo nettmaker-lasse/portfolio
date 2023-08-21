@@ -38,7 +38,7 @@ export default function LatestCode({ repositories }) {
 					</Link>
 				</div>
 			</div>
-			<div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto mt-6 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:mt-0">
+			<div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto mt-6 md:grid-cols-3 lg:grid-cols-3 gap-y-10 md:mt-0">
 				{repos &&
 					repos.map((latestRepo, idx) => (
 						<GithubRepoCard
@@ -53,37 +53,45 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="flex flex-col gap-2 align-top bg-white rounded-md dark:bg-transparent">
-			<Image
-				src="/github.jpg"
-				layout="responsive"
-				width={400}
-				height={400}
-				quality={70}
-				className="object-cover transition ease-out transform hover:scale-125 duration-2000"
-			/>
-
-			<div className="">
-				<span className="block text-[10px] text-black my-2 dark:text-white self-end">
-					{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
-				</span>
-				<h3 className="my-2 text-xl font-bold leading-none text-black capitalize dark:text-white">
-					{latestRepo.name}
-				</h3>
-				<p className="font-sans text-sm font-normal leading-normal text-black dark:text-white">
-					{latestRepo.description}
-				</p>
-				<div className="flex self-start mt-4">
-					<div>
-						<a
-							href={latestRepo.clone_url}
-							className="font-normal inline-block text-[12px] text-black dark:text-white border-b border-black hover:border-synthPink"
-						>
-							<p>View Repository </p>
-						</a>
-					</div>
-				</div>
-			</div>
+	  <div className="relative flex flex-col gap-2 align-top bg-white rounded-md cursor-pointer dark:bg-transparent group">
+		<div className="relative block">
+		  <Image
+			src="/github.jpg"
+			layout="responsive"
+			width={400}
+			height={400}
+			quality={70}
+			className="relative object-cover transition ease-out transform hover:scale-125 duration-2000"
+		  />
+		  {/* Overlay */}
+		  <div className="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 sm:backdrop-blur sm:bg-synthPink/20 group-hover:opacity-0">
+		  </div>
+		  {/* Centered Title */}
+		  <h3 className="absolute inset-0 items-center justify-center hidden text-2xl font-medium text-white transition-opacity duration-500 ease-in-out rounded-sm opacity-100 sm:flex dark:text-white group-hover:opacity-0">
+			{latestRepo.name}
+		  </h3>
+		  <span className="absolute top-5 left-5 block text-[12px] text-white my-2 dark:text-white self-end">
+			{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
+		  </span>
 		</div>
+		<div className="relative">
+			<div className="sm:hidden">
+											<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
+												{latestRepo.name}
+											</h3>
+										</div>
+		  <div className="flex self-start mt-4">
+			<div>
+			  <a
+				href={latestRepo.clone_url}
+				className="absolute top-[-60px] right-5 bg-synthPink p-2 font-normal inline-block text-[12px] text-white dark:text-white"
+			  >
+				<p className="hover:underline">View Repository</p>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	);
-};
+  };
+  

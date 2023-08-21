@@ -19,7 +19,7 @@ export default function AboutMeHeader() {
 					I am a Digital Concept Developer specializing in UI/UX and
 					web development, with a focus for details. I'm currently
 					working as a Frontend Developer for a company called
-					Nettmaker in Oslo, Norway where I have been for the past 2
+					Nettmaker in Oslo, Norway where I have been for the past 4
 					year by starting out as an intern through the AIESEC
 					program. I'm passionate about making sure that the
 					solutions, interfaces, graphics are user-friendly,

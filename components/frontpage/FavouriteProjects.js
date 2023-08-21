@@ -42,28 +42,32 @@ export default function FavouriteProjects({ projects }) {
 								href={"/projects/" + item.slug.current}
 								key={item.slug.current}
 							>
-								<div
-									className="relative flex flex-col w-full cursor-pointer"
-									key={i + item.slug.current}
-								>
-									<Image
-										src={item.image.url}
-										layout="responsive"
-										width={400}
-										height={400}
-										quality={70}
-										className="object-cover transition ease-out transform hover:scale-125 duration-2000"
-									/>
-									<div>
-										<h3 className="relative px-2 py-1 pl-0 mt-2 text-lg font-bold text-black rounded-sm dark:text-white">
-											<div className="flex self-start">
-												{item.title}
-											</div>
+								<div className="relative flex flex-col w-full cursor-pointer group">
+									<div className="relative block h-full">
+										<Image
+											src={item.image.url}
+											layout="responsive"
+											width={400}
+											height={400}
+											quality={70}
+											className="relative object-cover transition ease-out transform hover:scale-125 duration-2000"
+										/>
+										{/* Overlay */}
+										<div className="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 sm:backdrop-blur sm:bg-synthPink/20 group-hover:opacity-0"></div>
+										{/* Centered Title */}
+										<h3 className="absolute inset-0 items-center justify-center hidden text-2xl font-medium text-white transition-opacity duration-500 ease-in-out rounded-sm opacity-100 sm:flex dark:text-white group-hover:opacity-0">
+											{item.title}
 										</h3>
-										<h4 className="relative px-2 py-1 pl-0 text-sm font-normal text-black rounded-sm dark:text-white">
-											<div className="flex self-start">
-												{item.status}
-											</div>
+									</div>
+									{/* Status */}
+									<div className="relative block">
+										<div className="sm:hidden">
+											<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
+												{item.title}
+											</h3>
+										</div>
+										<h4 className="absolute top-[-55px] bg-synthPink px-4 rounded-none py-2 text-white right-5 text-sm font-normal dark:text-white">
+											{item.status}
 										</h4>
 									</div>
 								</div>
