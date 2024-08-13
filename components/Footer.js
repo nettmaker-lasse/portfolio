@@ -13,18 +13,18 @@ export default function Footer() {
 					<div className="w-full mb-8 text-center lg:w-4/12">
 						<a
 							href="/"
-							className="text-base font-normal text-black dark:text-gray-300 dark:text-white"
+							className="text-[12px] font-normal text-black dark:text-white"
 						>
 							<p>
 								Copyright &copy; {moment().format("YYYY")}{" "}
-								<b>Lasse Buus</b>
+								<span className="font-bold">Lasse Buus Nielsen</span>
 							</p>
 						</a>
 					</div>
 					<div className="flex flex-row items-center justify-center w-full space-x-4 lg:w-4/12 lg:justify-end">
 						<a
 							href={userData.socialLinks.instagram}
-							className="text-base font-normal dark:text-gray-300"
+							className="text-base font-normal dark:white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

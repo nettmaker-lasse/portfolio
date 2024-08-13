@@ -15,9 +15,9 @@ export default function FavouritePosts({ posts }) {
 
 	const linkRef = useRef(null);
 
-	useEffect(async () => {
+	useEffect(() => {
 		setFields(posts);
-	}, []);
+	}, [posts]);
 
 	return (
 		<div className="">
@@ -26,14 +26,9 @@ export default function FavouritePosts({ posts }) {
 					<h2 className="max-w-lg my-10 text-5xl font-bold text-black md:my-0 md:text-black dark:text-white">
 						Articles
 					</h2>
-					<div className="flex-1 md:mr-8">
-						<span className="block font-mono text-sm text-right text-synthPink dark:text-white">
-							View all articles
-						</span>
-					</div>
 					<Link href="/blog">
 						<ArrowButton
-							text="View all"
+							text="View all articles"
 							href="/blog"
 							ref={linkRef}
 						/>
@@ -41,7 +36,7 @@ export default function FavouritePosts({ posts }) {
 				</div>
 
 				{/* Grid starts here */}
-				<div className="grid gap-8 mt-8 md:grid-cols-3">
+				<div className="grid gap-8 mt-8 md:grid-cols-2">
 					{posts.postsData
 						.slice(0, 3)
 						.sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -51,32 +46,24 @@ export default function FavouritePosts({ posts }) {
 								key={item.slug.current}
 							>
 								<div
-									className="relative flex flex-col w-full cursor-pointer group"
-									key={i + item.slug.current}
+									className={`relative flex flex-col w-full cursor-pointer group ${
+										i === 2
+											? "md:col-span-2"
+											: "md:col-span-1"
+									}`}
 								>
-									<div className="relative block">
+									<div className="relative block w-full h-[500px] dark:border">
 										<Image
 											src={item.imagefrontpage.url}
-											layout="responsive"
-											width={400}
-											height={400}
-											quality={70}
-											className="relative object-cover transition"
+											layout="fill"
+											className="object-cover object-center"
+											alt={item.title}
 										/>
-										<div className="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 sm:backdrop-blur sm:bg-synthPink/20 group-hover:opacity-0"></div>
-										<h3 className="absolute inset-0 items-center justify-center hidden text-2xl font-medium text-center text-white transition-opacity duration-500 ease-in-out rounded-sm opacity-100 sm:flex dark:text-white group-hover:opacity-0">
-											{item.title}
-										</h3>
-									</div>
-									<div className="relative block">
-										<div className="sm:hidden">
-											<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
+										<div className="">
+											<h3 className="absolute items-center justify-start px-4 py-2 text-[12px] font-normal text-black bg-white top-6 left-2 sm:left-6 mr-2">
 												{item.title}
 											</h3>
 										</div>
-										<h4 className="absolute top-[-55px] bg-synthPink px-4 rounded-none py-2 text-white right-5 text-sm font-normal dark:text-white">
-											{item.status}
-										</h4>
 									</div>
 								</div>
 							</Link>

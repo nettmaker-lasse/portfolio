@@ -8,6 +8,7 @@ import ArrowButton from "@components/ArrowButton";
 export default function LatestCode({ repositories }) {
 	const [repos, setRepos] = useState([]);
 	const linkRef = useRef(null);
+
 	useEffect(() => {
 		setRepos(repositories);
 	}, [repositories]);
@@ -15,15 +16,10 @@ export default function LatestCode({ repositories }) {
 	return (
 		<section>
 			<div className="max-w-6xl mx-auto mt-8 md:mt-20">
-				<div className="flex flex-col items-center justify-between md:flex-row lg:my-10">
+				<div className="flex flex-col items-center justify-between md:flex-row">
 					<h1 className="max-w-lg my-6 text-5xl font-bold text-center text-black md:my-10 md:text-black dark:text-white lg:text-left">
 						Code
 					</h1>
-					<div className="flex-1 md:mr-8">
-						<span className="block font-mono text-sm text-right text-synthPink dark:text-white bg">
-							View all repositories
-						</span>
-					</div>
 					<Link
 						href={`https://github.com/${userData.githubUsername}`}
 						target="_blank"
@@ -38,13 +34,17 @@ export default function LatestCode({ repositories }) {
 					</Link>
 				</div>
 			</div>
-			<div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto mt-6 md:grid-cols-3 lg:grid-cols-3 gap-y-10 md:mt-0">
+			<div className="grid max-w-6xl grid-cols-2 gap-6 mx-auto mt-6 md:grid-cols-3 gap-y-6 md:mt-0">
 				{repos &&
 					repos.map((latestRepo, idx) => (
-						<GithubRepoCard
-							latestRepo={latestRepo}
+						<div
 							key={idx + latestRepo.id}
-						/>
+							className={`${
+								(idx % 6 === 0 || idx % 6 === 3 || idx % 6 == 4 ) ? "col-span-2 md:col-span-2" : "col-span-2 md:col-span-1"
+							}`}
+						>
+							<GithubRepoCard latestRepo={latestRepo} />
+						</div>
 					))}
 			</div>
 		</section>
@@ -53,39 +53,29 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="relative flex flex-col gap-2 align-top bg-white rounded-md cursor-pointer dark:bg-transparent group">
-			<div className="relative block">
+		<div className="relative flex flex-col align-top bg-white rounded-md cursor-pointer dark:bg-transparent group">
+			<div className="relative block w-full h-[350px] dark:border">
 				<Image
 					src="/github.jpg"
-					layout="responsive"
-					width={400}
-					height={400}
-					quality={70}
-					className="relative object-cover transition ease-out transform hover:scale-125 duration-2000"
+					layout="fill"
+					className="relative object-cover"
 				/>
-				{/* Overlay */}
-				<div className="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 sm:backdrop-blur sm:bg-synthPink/20 group-hover:opacity-0"></div>
 				{/* Centered Title */}
-				<h3 className="absolute inset-0 items-center justify-center hidden text-2xl font-medium text-white transition-opacity duration-500 ease-in-out rounded-sm opacity-100 sm:flex dark:text-white group-hover:opacity-0">
+				<h3 className="absolute p-2 text-[12px] font-normal text-black bg-white left-6 top-6 sm:flex">
 					{latestRepo.name}
 				</h3>
-				<span className="absolute top-5 left-5 block text-[12px] text-white my-2 dark:text-white self-end">
+				<span className="absolute self-end block my-2 text-sm text-white top-6 right-6 dark:text-white">
 					{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 				</span>
 			</div>
 			<div className="relative">
-				<div className="sm:hidden">
-					<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
-						{latestRepo.name}
-					</h3>
-				</div>
-				<div className="flex self-start mt-4">
+				<div className="flex self-start">
 					<div>
 						<a
 							href={latestRepo.clone_url}
-							className="absolute top-[-60px] right-5 bg-synthPink p-2 font-normal inline-block text-[12px] text-white dark:text-white"
+							className="absolute bottom-6 right-6 bg-white p-2 font-normal inline-block text-[12px] text-black hover:bg-synthPink hover:text-white"
 						>
-							<p className="hover:underline">View Repository</p>
+							View Repository
 						</a>
 					</div>
 				</div>

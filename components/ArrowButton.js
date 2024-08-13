@@ -7,7 +7,7 @@ const ArrowButton = forwardRef(({ text, href, ...rest }, ref) => {
       <Link href={href} passHref>
         <a
           ref={ref}
-          className="flex flex-row items-center px-8 py-4 my-4 space-x-4 text-xl font-semibold bg-white border border-synthPink md:my-0 dark:text-white dark:bg-synthPink hover:bg-synthPink hover:text-white"
+          className="flex flex-row items-center px-8 py-4 my-4 space-x-4 text-xl font-semibold border border-synthPink md:my-0 hover:bg-synthPink hover:text-white"
           {...rest}
         >
           <svg

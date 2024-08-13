@@ -44,10 +44,12 @@ function Hero({ hero }) {
 						</div>
 					</div>
 					{/* Spotify Playing now */}
-					<span className="block mt-10 mb-4 text-xl font-bold text-black dark:text-white sm:inline-block">
-						Currently listening to:
-					</span>
-					<PlayingNow />
+					<div className="flex flex-col">
+						<span className="block underline mt-10 mb-4 text-[12px] text-black font-base dark:text-white sm:inline-block">
+							Currently listening to:
+						</span>
+						<PlayingNow />
+					</div>
 				</div>
 				{/* Image container */}
 				<div className="relative w-full lg:block md:w-1/2">
@@ -61,7 +63,7 @@ function Hero({ hero }) {
 							className="object-cover w-full shadow dark:border border-synthPink"
 						/>
 						<div className="flex flex-row justify-between mt-4">
-							<div className="flex flex-row space-x-4 text-synthPink dark:text-synthPink">
+							<div className="flex flex-row space-x-4 text-black dark:text-synthPink">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"

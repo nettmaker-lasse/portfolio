@@ -17,12 +17,12 @@ export default function PlayingNow() {
 							? data.songUrl
 							: "https://open.spotify.com/user/113671250?si=73f1c554e0544785"
 					}
-					className="relative flex items-center space-x-4 w-auto"
+					className="relative flex items-center w-auto space-x-4"
 				>
 					<div className="w-16">
 						{data?.isPlaying ? (
 							<img
-								className="w-16 shadow-sm rounded-md border-synthPink border"
+								className="w-16 border border-white rounded-sm shadow-sm"
 								src={data?.albumImageUrl}
 								alt={data?.album}
 							/>

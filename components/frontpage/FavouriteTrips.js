@@ -17,7 +17,7 @@ export default function FavouriteTrips({ trips }) {
 	const linkRef = useRef(null);
 	useEffect(() => {
 		setFields(trips);
-	}, []);
+	}, [trips]);
 
 	return (
 		<div className="">
@@ -26,14 +26,9 @@ export default function FavouriteTrips({ trips }) {
 					<h2 className="max-w-lg my-10 text-5xl font-bold text-black md:my-0 md:text-black dark:text-white">
 						Trips
 					</h2>
-					<div className="flex-1 md:mr-8">
-						<span className="block font-mono text-sm text-right text-synthPink dark:text-white">
-							View all trips
-						</span>
-					</div>
 					<Link href="/trips">
 						<ArrowButton
-							text="View all"
+							text="View all trips"
 							href="/trips"
 							ref={linkRef}
 						/>
@@ -58,31 +53,23 @@ export default function FavouriteTrips({ trips }) {
 									className="relative flex flex-col w-full cursor-pointer group"
 									key={i + item.slug.current}
 								>
-									<div className="relative block">
+									<div className="relative block w-full h-[500px] dark:border">
 										<Image
 											src={urlFor(item.images[0]).url()}
-											layout="responsive"
-											width={400}
-											height={400}
-											quality={70}
-											className="relative object-cover transition"
+											layout="fill"
+											className="object-cover object-center"
+											alt={item.title}
 										/>
-										<div className="absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out opacity-100 sm:backdrop-blur sm:bg-synthPink/20 group-hover:opacity-0"></div>
-										<h3 className="absolute inset-0 items-center justify-center hidden text-2xl font-medium text-center text-white transition-opacity duration-500 ease-in-out rounded-sm opacity-100 sm:flex dark:text-white group-hover:opacity-0">
-											{item.title}
-										</h3>
-									</div>
-									<div className="relative block">
-										<div className="sm:hidden">
-											<h3 className="flex items-center justify-start pt-4 text-2xl font-medium text-black transition-opacity duration-500 ease-in-out rounded-sm opacity-100 dark:text-white group-hover:opacity-0">
+										<div>
+											<h3 className="absolute items-center justify-start px-4 py-2 text-[12px] font-normal text-black bg-white top-6 left-6">
 												{item.title}
 											</h3>
-										</div>
-										<h4 className="absolute top-[-55px] bg-synthPink px-4 rounded-none py-2 text-white right-5 text-sm font-normal dark:text-white">
+											<h4 className="absolute px-4 py-2 text-[12px] font-normal text-white rounded-none top-6 right-6 dark:text-white">
 											{moment(item.releaseDate).format(
 												"Do MMMM YYYY"
 											)}
 										</h4>
+										</div>
 									</div>
 								</div>
 							</Link>
