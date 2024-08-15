@@ -53,7 +53,7 @@ export default function FavouriteTrips({ trips }) {
 									className="relative flex flex-col w-full cursor-pointer group"
 									key={i + item.slug.current}
 								>
-									<div className="relative block w-full h-[500px] dark:border">
+									<div className="relative block w-full h-[300px] md:h-[500px] dark:border">
 										<Image
 											src={urlFor(item.images[0]).url()}
 											layout="fill"

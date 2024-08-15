@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Services() {
 	return (
 		<div className="">
-			<div className="max-w-6xl mx-auto my-[100px]">
+			<div className="max-w-6xl mx-auto my-20">
 				<div className="flex flex-col items-center gap-8 mt-8 md:flex-row md:gap-8 ">
 					<div className="w-full md:w-1/3 md:h-[300px] text-center text-black dark:text-white shadow-black rounded-md">
 						<div className="flex flex-col items-center justify-center h-full p-6">

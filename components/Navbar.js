@@ -30,7 +30,7 @@ const Navbar = () => {
 		(item) => (
 			<li key={item}>
 				<Link href={`/${item.toLowerCase()}`}>
-					<a className="text-sm text-black cursor-pointer hover:text-synthPink hover:border-b hover:border-black dark:hover:border-synthPink dark:text-white">
+					<a className="text-sm font-medium text-black cursor-pointerz hover:border-b hover:border-synthPink dark:hover:border-synthPink dark:text-white">
 						{item}
 					</a>
 				</Link>
@@ -42,10 +42,10 @@ const Navbar = () => {
 		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-4 md:my-8 md:items-center md:flex-row">
 			<Link href="/">
 				<a>
-					<h1 className="text-xl font-semibold text-black dark:text-white">
+					<h1 className="font-semibold text-black text-md dark:text-white">
 						{userData.name}
 					</h1>
-					<p className="text-base font-light text-black dark:text-white">
+					<p className="text-xs font-light text-black dark:text-white">
 						{userData.designation}
 					</p>
 				</a>
@@ -58,11 +58,13 @@ const Navbar = () => {
 					<FontAwesomeIcon icon={menuIcon} style={iconStyle} />
 				</button>
 			</div>
-			<div className="items-center hidden space-x-4 md:flex">
-				<ul className="flex space-x-8">{menuItems}</ul>
+			<div className="items-center hidden space-x-4 md:flex absolute left-[50%] translate-x-[-50%] bg-white dark:bg-black dark:border-synthPink border border-black rounded-full">
+				<ul className="flex px-6 py-3 space-x-8">{menuItems}</ul>
+			</div>
+			<div className="flex absolute right-12 mt-[25px] md:mt-0 translate-y-[-50%] sm:flex justify-center gap-4 align-middle md:right-0 md:relative md:translate-y-0">
 				<button
 					onClick={toggleDarkMode}
-					className="text-gray-900 dark:text-gray-100 focus:outline-none"
+					className="text-gray-900 dark:text-gray-100 focus:outline-none "
 					style={{
 						"--tw-text-opacity": "1",
 						color: `rgba(0, 240, 255, var(--tw-text-opacity))`,
@@ -83,35 +85,8 @@ const Navbar = () => {
 				</a>
 			</div>
 			{mobileMenuOpen && (
-				<div className="flex flex-col w-full mt-4 space-y-4 text-center md:hidden">
-					<ul>{menuItems}</ul>
-					<div className="flex items-center justify-center space-x-4">
-						<button
-							onClick={toggleDarkMode}
-							className="text-gray-900 dark:text-gray-100 focus:outline-none"
-							style={{
-								"--tw-text-opacity": "1",
-								color: `rgba(251, 100, 160, var(--tw-text-opacity))`,
-							}}
-						>
-							<FontAwesomeIcon
-								icon={theme === "dark" ? faLightbulb : faMoon}
-								style={iconStyle}
-							/>
-						</button>
-						<a
-							href="https://github.com/nettmaker-lasse"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-gray-900 dark:text-gray-100 hover:hover:text-synthPink dark:hover:text-synthPink"
-						>
-							<FontAwesomeIcon
-								icon={faGithub}
-								style={iconStyle}
-								className="dark:invert"
-							/>
-						</a>
-					</div>
+				<div className="flex flex-col w-full mt-4 text-left md:hidden">
+					<ul className="flex flex-col gap-2">{menuItems}</ul>
 				</div>
 			)}
 		</nav>

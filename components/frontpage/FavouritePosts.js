@@ -52,7 +52,7 @@ export default function FavouritePosts({ posts }) {
 											: "md:col-span-1"
 									}`}
 								>
-									<div className="relative block w-full h-[500px] dark:border">
+									<div className="relative block w-full h-[300px] md:h-[500px] dark:border">
 										<Image
 											src={item.imagefrontpage.url}
 											layout="fill"

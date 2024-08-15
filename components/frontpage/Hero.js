@@ -27,20 +27,17 @@ function Hero({ hero }) {
 	const { title, subtitle, image, imagecaption } = hero.heroData;
 
 	return (
-		<div className="max-w-6xl mx-auto">
+		<div className="max-w-6xl mx-auto mt-8 md:mt-20">
 			<div className="flex flex-col items-start justify-between overflow-hidden md:flex-row sm:items-center">
 				{/* Text container */}
 				<div className="relative w-full mb-5 md:w-1/2">
 					<div>
 						<div className="ml-0 text-left md:mb-4 max-w-[385px]">
-							<h1 className="block text-4xl font-bold md:text-7xl text-synthPink">
+							<h2 className="block text-4xl font-bold md:text-7xl text-synthPink">
 								{title}
-							</h1>
-						</div>
-						<div className="ml-0 text-left max-w-[385px]">
-							<h1 className="block w-full text-4xl font-bold md:text-7xl text-synthPink">
+								<br />
 								{subtitle}
-							</h1>
+							</h2>
 						</div>
 					</div>
 					{/* Spotify Playing now */}
