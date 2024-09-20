@@ -41,7 +41,7 @@ module.exports = {
 			emerald: colors.emerald,
 			yellow: colors.amber,
 			blue: colors.sky,
-			redd: colors.red,
+			red: colors.red,
 			synth: {
 				DEFAULT: "#0a5459",
 			},
