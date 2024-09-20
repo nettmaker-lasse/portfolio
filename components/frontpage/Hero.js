@@ -33,10 +33,10 @@ function Hero({ hero }) {
 				<div className="relative w-full mb-5 md:w-1/2">
 					<div>
 						<div className="ml-0 text-left md:mb-4 max-w-[385px]">
-							<h2 className="block text-4xl font-bold md:text-7xl text-synthPink">
+							<h2 className="block text-4xl font-bold text-red-900 md:text-7xl">
 								{title}
 								<br />
-								{subtitle}
+								<span className="text-red-700">{subtitle}</span>
 							</h2>
 						</div>
 					</div>
