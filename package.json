@@ -2,10 +2,10 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-	"dev": "NODE_OPTIONS=--openssl-legacy-provider next dev -p 3000",
-    "build": "next build",
-    "start": "next start"
+   "scripts": {
+    "dev":   "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev -p 3000",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
