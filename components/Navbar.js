@@ -67,7 +67,7 @@ const Navbar = () => {
 					className="text-gray-900 dark:text-gray-100 focus:outline-none "
 					style={{
 						"--tw-text-opacity": "1",
-						color: `rgba(0, 240, 255, var(--tw-text-opacity))`,
+						color: `rgba(277, 73, 73, var(--tw-text-opacity))`,
 					}}
 				>
 					<FontAwesomeIcon

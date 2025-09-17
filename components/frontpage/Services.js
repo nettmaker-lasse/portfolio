@@ -9,7 +9,7 @@ export default function Services() {
 					<div className="w-full md:w-1/3 md:h-[300px] text-center text-black dark:text-white shadow-black rounded-md">
 						<div className="flex flex-col items-center justify-center h-full p-6">
 							<div>
-								<div className="bg-black dark:bg-white flex items-center justify-center h-[50px] w-[50px]">
+								<div className="bg-synth flex items-center justify-center h-[50px] w-[50px]">
 									<Image
 										src="/services/crown.svg"
 										width="25"
@@ -31,7 +31,7 @@ export default function Services() {
 					<div className="w-full md:w-1/3 md:h-[300px] text-center shadow-black rounded-md">
 						<div className="flex flex-col items-center justify-center h-full p-6">
 							<div>
-								<div className="bg-black dark:bg-white flex items-center justify-center h-[50px] w-[50px]">
+								<div className="bg-synth flex items-center justify-center h-[50px] w-[50px]">
 									<Image
 										src="/services/app.svg"
 										width="25"
@@ -53,7 +53,7 @@ export default function Services() {
 					<div className="w-full md:w-1/3 md:h-[300px] text-center shadow-black rounded-md">
 						<div className="flex flex-col items-center justify-center h-full p-6">
 							<div>
-								<div className="bg-black dark:bg-white flex items-center justify-center h-[50px] w-[50px]">
+								<div className="bg-synth flex items-center justify-center h-[50px] w-[50px]">
 									<Image
 										src="/services/globe.svg"
 										width="25"

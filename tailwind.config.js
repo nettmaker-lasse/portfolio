@@ -43,10 +43,10 @@ module.exports = {
 			blue: colors.sky,
 			red: colors.red,
 			synth: {
-				DEFAULT: "#0a5459",
+				DEFAULT: "#e34949",
 			},
 			synthPink: {
-				DEFAULT: "#00f0ff",
+				DEFAULT: "#e34949",
 			},
 			gradBlue: "​#5179FE",
 		},
