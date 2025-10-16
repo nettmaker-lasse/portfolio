@@ -17,7 +17,10 @@ module.exports = {
 		extend: {
 			boxShadow: {
 				'xl': '0 5px 20px -1px rgba(0, 0, 0, 0.3)',
-			  }
+			},
+			maxWidth: {
+				'6xl': '1240px', // Change this value to your preferred size
+			}
 		},
 		transitionDuration: {
 			0: "0ms",
@@ -43,10 +46,10 @@ module.exports = {
 			blue: colors.sky,
 			red: colors.red,
 			synth: {
-				DEFAULT: "#e34949",
+				DEFAULT: "#353d62",
 			},
 			synthPink: {
-				DEFAULT: "#e34949",
+				DEFAULT: "#353d62",
 			},
 			gradBlue: "​#5179FE",
 		},

@@ -26,7 +26,7 @@ const Navbar = () => {
 		height: "20px",
 	};
 
-	const menuItems = ["About", "Projects", "Blog", "Trips", "Contact"].map(
+	const menuItems = ["About", "Blog", "Trips", "Contact"].map(
 		(item) => (
 			<li key={item}>
 				<Link href={`/${item.toLowerCase()}`}>
@@ -67,7 +67,7 @@ const Navbar = () => {
 					className="text-gray-900 dark:text-gray-100 focus:outline-none "
 					style={{
 						"--tw-text-opacity": "1",
-						color: `rgba(277, 73, 73, var(--tw-text-opacity))`,
+						color: `rgba(255, 202, 127, var(--tw-text-opacity))`,
 					}}
 				>
 					<FontAwesomeIcon

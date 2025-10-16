@@ -18,9 +18,9 @@ export default function Home({ hero, projects, repositories, posts, trips }) {
 			>
 				<Hero hero={hero} />
 				<Services />
-				<FavouriteProjects projects={projects} />
-				<LatestCode repositories={repositories} />
+				{/* <FavouriteProjects projects={projects} /> */}
 				<FavouritePosts posts={posts} />
+				<LatestCode repositories={repositories} />
 				<FavouriteTrips trips={trips} />
 			</ContainerBlock>
 		</>

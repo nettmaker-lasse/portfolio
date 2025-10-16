@@ -1,9 +1,20 @@
 import React from "react";
+import Image from "next/image";
 
 export default function AboutMeHeader() {
 
 	return (
 		<div className="max-w-6xl mx-auto sm:mt-[100px] mb-[50px]">
+			<div className="max-w-2xl mx-auto mb-6 h-2xl">
+				<Image
+				src="/profile-stockholm.jpg"
+				layout="responsive"
+				width={200}
+				height={200}
+				alt="Lasse Buus Nielsen"
+				className="w-32 h-32 mx-auto object-fit"
+			/>
+			</div>
 			<div className="max-w-2xl mx-auto">
 				<span className="block text-lg font-light text-synthPink dark:text-white">
 					Hey, I'm

@@ -14,7 +14,7 @@ export default function Services() {
 										src="/services/crown.svg"
 										width="25"
 										height="25"
-										className="text-white dark:invert"
+										className="text-white"
 									/>
 								</div>
 							</div>
@@ -36,7 +36,7 @@ export default function Services() {
 										src="/services/app.svg"
 										width="25"
 										height="25"
-										className="text-white dark:invert"
+										className="text-white"
 									/>
 								</div>
 							</div>
@@ -58,7 +58,7 @@ export default function Services() {
 										src="/services/globe.svg"
 										width="25"
 										height="25"
-										className="text-white dark:invert"
+										className="text-white"
 									/>
 								</div>
 							</div>

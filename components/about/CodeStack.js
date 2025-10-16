@@ -10,7 +10,7 @@ export default function CodeStack() {
 				<div className="flex flex-wrap content-between">
 					<div className="w-full max-w-2xl mx-auto mb-4">
 						<div className="relative">
-									<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
+									<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
 										Code stack
 									</h3>
 						</div>
@@ -24,7 +24,7 @@ export default function CodeStack() {
 						</div>
 					</div>
 					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
-								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
+								<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
 									Design tools
 								</h3>
 						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
@@ -38,7 +38,7 @@ export default function CodeStack() {
 						</div>
 					</div>
 					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
-								<h3 className="inline-block mb-6 text-3xl font-medium text-black dark:text-white">
+								<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
 									Productive tools
 								</h3>
 						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
@@ -60,7 +60,7 @@ export default function CodeStack() {
 const SkillCard = ({ title, url }) => {
 	return (
 		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width="full" height="50" />
+			<Image src={url} layout="responsive" width={60} height={50} />
 		</div>
 	);
 };
@@ -68,7 +68,7 @@ const SkillCard = ({ title, url }) => {
 const ToolCard = ({ title, url }) => {
 	return (
 		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width="full" height="50" />
+			<Image src={url} layout="responsive" width={60} height={50} />
 		</div>
 	);
 };
@@ -76,7 +76,7 @@ const ToolCard = ({ title, url }) => {
 const OtherCard = ({ title, url }) => {
 	return (
 		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width="full" height="50" />
+			<Image src={url} layout="responsive" width={60} height={50} />
 		</div>
 	);
 };
