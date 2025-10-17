@@ -67,11 +67,11 @@ export default function Home({ posts }) {
 												{posts.title}
 											</div>
 										</h3>
-										<h4 className="relative px-2 py-1 pl-0 text-sm font-normal text-black rounded-sm dark:text-white">
-											<div className="flex self-start">
+										<span className="relative flex px-2 py-1 pl-0 text-sm font-normal text-white rounded-sm dark:text-white">
+											<div className="flex self-start p-2 text-black bg-white dark:text-white dark:bg-synth">
 												{posts.status}
 											</div>
-										</h4>
+										</span>
 									</div>
 								</div>
 							))

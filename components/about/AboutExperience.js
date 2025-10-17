@@ -48,7 +48,7 @@ export default function AboutExperience() {
 const ExperienceCard = ({ title, date, company, content }) => {
 	return (
 		<div className="relative mt-8">
-			<h4 className="relative inline-block px-2 py-1 pl-0 text-sm font-normal bg-white text-synthPink bold dark:bg-transparent">
+			<h4 className="relative inline-block px-2 py-1 pl-0 text-sm font-normal bg-white text-synthPink bold dark:bg-transparent dark:text-gray-200">
 				<div className="flex self-start">{date}</div>
 			</h4>
 			<h3 className="my-4 text-xl font-semibold leading-none text-black dark:text-white">
@@ -68,7 +68,7 @@ const SchoolCard = ({ title, date, school, content, degree }) => {
 	return (
 		<div className="relative w-full mt-6">
 			{degree ? (
-				<span className="relative top-0 right-0 inline-block p-2 mb-4 text-xs font-light text-white bg-black dark:bg-synthPink dark:text-white">
+				<span className="relative top-0 right-0 inline-block p-2 mb-4 text-xs font-light text-white bg-synthPink dark:bg-synthPink dark:text-white">
 					{degree}
 				</span>
 			) : (
@@ -80,7 +80,7 @@ const SchoolCard = ({ title, date, school, content, degree }) => {
 			<h3 className="relative my-4 text-xl font-light leading-none text-black dark:text-white">
 				{title}
 			</h3>
-			<h4 className="mb-2 font-light text-md text-synthPink">{school}</h4>
+			<h4 className="mb-2 font-light text-md text-synthPink dark:text-gray-200">{school}</h4>
 			<p className="font-sans text-base text-black font-regular dark:text-white">
 				{content}
 			</p>

@@ -33,7 +33,7 @@ function Hero({ hero }) {
 				<div className="relative w-full mb-5 md:w-1/2">
 					<div>
 						<div className="ml-0 text-left md:mb-4 max-w-[385px]">
-							<h2 className="block text-4xl font-bold md:text-7xl text-synthPink dark:text-white">
+							<h2 className="block text-5xl font-bold md:text-7xl text-synthPink dark:text-white">
 								{title}
 								<br />
 								{subtitle}
@@ -41,7 +41,7 @@ function Hero({ hero }) {
 						</div>
 					</div>
 					{/* Spotify Playing now */}
-					<div className="flex flex-col">
+					<div className="flex-col hidden sm:flex">
 						<span className="block underline mt-10 mb-4 text-[12px] text-black font-base dark:text-white sm:inline-block">
 							Currently listening to:
 						</span>
@@ -66,7 +66,7 @@ function Hero({ hero }) {
 									width="16"
 									height="16"
 									fill="currentColor"
-									className="bi bi-arrow-90deg-up"
+									className="bi bi-arrow-90deg-up dark:text-white"
 									viewBox="0 0 16 16"
 								>
 									<path
@@ -74,7 +74,7 @@ function Hero({ hero }) {
 										d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
 									/>
 								</svg>
-								<p className="font-mono">{imagecaption}</p>
+								<p className="font-mono dark:text-white">{imagecaption}</p>
 							</div>
 						</div>
 					</div>

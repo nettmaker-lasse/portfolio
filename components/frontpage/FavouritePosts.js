@@ -36,7 +36,7 @@ export default function FavouritePosts({ posts }) {
 				</div>
 
 				{/* Grid starts here */}
-				<div className="grid gap-8 mt-8 md:grid-cols-2">
+				<div className="grid gap-8 mt-8 md:grid-cols-3">
 					{posts.postsData
 						.slice(0, 3)
 						.sort((a, b) => (a.title > b.title ? 1 : -1))
@@ -48,7 +48,7 @@ export default function FavouritePosts({ posts }) {
 								<div
 									className={`relative flex flex-col w-full cursor-pointer group ${
 										i === 2
-											? "md:col-span-2"
+											? "md:col-span-1"
 											: "md:col-span-1"
 									}`}
 								>
@@ -60,7 +60,7 @@ export default function FavouritePosts({ posts }) {
 											alt={item.title}
 										/>
 										<div className="">
-											<h3 className="absolute items-center justify-start px-4 py-2 text-[12px] font-normal text-black bg-white top-6 left-2 sm:left-6 mr-2">
+											<h3 className="absolute items-center justify-start px-4 py-2 text-[12px] font-normal text-black bg-white top-6 left-2 sm:left-6 mr-6">
 												{item.title}
 											</h3>
 										</div>

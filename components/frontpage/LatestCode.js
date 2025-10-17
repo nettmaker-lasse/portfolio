@@ -53,18 +53,18 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
 	return (
-		<div className="relative flex flex-col align-top bg-white rounded-md cursor-pointer dark:bg-transparent group">
+		<div className="relative flex flex-col align-top cursor-pointer bg-synth group">
 			<div className="relative block w-full h-[350px] dark:border">
 				<Image
 					src="/github.jpg"
 					layout="fill"
-					className="relative object-cover"
+					className="relative object-cover opacity-10"
 				/>
 				{/* Centered Title */}
 				<h3 className="absolute p-2 text-[12px] font-normal text-black bg-white left-6 top-6 sm:flex">
 					{latestRepo.name}
 				</h3>
-				<span className="absolute self-end block my-2 text-sm text-white top-6 right-6 dark:text-white">
+				<span className="absolute self-end block my-2 text-sm text-white underline top-6 right-6 dark:text-white">
 					{moment(latestRepo.pushed_at).format("Do MMMM YYYY")}
 				</span>
 			</div>

@@ -20,7 +20,7 @@ export default function AboutMeHeader() {
 					Hey, I'm
 				</span>
 				<div className="my-4 ml-0">
-						<h1 className="inline-block px-2 pb-4 pl-0 mb-0 text-4xl font-bold text-black dark:text-synthPink">
+						<h1 className="inline-block px-2 pb-4 pl-0 mb-0 text-4xl font-bold text-black dark:text-white">
 							Lasse Buus Nielsen
 						</h1>
 				</div>

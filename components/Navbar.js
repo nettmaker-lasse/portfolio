@@ -30,7 +30,7 @@ const Navbar = () => {
 		(item) => (
 			<li key={item}>
 				<Link href={`/${item.toLowerCase()}`}>
-					<a className="text-sm font-medium text-black cursor-pointerz hover:border-b hover:border-synthPink dark:hover:border-synthPink dark:text-white">
+					<a className="text-sm font-medium text-white cursor-pointerz hover:border-b hover:border-white dark:hover:border-synthPink dark:text-black">
 						{item}
 					</a>
 				</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
 					<FontAwesomeIcon icon={menuIcon} style={iconStyle} />
 				</button>
 			</div>
-			<div className="items-center hidden space-x-4 md:flex absolute left-[50%] translate-x-[-50%] bg-white dark:bg-black dark:border-synthPink border border-black rounded-full">
+			<div className="items-center hidden space-x-4 md:flex absolute left-[50%] translate-x-[-50%] bg-synth dark:bg-white dark:border-black border border-white rounded-full">
 				<ul className="flex px-6 py-3 space-x-8">{menuItems}</ul>
 			</div>
 			<div className="flex absolute right-12 mt-[25px] md:mt-0 translate-y-[-50%] sm:flex justify-center gap-4 align-middle md:right-0 md:relative md:translate-y-0">

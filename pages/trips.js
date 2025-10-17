@@ -70,13 +70,13 @@ export default function Home({ trips }) {
 											{trips.title}
 											</div>
 										</h3>
-										<h4 className="relative px-2 py-1 pl-0 text-sm font-normal text-black rounded-sm dark:text-white">
-											<div className="flex self-start">
+										<span className="relative flex px-2 py-1 pl-0 text-sm font-normal text-white rounded-sm dark:text-white">
+											<div className="flex self-start p-2 text-black bg-white dark:bg-synth dark:text-white">
 											{moment(trips.releaseDate).format(
 											"Do MMMM YYYY"
 										)}
 											</div>
-										</h4>
+										</span>
 									</div>
 								</div>
 							))
