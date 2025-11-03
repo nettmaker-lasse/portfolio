@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import ContainerBlock from "../components/ContainerBlock";
 import client from "@lib/sanity";
 import moment from "moment";
-import Image from "next/dist/client/image";
-
+import Image from "next/image";
 export default function Home({ trips }) {
 	const router = useRouter();
 	const [mappedTrips, setMappedTrips] = useState([]);
@@ -59,8 +58,9 @@ export default function Home({ trips }) {
 									<Image
 										src={urlFor(trips.images[0]).url()}
 										alt={trips.title}
-										quality={70}
-										layout="fill"
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+										quality={75}
+										fill
 										className="w-full md:w-[400px] h-[400px] object-cover"
 									/>
 									</div>

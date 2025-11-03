@@ -33,7 +33,6 @@ export const Project = ({
 							<img
 							className="object-cover h-[400px] w-full sm:h-full"
 								src={imageUrl}
-								quality={70}
 						/>
 						)}
 						</div>

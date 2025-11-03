@@ -3,20 +3,20 @@ import userData from "@constants/data";
 import Image from "next/image";
 
 export default function CodeStack() {
-
 	return (
 		<div className="">
 			<div className="block max-w-6xl mx-auto my-14">
 				<div className="flex flex-wrap content-between">
 					<div className="w-full max-w-2xl mx-auto mb-4">
 						<div className="relative">
-									<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
-										Code stack
-									</h3>
+							<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
+								Code stack
+							</h3>
 						</div>
 						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendCode.map((skill, idx) => (
-								<SkillCard key={idx}
+								<SkillCard
+									key={idx}
 									title={skill.language}
 									url={skill.url}
 								/>
@@ -24,9 +24,9 @@ export default function CodeStack() {
 						</div>
 					</div>
 					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
-								<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
-									Design tools
-								</h3>
+						<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
+							Design tools
+						</h3>
 						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendDesign.map((skill, idx) => (
 								<ToolCard
@@ -38,9 +38,9 @@ export default function CodeStack() {
 						</div>
 					</div>
 					<div className="w-full max-w-2xl mx-auto mt-20 mb-4">
-								<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
-									Productive tools
-								</h3>
+						<h3 className="inline-block mb-6 text-2xl font-medium text-black dark:text-white">
+							Productive tools
+						</h3>
 						<div className="grid items-center justify-between grid-cols-4 gap-10 sm:grid-cols-7">
 							{userData.frontendOthers.map((skill, idx) => (
 								<OtherCard
@@ -59,24 +59,36 @@ export default function CodeStack() {
 
 const SkillCard = ({ title, url }) => {
 	return (
-		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width={60} height={50} />
+		<div className="relative w-16 h-16">
+			<Image
+				src={url}
+				fill
+				style={{ objectFit: "contain" }}
+			/>
 		</div>
 	);
 };
 
 const ToolCard = ({ title, url }) => {
 	return (
-		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width={60} height={50} />
+		<div className="relative w-16 h-16">
+			<Image
+				src={url}
+				fill
+				style={{ objectFit: "contain" }}
+			/>
 		</div>
 	);
 };
 
 const OtherCard = ({ title, url }) => {
 	return (
-		<div className="relative w-[60px]">
-			<Image src={url} layout="responsive" width={60} height={50} />
+		<div className="relative w-16 h-16">
+			<Image
+				src={url}
+				fill
+				style={{ objectFit: "contain" }}
+			/>
 		</div>
 	);
 };

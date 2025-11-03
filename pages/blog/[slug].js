@@ -41,8 +41,9 @@ export const Post = ({ title, body, image, poststatus, content, caption }) => {
 							<Image
 								className="object-cover h-[400px] sm:h-full"
 								src={urlFor(image).url()}
-								quality={70}
-								layout="fill"
+								quality={75}
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+								fill
 							/>
 						</div>
 						<div className="absolute bottom-8 left-8">

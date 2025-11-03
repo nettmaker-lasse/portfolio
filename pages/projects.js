@@ -54,8 +54,9 @@ export default function Home({ projects }) {
 									<img
 										src={project.image}
 										alt={project.title}
-										quality={70}
-										layout="fill"
+										quality={75}
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+										fill
 										className="w-full md:w-[400px] h-[400px] object-cover"
 									/>
 									</div>

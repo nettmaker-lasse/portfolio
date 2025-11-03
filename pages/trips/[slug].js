@@ -1,10 +1,8 @@
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
 import ContainerBlock from "../../components/ContainerBlock";
 import moment from "moment";
 import client from "@lib/sanity";
-import Image from "next/dist/client/image";
-import { SRLWrapper } from "simple-react-lightbox";
+import Image from "next/image";
 
 export const Project = ({ title, images, date, slug }) => {
 	const builder = imageUrlBuilder(client);
@@ -22,8 +20,11 @@ export const Project = ({ title, images, date, slug }) => {
 							<Image
 								className="object-cover h-[400px] sm:h-full"
 								src={urlFor(images[0]).url()}
-								quality={70}
-								layout="fill"
+								quality={75}
+								sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+								fill
+								style={{objectFit: "cover"}}
+								alt="hero image"
 							/>
 						</div>
 						<div className="absolute bottom-8 left-8">
@@ -37,7 +38,6 @@ export const Project = ({ title, images, date, slug }) => {
 							{title}
 						</h1>
 					</div>
-					<SRLWrapper>
 						<div className="container grid max-w-6xl gap-8 mx-auto grid-cols sm:grid-cols-3">
 							{Object.keys(images)
 								.filter((e, i) => i != 0)
@@ -48,16 +48,17 @@ export const Project = ({ title, images, date, slug }) => {
 									>
 										<Image
 											src={urlFor(images[item]).url()}
-											layout="fill"
-											objectFit="cover"
-											className="transition ease-out transform hover:scale-125 duration-2000"
-											placeholder="blur"
-											quality={30}
+											fill
+											sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+											quality={75}
+											style={{objectFit: "cover"}}
+											className="object-cover h-[400px] sm:h-full"
+											alt="trip image"
+											loading="eager"
 										/>
 									</div>
 								))}
 						</div>
-					</SRLWrapper>
 				</div>
 			</div>
 		</ContainerBlock>

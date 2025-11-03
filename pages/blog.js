@@ -2,7 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import ContainerBlock from "../components/ContainerBlock";
-import Image from "next/dist/client/image";
+import Image from "next/image";
 
 export default function Home({ posts }) {
 	const router = useRouter();
@@ -56,8 +56,9 @@ export default function Home({ posts }) {
 										<img
 											src={posts.imagefrontpage}
 											alt={posts.title}
-											quality={70}
-											layout="fill"
+											quality={75}
+											sizes="(max-width: 768px) 100vw, 33vw"
+											fill
 											className="w-full md:w-[400px] h-[400px] object-cover"
 										/>
 									</div>
