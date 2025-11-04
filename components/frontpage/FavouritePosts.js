@@ -18,8 +18,8 @@ export default function FavouritePosts({ posts }) {
 	}, [posts]);
 
 	return (
-		<div className="">
-			<div className="max-w-6xl mx-auto mt-8 md:mt-20">
+		<div className="grid-pattern">
+			<div className="max-w-6xl p-8 mx-auto">
 				<div className="flex flex-col items-center justify-between md:flex-row">
 					<h2 className="max-w-lg my-10 text-5xl font-bold text-black md:my-0 dark:text-white">
 						Articles

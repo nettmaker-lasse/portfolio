@@ -38,7 +38,7 @@ const Navbar = () => {
 	return (
 		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-4 md:my-8 md:items-center md:flex-row">
 			<Link href="/" className="block">
-				<h1 className="font-semibold text-black text-md dark:text-white">
+				<h1 className="text-4xl font-semibold text-black dark:text-white">
 					{userData.name}
 				</h1>
 				<p className="text-xs font-light text-black dark:text-white">

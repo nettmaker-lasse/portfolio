@@ -12,8 +12,8 @@ export default function LatestCode({ repositories }) {
 	}, [repositories]);
 
 	return (
-		<section>
-			<div className="max-w-6xl mx-auto mt-8 md:mt-20">
+		<section className="">
+			<div className="max-w-6xl mx-auto border-l border-r border-[#133e340d] px-8">
 				<div className="flex flex-col items-center justify-between md:flex-row">
 					<h1 className="max-w-lg my-6 text-5xl font-bold text-center text-black md:my-10 dark:text-white lg:text-left">
 						Code
@@ -29,7 +29,7 @@ export default function LatestCode({ repositories }) {
 				</div>
 			</div>
 
-			<div className="grid max-w-6xl grid-cols-2 gap-6 mx-auto mt-6 md:grid-cols-3 gap-y-6 md:mt-0">
+			<div className="grid max-w-6xl grid-cols-2 gap-6 p-8 mx-auto mt-6 md:grid-cols-3 gap-y-6 md:mt-0 border-l border-r border-[#133e340d]">
 				{repos.map((latestRepo, idx) => (
 					<div
 						key={`${idx}-${latestRepo.id}`}
