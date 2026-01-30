@@ -6,6 +6,7 @@ import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faTimes, faMoon } from "@fortawesome/free-solid-svg-icons";
 import userData from "@constants/data";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const Navbar = () => {
 	const { theme, setTheme } = useTheme();
@@ -38,7 +39,8 @@ const Navbar = () => {
 	return (
 		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-4 md:my-8 md:items-center md:flex-row">
 			<Link href="/" className="block">
-				<h1 className="text-4xl font-semibold text-black dark:text-white">
+				<h1 className="flex text-4xl font-semibold text-synth dark:text-white">
+					<Image className="mr-[-5px] ml-[-10px]" src="/buus-web-logo.svg" alt="Logo" width={40} height={40} />
 					{userData.name}
 				</h1>
 				<p className="text-xs font-light text-black dark:text-white">

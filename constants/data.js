@@ -1,6 +1,6 @@
 const userData = {
 	githubUsername: "nettmaker-lasse",
-	name: "buus",
+	name: "uus",
 	designation: "Frontend Developer",
 	avatarUrl: "/avatar-primary.jpg",
 	email: "lassebuus91@gmail.com",

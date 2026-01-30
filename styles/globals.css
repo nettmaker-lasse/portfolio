@@ -65,14 +65,14 @@ a {
 	:root {
 		/* LIGHT */
 		--page-bg: #f9f3ef;
-		/* --page-bg: #ffffff; */
+		/* --page-bg: #ffffe3; */
 		/* 👈 your light background */
 		color-scheme: light;
 	}
 
 	.dark {
 		/* DARK */
-		--page-bg: #1b1c21;
+		--page-bg: #10100e;
 		color-scheme: dark;
 	}
 
