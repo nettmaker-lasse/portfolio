@@ -1,7 +1,16 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['cdn.sanity.io', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
     formats: ['image/avif', 'image/webp'],
   },
 };
