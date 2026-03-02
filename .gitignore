@@ -4,7 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-/cmsportfolio
+/cmsportfolio/node_modules
+/cmsportfolio/dist
+/cmsportfolio/.sanity
+/cmsportfolio/sanity.config.ts
+/cmsportfolio/sanity.cli.ts
 
 # testing
 /coverage

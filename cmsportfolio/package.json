@@ -1,0 +1,29 @@
+{
+  "name": "cmsportfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "nettmaker-lasse <lasse.buus@nettmaker.no>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/vision": "4.10.2",
+    "prop-types": "^15.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sanity": "4.10.2",
+    "styled-components": "^6.1.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nettmaker-lasse/portfolio.git"
+  }
+}
