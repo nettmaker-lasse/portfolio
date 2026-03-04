@@ -48,7 +48,7 @@ export default function AboutExperience() {
 const ExperienceCard = ({ title, date, company, content }) => {
 	return (
 		<div className="relative mt-8">
-			<h4 className="relative inline-block px-2 py-1 pl-0 text-sm font-normal bg-white text-synthPink bold dark:bg-transparent dark:text-gray-200">
+			<h4 className="relative inline-block px-2 py-1 text-sm font-normal bg-white text-synthPink bold dark:bg-transparent dark:text-gray-200">
 				<div className="flex self-start">{date}</div>
 			</h4>
 			<h3 className="my-4 text-xl font-semibold leading-none text-black dark:text-white">

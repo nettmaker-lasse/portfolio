@@ -1,4 +1,17 @@
 const colors = require("tailwindcss/colors");
+const zincPalette = colors.zinc || colors.gray;
+const olivePalette = {
+  50: "#f6f7ee",
+  100: "#ecefd7",
+  200: "#d9dfad",
+  300: "#c2cb7f",
+  400: "#adb85a",
+  500: "#8e9a3a",
+  600: "#707b2f",
+  700: "#555e26",
+  800: "#3f461d",
+  900: "#2c3115",
+};
 
 module.exports = {
   mode: "jit",
@@ -38,6 +51,8 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      zinc: zincPalette,
+      olive: olivePalette,
       green: colors.emerald,
       purple: colors.violet,
       yellow: colors.amber, // (you listed yellow twice earlier—kept one)
