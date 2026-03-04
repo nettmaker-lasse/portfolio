@@ -19,7 +19,7 @@ export default function FavouritePosts({ posts }) {
 
 	return (
 		<div className="grid-pattern">
-			<div className="max-w-6xl p-8 mx-auto">
+			<div className="max-w-6xl p-2 mx-auto sm:py-8 sm:p-0">
 				<div className="flex flex-col items-center justify-between md:flex-row">
 					<h2 className="max-w-lg my-10 text-5xl font-bold text-black md:my-0 dark:text-white">
 						Articles

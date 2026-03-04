@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import Link from "next/link";
 
 const baseClasses =
-	"inline-flex items-center gap-4 px-8 py-4 my-4 text-xl font-semibold border border-synthPink md:my-0 hover:bg-synthPink hover:text-white";
+	"inline-flex items-center gap-4 px-8 py-4 my-4 text-xl font-semibold border border-synthPink md:my-0 hover:bg-synthPink dark:bg-synthPink hover:text-white";
 
 const ArrowIcon = () => (
 	<svg

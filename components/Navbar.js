@@ -29,7 +29,7 @@ const Navbar = () => {
 		<li key={item}>
 			<Link
 				href={`/${item.toLowerCase()}`}
-				className="text-sm font-medium text-white cursor-pointer hover:border-b hover:border-white dark:hover:border-synthPink dark:text-black"
+				className="text-sm font-medium text-white cursor-pointer hover:border-b hover:border-white dark:hover:border-synthPink dark:text-white md:dark:text-black"
 			>
 				{item}
 			</Link>
@@ -37,10 +37,10 @@ const Navbar = () => {
 	));
 
 	return (
-		<nav className="relative flex flex-col items-start justify-between max-w-6xl mx-auto my-4 md:my-8 md:items-center md:flex-row">
+		<nav className="relative flex flex-col items-start justify-between max-w-6xl my-4 sm:mx-auto md:my-8 md:items-center md:flex-row">
 			<Link href="/" className="block">
 				<h1 className="flex text-4xl font-semibold text-synth dark:text-white">
-					<Image className="mr-[-5px] ml-[-10px]" src="/buus-web-logo.svg" alt="Logo" width={40} height={40} />
+					<Image className="h-[35px] dark:invert dark:brightness-0" src="/b-letter-logo.svg" alt="Logo" width={35} height={35} />
 					{userData.name}
 				</h1>
 				<p className="text-xs font-light text-black dark:text-white">

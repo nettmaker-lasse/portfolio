@@ -28,7 +28,7 @@ function Hero({ hero }) {
 
 	return (
 		<div className="grid-pattern">
-			<div className="max-w-6xl p-8 mx-auto">
+			<div className="max-w-6xl p-2 mx-auto sm:p-8">
 				<div className="flex flex-col items-start justify-between overflow-hidden md:flex-row sm:items-center">
 					{/* Text container */}
 					<div className="relative w-full mb-5 md:w-1/2">

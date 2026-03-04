@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "photoswipe/dist/photoswipe.css";
 import { ThemeProvider } from "next-themes";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
