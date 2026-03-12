@@ -9,9 +9,8 @@ export function proxy(request) {
 		return NextResponse.next();
 	}
 
-	// Enforce one canonical host so crawlers don't index duplicate domains.
-	const shouldRedirectToPrimary =
-		host.endsWith(".vercel.app") || host === `www.${PRIMARY_DOMAIN}`;
+	// Enforce canonical host for preview domains only.
+	const shouldRedirectToPrimary = host.endsWith(".vercel.app");
 
 	if (shouldRedirectToPrimary) {
 		const url = request.nextUrl.clone();
